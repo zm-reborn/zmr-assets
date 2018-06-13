@@ -1,0 +1,203 @@
+$realignbones
+
+$ikchain rhand "ValveBiped.Bip01_R_Hand" Z 0 knee  0.640 0.769 0.000
+$ikchain lhand "ValveBiped.Bip01_L_Hand" Z 0 knee  0.607 0.795 0.000
+$ikchain rfoot "ValveBiped.Bip01_R_Foot" Z 0 knee  0.545 -0.838 0.000
+$ikchain lfoot "ValveBiped.Bip01_L_Foot" Z 0 knee  0.518 -0.855 -0.000
+
+$heirarchy "valvebiped.Bip01_L_Clavicle" "valvebiped.Bip01_Spine4" 
+$heirarchy "valvebiped.Bip01_R_Clavicle" "valvebiped.Bip01_Spine4" 
+$heirarchy "valvebiped.Bip01_L_Thigh" "valvebiped.Bip01_Pelvis" 
+$heirarchy "valvebiped.Bip01_R_Thigh" "valvebiped.Bip01_Pelvis" 
+
+$sequence "Idle01" "Idle01" loop ACT_IDLE 1 fps 30.00
+//$animation a_Walk1 "a_Walk1" loop fps 24.000000
+//$animation a_WalkSE "a_WalkSE" loop fps 24.000000
+//$animation a_WalkE "a_WalkE" loop fps 24.000000
+//$animation a_WalkNE "a_WalkNE" loop fps 24.000000
+//$animation a_walk1 "a_walk1" loop fps 24.000000
+//$animation a_WalkNW "a_WalkNW" loop fps 24.000000
+//$animation a_WalkW "a_WalkW" loop fps 24.000000
+//$animation a_WalkSW "a_WalkSW" loop fps 24.000000
+$sequence "a_walk1" "a_Walk1" LX loop ACT_WALK 1 fps 28.00 {
+  { event AE_ZOMBIE_STEP_LEFT 5 }
+  { event AE_ZOMBIE_STEP_RIGHT 15 }
+  { event AE_ZOMBIE_SCUFF_LEFT 20 }
+  { event AE_ZOMBIE_STEP_LEFT 28 }
+  { event AE_ZOMBIE_STEP_RIGHT 38 }
+  { event AE_ZOMBIE_SCUFF_LEFT 40 }
+// blendwidth 9
+//  blend move_yaw -180.000000 180.000000
+// a_WalkSE a_WalkE a_WalkNE a_walk1 a_WalkNW a_WalkW a_WalkSW a_WalkS
+}
+
+//$animation a_walk2 "a_walk2" loop fps 24.000000
+$sequence walk2 "a_Walk2" LX loop ACT_WALK 1 fps 28.00 {
+  { event AE_ZOMBIE_STEP_LEFT 7 }
+  { event AE_ZOMBIE_SCUFF_RIGHT 10 }
+  { event AE_ZOMBIE_STEP_RIGHT 21 }
+  { event AE_ZOMBIE_STEP_LEFT 31 }
+  { event AE_ZOMBIE_SCUFF_RIGHT 34 }
+  { event AE_ZOMBIE_STEP_RIGHT 44 }
+//  blendwidth 9
+//  blend move_yaw -180.000000 180.000000
+// a_WalkSE a_WalkE a_WalkNE a_walk2 a_WalkNW a_WalkW a_WalkSW a_WalkS
+}
+//$animation a_walk3 "a_walk3" loop fps 24.000000
+$sequence "walk3" "a_Walk3" LX loop ACT_WALK 1 fps 28.00 {
+  { event AE_ZOMBIE_STEP_LEFT 7 }
+  { event AE_ZOMBIE_STEP_RIGHT 18 }
+  { event AE_ZOMBIE_SCUFF_LEFT 21 }
+  { event AE_ZOMBIE_STEP_LEFT 32 }
+  { event AE_ZOMBIE_STEP_RIGHT 40 }
+  { event AE_ZOMBIE_SCUFF_LEFT 44 }
+//  blendwidth 9
+//  blend move_yaw -180.000000 180.000000
+// a_WalkSE a_WalkE a_WalkNE a_walk3 a_WalkNW a_WalkW a_WalkSW a_WalkS
+}
+//$animation a_Walk4 "a_Walk4" loop fps 24.000000
+$sequence "walk4" "a_Walk4" LX loop ACT_WALK 1 fps 28.00 {
+  { event AE_ZOMBIE_STEP_LEFT 4 }
+  { event AE_ZOMBIE_STEP_RIGHT 16 }
+  { event AE_ZOMBIE_STEP_LEFT 22 }
+  { event AE_ZOMBIE_STEP_RIGHT 28 }
+  { event AE_ZOMBIE_STEP_LEFT 43 }
+  { event AE_ZOMBIE_STEP_RIGHT 49 }
+  { event AE_ZOMBIE_STEP_LEFT 58 }
+  { event AE_ZOMBIE_STEP_RIGHT 67 }
+}
+
+$sequence "FireWalk" "FireWalk" LX loop ACT_WALK_ON_FIRE 1 fps 30.00
+//$sequence FireWalk "FireWalk" LX LY LZ loop ACT_WALK_ON_FIRE 1 fps 30.00
+$sequence "FireIdle" "FireIdle" loop ACT_IDLE_ON_FIRE 1 fps 30.00
+$sequence "attackA" "attackA" ACT_MELEE_ATTACK1 2 fps 30.00 {
+  { event AE_ZOMBIE_ATTACK_SCREAM 5 }
+  { event AE_ZOMBIE_ATTACK_RIGHT 25 }
+}
+
+$sequence attackB "attackB" ACT_MELEE_ATTACK1 2 fps 30.00 {
+  { event AE_ZOMBIE_ATTACK_SCREAM 5 }
+  { event AE_ZOMBIE_ATTACK_RIGHT 25 }
+}
+
+$sequence attackC "attackC" ACT_MELEE_ATTACK1 2 fps 30.00 {
+  { event AE_ZOMBIE_ATTACK_SCREAM 5 }
+  { event AE_ZOMBIE_ATTACK_LEFT 25 }
+}
+
+$sequence attackD "attackD" ACT_MELEE_ATTACK1 2 fps 30.00 {
+  { event AE_ZOMBIE_ATTACK_SCREAM 5 }
+  { event AE_ZOMBIE_ATTACK_LEFT 25 }
+}
+
+$sequence "attackE" "attackE" ACT_MELEE_ATTACK1 2 fps 30.00 {
+  { event AE_ZOMBIE_ATTACK_SCREAM 5 }
+  { event AE_ZOMBIE_ATTACK_BOTH 25 }
+}
+
+$sequence "attackF" "attackF" ACT_MELEE_ATTACK1 2 fps 30.00 {
+  { event AE_ZOMBIE_ATTACK_SCREAM 5 }
+  { event AE_ZOMBIE_ATTACK_BOTH 25 }
+}
+
+//quick attacks using swat anims
+$sequence "attackG_quick" "swatleftmid" ACT_MELEE_ATTACK1 2 fps 36.00 {
+  { event AE_ZOMBIE_ATTACK_SCREAM 1 }
+  { event AE_ZOMBIE_ATTACK_LEFT 9 }
+}
+
+$sequence "attackH_quick" "swatrightmid" ACT_MELEE_ATTACK1 2 fps 36.00 {
+  { event AE_ZOMBIE_ATTACK_SCREAM 1 }
+  { event AE_ZOMBIE_ATTACK_RIGHT 9 }
+}
+
+$sequence "swatleftmid" "swatleftmid" ACT_ZOM_SWATLEFTMID 1 fps 30.00 {
+  { event AE_ZOMBIE_STARTSWAT 1 }
+  { event AE_ZOMBIE_SWATITEM 9 }
+}
+
+$sequence "swatrightmid" "swatrightmid" ACT_ZOM_SWATRIGHTMID 1 fps 30.00 {
+  { event AE_ZOMBIE_STARTSWAT 1 }
+  { event AE_ZOMBIE_SWATITEM 9 }
+}
+
+$sequence "swatleftlow" "swatleftlow" ACT_ZOM_SWATLEFTLOW 1 fps 30.00 {
+  { event AE_ZOMBIE_STARTSWAT 1 }
+  { event AE_ZOMBIE_SWATITEM 15 }
+}
+
+$sequence "swatrightlow" "swatrightlow" ACT_ZOM_SWATRIGHTLOW 1 fps 30.00 {
+  { event AE_ZOMBIE_STARTSWAT 1 }
+  { event AE_ZOMBIE_SWATITEM 18 }
+}
+
+//$sequence "physflinch1" "physflinch1" ACT_FLINCH_PHYSICS 1 fps 30.00
+//$sequence "physflinch2" "physflinch2" ACT_FLINCH_PHYSICS 1 fps 30.00
+//$sequence "physflinch3" "physflinch3" ACT_FLINCH_PHYSICS 1 fps 30.00
+
+/*meh gestures are better
+//use physflinch for normal flinch too
+// $sequence "bigflinch" "physflinch1" ACT_BIG_FLINCH 1 fps 30.00
+// $sequence "rightflinch" "physflinch2" ACT_FLINCH_RIGHTARM 1 fps 30.00
+// $sequence "leftflinch" "physflinch3" ACT_FLINCH_LEFTARM 1 fps 30.00
+*/
+
+//weakening blend weightlist
+$Weightlist "AllBones" "valvebiped.Bip01_Pelvis" 0.3
+
+
+
+
+$sequence "slump_b" "slump_b" loop fps 30.00
+$sequence "slumprise_b" "slumprise_b" fps 30.00 {
+  { event AE_NPC_LEFTFOOT 13 }
+  { event AE_NPC_RIGHTFOOT 27 }
+  { event AE_ZOMBIE_GET_UP 57 }
+}
+
+//$animation mdldecompiler_delta.smd "mdldecompiler_delta.smd" fps 30
+
+
+
+
+//
+// We don't need any flinch sequences
+//
+
+
+//$sequence "gest_bigflinch" "physflinch1" ACT_GESTURE_BIG_FLINCH 1 fps 30 subtract "Idle01" 0 delta
+//$sequence "gest_smallflinch" "physflinch1" ACT_GESTURE_SMALL_FLINCH 1 fps 40 subtract "Idle01" 0 delta weightlist AllBones
+//$sequence "gest_stomachflinch" "physflinch1" ACT_GESTURE_FLINCH_STOMACH 1 fps 40 subtract "physflinch1" 0 delta weightlist AllBones
+//$sequence "gest_rightflinch" "physflinch2" ACT_GESTURE_FLINCH_RIGHTARM 1 fps 30 subtract "Idle01" 0 delta
+//$sequence "gest_leftflinch" "physflinch3" ACT_GESTURE_FLINCH_LEFTARM 1 fps 30 subtract "Idle01" 0 delta
+
+
+//$sequence flinch1inDelta "flinch1inDelta" fps 30.00 subtract mdldecompiler_delta.smd 0 delta
+//$sequence flinch1inFrame "flinch1inFrame" fps 30.00
+//$sequence flinch1CoreDelta "flinch1CoreDelta" fps 30.00 subtract mdldecompiler_delta.smd 0 delta
+//$sequence flinch1OutFrame "flinch1OutFrame" fps 30.00
+//$sequence flinch1outDelta "flinch1outDelta" fps 30.00 subtract mdldecompiler_delta.smd 0 delta
+
+//$sequence flinch1 "flinch1" ACT_GESTURE_FLINCH_HEAD 1 fps 30.00 subtract mdldecompiler_delta.smd 0 delta
+//$sequence flinch2inDelta "flinch2inDelta" fps 30.00 subtract mdldecompiler_delta.smd 0
+//$sequence flinch2inFrame "flinch2inFrame" fps 30.00
+//$sequence flinch2CoreDelta "flinch2CoreDelta" fps 30.00 subtract mdldecompiler_delta.smd 0
+//$sequence flinch2OutFrame "flinch2OutFrame" fps 30.00
+//$sequence flinch2outDelta "flinch2outDelta" fps 30.00 subtract mdldecompiler_delta.smd 0
+//$sequence flinch2 "flinch2" ACT_GESTURE_FLINCH_HEAD 1 fps 30.00 subtract mdldecompiler_delta.smd 0
+//$sequence flinch3inDelta "flinch3inDelta" fps 30.00 subtract mdldecompiler_delta.smd 0
+//$sequence flinch3inFrame "flinch3inFrame" fps 30.00
+//$sequence flinch3CoreDelta "flinch3CoreDelta" fps 30.00 subtract mdldecompiler_delta.smd 0
+//$sequence flinch3OutFrame "flinch3OutFrame" fps 30.00
+//$sequence flinch3outDelta "flinch3outDelta" fps 30.00 subtract mdldecompiler_delta.smd 0
+//$sequence flinch3 "flinch3" ACT_GESTURE_FLINCH_HEAD 1 fps 30.00 subtract mdldecompiler_delta.smd 0
+
+
+$sequence Tantrum "Tantrum" loop ACT_ZOMBIE_TANTRUM 1 fps 30.00
+$sequence WallPound "WallPound" loop ACT_ZOMBIE_WALLPOUND 1 fps 30.00 {
+  { event AE_ZOMBIE_POUND 14 }
+  { event AE_ZOMBIE_POUND 35 }
+}
+
+
+$sequence ragdoll "ragdoll" ACT_DIERAGDOLL 1 fps 30.00

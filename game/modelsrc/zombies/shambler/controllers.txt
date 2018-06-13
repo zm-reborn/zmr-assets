@@ -1,0 +1,109 @@
+O = overridden by
+X = overrides
+B = bad combination with
+G = good combination with
+U = unused
+
+right_inner_raiser			O: right_lowerer
+left_inner_raiser			O: left_lowerer
+right_outer_raiser			O: right_lowerer
+left_outer_raiser			O: left_lowerer
+right_lowerer				X: brow raisers
+left_lowerer				X: brow raisers
+
+right_cheek_raiser			
+left_cheek_raiser			
+wrinkler					
+dilator		
+right_part					
+left_part					
+right_corner_depressor		
+left_corner_depressor		 
+jaw_clencher				
+
+right_upper_raiser			O: bite
+left_upper_raiser			O: bite
+right_corner_puller			B: right_funneler, right_puckerer		Max: 0.75
+left_corner_puller			B: left_funneler, left_puckerer			Max: 0.75
+chin_raiser					O: smile, bite
+right_puckerer				O: bite									Max: 0.33
+left_puckerer				O: bite									Max: 0.33
+right_funneler				O: bite
+left_funneler				O: bite
+right_stretcher				O: smile
+left_stretcher				O: smile
+bite						X: puckerers, funnelers, mouth raisers, mouth droppers, lower_lip
+lower_lip					O: bite
+
+jaw_drop					G: mouth droppers
+right_mouth_drop			G: jaw_drop; O: bite
+left_mouth_drop				G: jaw_drop; O: bite
+smile						X: mouth stretchers, chin_raiser; O: bite
+
+-----------------------------
+PSEUDOCODE
+-----------------------------
+	always: (no conflicts)
+		right_cheek_raiser		
+		left_cheek_raiser		
+		wrinkler				
+		dilator						
+		right_corner_depressor	
+		left_corner_depressor	
+		right_part					
+		left_part					
+		jaw_clencher
+
+	if (raise_eyebrows) 
+	{
+		right_inner_raiser	
+		left_inner_raiser		
+		right_outer_raiser		
+		left_outer_raiser		
+	}
+	else
+	{
+		right_lowerer			
+		left_lowerer			
+	}
+
+	if (bite)
+	{
+		bite	
+	}
+	else
+	{
+
+		right_upper_raiser		
+		left_upper_raiser
+		lower_lip
+
+		if (smile)
+		{
+			smile
+		}
+		else
+		{
+			chin_raiser
+			right_stretcher	
+			left_stretcher
+		}
+
+		if (puckerer)
+		{
+			right_puckerer			(Max 0.33)
+			left_puckerer			(Max 0.33)
+			right_funneler	
+			left_funneler
+		}
+		else
+		{
+			right_corner_puller		(Max 0.75)
+			left_corner_puller		(Max 0.75)
+		}
+
+		//add jaw drop factor *0.5 to mouth droppers
+		jaw_drop		
+		right_mouth_drop
+		left_mouth_drop
+	}

@@ -1,0 +1,39 @@
+$definemacro makelods refModel \\
+$lod 15 \\
+{ \\
+	replacemodel $refModel$ lod1_$refModel$ \\
+  	bonetreecollapse "ValveBiped.Bip01_L_Hand" \\
+	bonetreecollapse "ValveBiped.Bip01_R_Hand" \\
+} \\
+$lod 22 \\
+{ \\
+	replacemodel $refModel$ lod2_$refModel$ \\
+  	$include "lowesthumanskeleton.qci" \\
+	$include "lowesthumannohelpers.qci" \\
+  	bonetreecollapse "ValveBiped.Bip01_L_Hand" \\
+	bonetreecollapse "ValveBiped.Bip01_R_Hand" \\
+} \\
+$lod 33 \\
+{ \\
+	replacemodel $refModel$ lod3_$refModel$ \\
+  	$include "lowesthumanskeleton.qci" \\
+	$include "lowesthumannohelpers.qci" \\
+  	bonetreecollapse "ValveBiped.Bip01_L_Hand" \\
+	bonetreecollapse "ValveBiped.Bip01_R_Hand" \\
+} \\
+$lod 50 \\
+{ \\
+	replacemodel $refModel$ lod4_$refModel$ \\
+  	$include "lowesthumanskeleton.qci" \\
+	$include "lowesthumannohelpers.qci" \\
+  	bonetreecollapse "ValveBiped.Bip01_L_Hand" \\
+	bonetreecollapse "ValveBiped.Bip01_R_Hand" \\
+} \\
+$shadowlod \\
+{ \\
+	replacemodel $refModel$ lod2_$refModel$ \\
+  	$include "lowesthumanskeleton.qci" \\
+	$include "lowesthumannohelpers.qci" \\
+  	bonetreecollapse "ValveBiped.Bip01_L_Hand" \\
+	bonetreecollapse "ValveBiped.Bip01_R_Hand" \\
+} \\
