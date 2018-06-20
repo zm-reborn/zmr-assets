@@ -1,0 +1,27 @@
+$sequence Idle01_fix "Idle01_fix" loop ACT_IDLE 1 fps 30.00
+
+$sequence refpose "refpose" fps 30.00
+
+$sequence FireWalk "FireWalk" LX LY LZ loop ACT_ZOM_WALK_ON_FIRE 1 fps 60.00 {
+	
+  { event AE_ZOMBIE_STEP_LEFT 40 }
+  { event AE_ZOMBIE_STEP_RIGHT 10 }
+}
+
+$sequence walk_fix "Walk_fix" LX LY LZ loop ACT_WALK 1 fps 60.00 {
+  { event AE_ZOMBIE_STEP_LEFT 40 }
+  { event AE_ZOMBIE_STEP_RIGHT 10 }
+}
+
+$sequence Run "Run" LX LY LZ loop fps 30.00
+$sequence melee_01 "melee_01" LX LY LZ  ACT_MELEE_ATTACK1 1 fps 40.00 {
+  { event AE_ZOMBIE_ATTACK_SCREAM 5 }
+  { event AE_ZOMBIE_ATTACK_RIGHT 29 }
+}
+
+$sequence "FlinchC" "FlinchC" ACT_BIG_FLINCH 1 fps 30.00
+$sequence "FlinchR" "FlinchR" ACT_FLINCH_RIGHTARM 1 fps 30.00
+$sequence "FlinchL" "FlinchL" ACT_FLINCH_LEFTARM 1 fps 30.00
+
+$sequence ragdoll "ragdoll" ACT_DIERAGDOLL 1 fps 30.00
+

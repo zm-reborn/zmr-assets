@@ -1,0 +1,8 @@
+$sequence idle2 "idle2" loop ACT_IDLE 1 fps 30.00
+$sequence walk "Walk" LX loop ACT_WALK 1 fps 45.00
+
+$sequence attack1 "attack1" ACT_MELEE_ATTACK1 1 fps 15.00 {
+	{ event AE_DRAGGY_SICK 1 }
+}
+
+$sequence ragdoll "ragdoll" ACT_DIERAGDOLL 1 fps 30.00

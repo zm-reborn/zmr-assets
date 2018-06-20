@@ -1,0 +1,75 @@
+//$realignbones
+
+
+$ikchain rfoot ValveBiped.Bip01_R_Foot knee  0.774 -0.633 0.000
+$ikchain lfoot ValveBiped.Bip01_L_Foot knee  0.000 0.000 0.000
+$ikchain rhand ValveBiped.Bip01_R_Hand knee  0.759 0.651 0.000
+$ikchain lhand ValveBiped.Bip01_L_Hand knee  0.726 0.688 0.000
+
+
+// IMPORTANT: Put the idle animation first so Hammer view works correctly.
+$sequence idle "idle" loop ACT_IDLE 9 fps 15.00
+$sequence idle3 "idle3" loop ACT_IDLE 15 fps 20.00
+$sequence idle_angry "idle_angry" loop ACT_IDLE_ANGRY 1 fps 30.00
+$sequence idle_onfire "idle_onfire" loop ACT_IDLE_ON_FIRE 1 fps 30.00
+
+$sequence idle_rot "idle_rot" loop ACT_HOVER 1 fps 15.00
+
+
+$sequence ragdoll "ragdoll" ACT_DIERAGDOLL 1 fps 30.00
+
+
+$sequence Leap "Leap" ACT_RANGE_ATTACK1 1 LX LZ frame 1 12 fps 30.00 {
+  { event AE_FASTZOMBIE_LEAP 8 }
+}
+
+$sequence LeapStrike "LeapStrike" loop ACT_FASTZOMBIE_LEAP_STRIKE 1 frame 2 13 fps 26.00
+$sequence LandRight "LandRight" ACT_FASTZOMBIE_LAND_RIGHT 1 LX fps 30.00
+$sequence LandLeft "LandLeft" ACT_FASTZOMBIE_LAND_LEFT 1 LX fps 30.00
+
+//TGB: reduced FPS a bit, as it was superfast
+$sequence Melee "Melee" loop ACT_MELEE_ATTACK1 10 frame 2 16 fps 25.00 {
+  { event AE_ZOMBIE_ATTACK_RIGHT 3 }
+  { event AE_ZOMBIE_ATTACK_LEFT 7 }
+}
+
+//TGB: turned into melee_attack1 with low weight, for variation
+$sequence Melee2 "BR2_Attack" ACT_MELEE_ATTACK1 2 fps 30.00 {
+  { event AE_ZOMBIE_ATTACK_RIGHT 18 }
+  { event AE_ZOMBIE_ATTACK_LEFT 20 }
+}
+
+//$sequence MeleeDelay "BR2_Roar" ACT_MELEE_ATTACK1 1 fps 35.00
+
+$sequence BR2_Attack "BR2_Attack" ACT_FASTZOMBIE_BIG_SLASH 1 fps 30.00 {
+  { event AE_ZOMBIE_ATTACK_RIGHT 18 }
+}
+
+$sequence climbmount "climbmount" LX LZ frame 2 32 fps 30.00
+$sequence climbloop "climbloop" loop ACT_CLIMB_UP 1 LX LZ frame 2 16 fps 20.00 {
+  { event AE_FASTZOMBIE_CLIMB_LEFT 5 }
+  { event AE_FASTZOMBIE_CLIMB_RIGHT 12 }
+}
+
+$sequence climbdismount "climbdismount3" ACT_CLIMB_DISMOUNT 1 fps 30.00 walkframe 33 LZ walkframe 53 LZ LX
+//$animation climbdismount walkframe 40 LZ walkframe 53 LZ LX
+
+$sequence JumpNavMove "JumpNavMove" ACT_JUMP 1 frame 2 54 fps 30.00
+$sequence leap_start "leap_start" ACT_HOP 1 frame 2 15 fps 30.00
+$sequence leap_loop "leap_loop" ACT_GLIDE 1 frame 2 32 loop fps 30.00
+$sequence leap_land "leap_land" frame 2 20 fps 30.00
+
+$sequence BR2_Roar "BR2_Roar" ACT_FASTZOMBIE_FRENZY 1 fps 35.00
+
+
+//TGB: only running anim, no walk
+//$sequence walk_all "a_walkN" loop ACT_WALK 1 LX frame 2 22 fps 30.00 {
+//  { event AE_ZOMBIE_STEP_RIGHT 7 }
+//  { event AE_ZOMBIE_STEP_LEFT 16 }
+//}
+
+//renamed ACT_RUN
+$sequence walkRun "Run" loop ACT_WALK 1 frame 2 16 LX fps 36.00 {
+  { event AE_FASTZOMBIE_GALLOP_LEFT 5 }
+  { event AE_FASTZOMBIE_GALLOP_RIGHT 9 }
+}

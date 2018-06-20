@@ -1,0 +1,36 @@
+$cdmaterials "models\zombie_fast\"
+
+
+$eyeposition 0 0 40
+$illumposition 0 0 32
+
+
+$surfaceprop "flesh"
+
+
+//$poseparameter move_yaw -180.00 180.00
+
+$hboxset "default"
+$hbox 2 "ValveBiped.Bip01_Spine1" -8.500  0.000  -7.120  15.500  9.000  7.730
+$hbox 4 "ValveBiped.Bip01_L_UpperArm" -1.000  -3.500  -2.500  11.000  3.500  2.500
+$hbox 4 "ValveBiped.Bip01_L_Forearm" -0.500  -1.860  -1.900  10.500  3.110  2.360
+$hbox 4 "ValveBiped.Bip01_L_Hand" 0.000  -1.780  -1.000  6.000  1.230  2.000
+$hbox 5 "ValveBiped.Bip01_R_UpperArm" -1.000  -3.500  -2.500  11.000  3.500  2.500
+$hbox 5 "ValveBiped.Bip01_R_Forearm" -0.500  -1.890  -1.600  10.500  3.090  2.660
+$hbox 5 "ValveBiped.Bip01_R_Hand" 0.000  -1.780  -2.500  6.000  1.230  0.500
+$hbox 6 "ValveBiped.Bip01_L_Thigh" 0.000  -4.000  -3.730  17.250  4.000  4.290
+$hbox 6 "ValveBiped.Bip01_L_Calf" 0.000  -4.870  -3.540  17.250  3.180  2.630
+$hbox 6 "ValveBiped.Bip01_L_Foot" -1.500  -2.000  -2.500  7.500  2.000  2.500
+$hbox 7 "ValveBiped.Bip01_R_Thigh" 0.000  -4.000  -3.730  17.250  4.000  4.290
+$hbox 7 "ValveBiped.Bip01_R_Calf" 0.000  -4.920  -3.120  17.250  3.250  2.650
+$hbox 7 "ValveBiped.Bip01_R_Foot" -1.500  -2.000  -2.500  7.500  2.000  2.500
+//$hbox 1 "ValveBiped.HC_Body_Bone" -6.590  -5.000  -5.760  8.500  5.000  6.240
+//desired:					 	 9.000  1.500  0.000	11.000  9.000   8.000
+$hbox 1 "ValveBiped.Bip01_Spine4" 3.500  -3.000  -4.000  14.500  6.000  4.000
+
+// Model uses material "corpse1.vmt"
+$attachment "eyes" "ValveBiped.HC_BodyCube" -4.00 -8.00 -7.00 rotate 0.00 -90.00 0.00
+$attachment "head" "ValveBiped.HC_BodyCube" -0.00 0.00 0.00 rotate 0.00 0.00 0.00
+$attachment "chest" "ValveBiped.Bip01_Spine4" -4.00 0.00 3.00 rotate -70.00 0.00 180.00
+$attachment "Blood_Left" "ValveBiped.Bip01_L_Finger2" 0.00 0.00 -0.00 rotate -0.00 0.00 0.00
+$attachment "Blood_Right" "ValveBiped.Bip01_R_Finger2" 0.00 -0.00 0.00 rotate -0.00 0.00 -0.00

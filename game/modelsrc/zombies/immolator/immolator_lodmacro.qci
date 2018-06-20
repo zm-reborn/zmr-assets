@@ -1,0 +1,23 @@
+$definemacro makelods refModel \\
+$lod 10 \\
+{ \\
+	replacemodel $refModel$ $refModel$_lod1 \\
+	bonetreecollapse "Bip01 L Hand" \\
+	bonetreecollapse "Bip01 R Hand" \\
+} \\
+$lod 18 \\
+{ \\
+	replacemodel $refModel$ $refModel$_lod2 \\
+} \\
+$lod 35 \\
+{ \\
+	replacemodel $refModel$ $refModel$_lod3 \\
+} \\
+$lod 55 \\
+{ \\
+	replacemodel $refModel$ $refModel$_lod4 \\
+} \\
+$shadowlod \\
+{ \\
+	replacemodel $refModel$ $refModel$_lod5 \\
+} \\

@@ -1,0 +1,88 @@
+$sequence "idle1" {
+	"decompiled/idle1.smd"
+	activity "ACT_IDLE" 3
+	fadein 0.2
+	fadeout 0.2
+	fps 15
+	loop
+}
+
+$sequence "idle2" {
+	"decompiled/idle2.smd"
+	activity "ACT_IDLE" 3
+	fadein 0.2
+	fadeout 0.2
+	fps 15
+	loop
+}
+
+$sequence "idle3" {
+	"decompiled/idle3.smd"
+	activity "ACT_IDLE" 6
+	fadein 0.2
+	fadeout 0.2
+	fps 15
+	loop
+}
+
+$sequence "ragdoll" {
+	"decompiled/ragdoll.smd"
+	activity "ACT_DIERAGDOLL" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence walk "decompiled/walk" loop ACT_WALK 1 LX LY LZ fps 30.00
+$sequence walk2 "decompiled/walk2" loop ACT_WALK 1 LX LY LZ fps 30.00
+$sequence Walk_OnFire "decompiled/Walk_OnFire" loop ACT_WALK_ON_FIRE 1 LX LY LZ fps 24.00
+
+$sequence "Idle_OnFire" {
+	"decompiled/Idle_OnFire.smd"
+	activity "ACT_IDLE_ON_FIRE" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 16
+	loop
+}
+
+$sequence "attackleft" {
+	"decompiled/attackleft.smd"
+	activity "ACT_MELEE_ATTACK1" 2
+	{ event AE_ZOMBIE_ATTACK_SCREAM 1 "" }
+	{ event AE_ZOMBIE_ATTACK_LEFT 16 "" }
+	fadein 0.2
+	fadeout 0.2
+	fps 25
+}
+
+$sequence "attackleft2" {
+	"decompiled/attackleft2.smd"
+	activity "ACT_MELEE_ATTACK1" 2
+	{ event AE_ZOMBIE_ATTACK_SCREAM 1 "" }
+	{ event AE_ZOMBIE_ATTACK_LEFT 17 "" }
+	fadein 0.2
+	fadeout 0.2
+	fps 25
+}
+
+$sequence "attackright" {
+	"decompiled/attackright.smd"
+	activity "ACT_MELEE_ATTACK1" 2
+	{ event AE_ZOMBIE_ATTACK_SCREAM 1 "" }
+	{ event AE_ZOMBIE_ATTACK_RIGHT 13 "" }
+	fadein 0.2
+	fadeout 0.2
+	fps 25
+}
+
+$sequence "attackright2" {
+	"decompiled/attackright2.smd"
+	activity "ACT_MELEE_ATTACK1" 2
+	{ event AE_ZOMBIE_ATTACK_SCREAM 1 "" }
+	{ event AE_ZOMBIE_ATTACK_RIGHT 14 "" }
+	fadein 0.2
+	fadeout 0.2
+	fps 25
+}
+

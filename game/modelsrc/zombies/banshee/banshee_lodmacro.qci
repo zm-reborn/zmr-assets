@@ -1,0 +1,21 @@
+$definemacro makelods refModel \\
+$lod 10 \\
+{ \\
+	replacemodel $refModel$ lod1_$refModel$ \\
+} \\
+$lod 20 \\
+{ \\
+	replacemodel $refModel$ lod2_$refModel$ \\
+} \\
+$lod 30 \\
+{ \\
+	replacemodel $refModel$ lod3_$refModel$ \\
+} \\
+$lod 40 \\
+{ \\
+	replacemodel $refModel$ lod4_$refModel$ \\
+} \\
+$shadowlod \\
+{ \\
+	replacemodel $refModel$ lod5_$refModel$ \\
+} \\
