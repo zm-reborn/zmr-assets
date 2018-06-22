@@ -1,4 +1,4 @@
-$collisionjoints "phymodelnew.smd" {
+$collisionjoints "physmodeldecompiled.smd" {
 
 	$mass 90.0
 	$inertia 10.00
