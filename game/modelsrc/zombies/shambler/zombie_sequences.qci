@@ -1,16 +1,26 @@
 $realignbones
 
-$ikchain rhand "ValveBiped.Bip01_R_Hand" Z 0 knee  0.640 0.769 0.000
-$ikchain lhand "ValveBiped.Bip01_L_Hand" Z 0 knee  0.607 0.795 0.000
-$ikchain rfoot "ValveBiped.Bip01_R_Foot" Z 0 knee  0.545 -0.838 0.000
-$ikchain lfoot "ValveBiped.Bip01_L_Foot" Z 0 knee  0.518 -0.855 -0.000
+
+// IK Rules
+// These apparently have to be also defined in the model qc.
+$include "zombie_ikrules.qci"
+
 
 $heirarchy "valvebiped.Bip01_L_Clavicle" "valvebiped.Bip01_Spine4" 
 $heirarchy "valvebiped.Bip01_R_Clavicle" "valvebiped.Bip01_Spine4" 
 $heirarchy "valvebiped.Bip01_L_Thigh" "valvebiped.Bip01_Pelvis" 
 $heirarchy "valvebiped.Bip01_R_Thigh" "valvebiped.Bip01_Pelvis" 
 
-$sequence "Idle01" "Idle01" loop ACT_IDLE 1 fps 30.00
+$sequence "Idle01" {
+	"Idle01"
+	activity ACT_IDLE 1
+	loop
+	fps 30.00
+	
+	// IK testing. Uncomment these for IK.
+	//ikrule rfoot footstep
+	//ikrule lfoot footstep
+}
 //$animation a_Walk1 "a_Walk1" loop fps 24.000000
 //$animation a_WalkSE "a_WalkSE" loop fps 24.000000
 //$animation a_WalkE "a_WalkE" loop fps 24.000000
