@@ -1,0 +1,64 @@
+$sectionframes 30 160
+
+$sequence "idle" {
+	"revolver/idle.smd"
+	activity "ACT_VM_IDLE" 1
+	fadein 0
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "draw" {
+	"revolver/draw.smd"
+	activity "ACT_VM_DRAW" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "fire1" {
+	"revolver/fire1.smd"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	{ event AE_MUZZLEFLASH 11 "DEFAULT MUZZLE" }
+	{ event AE_ZM_REVOLVERSHOOT 11 "" } // IMPORTANT: We use this to do the actual attacking! KEEP IT THE SAME
+	fadein 0.1 // Fade in a bit faster
+	fadeout 0.2
+	//snap // I don't think we need to snap the slow attack
+	fps 30
+}
+
+$sequence "fire2" {
+	"revolver/fire2.smd"
+	activity "ACT_VM_SECONDARYATTACK" 1
+	{ event AE_MUZZLEFLASH 8 "AE_MUZZLEFLASH" }
+	{ event AE_ZM_REVOLVERSHOOT 8 "" } // IMPORTANT: We use this to do the actual attacking! KEEP IT THE SAME
+	fadein 0.2
+	fadeout 0.2
+	snap
+	fps 45
+}
+
+$sequence "dryfire" {
+	"revolver/dryfire.smd"
+	activity "ACT_VM_DRYFIRE" 1
+	fadein 0.2
+	fadeout 0.2
+	snap
+	fps 30
+}
+
+$sequence "reload" {
+	"revolver/reload.smd"
+	activity "ACT_VM_RELOAD" 1
+	{ event "AE_CL_PLAYSOUND" 50 "Weapon_Revolver_ZM.Reload" }
+	{ event 6001 65 "0" } // Ejects the brass
+	{ event 6001 65 "0" }
+	{ event 6001 65 "0" }
+	{ event 6001 65 "0" }
+	{ event 6001 65 "0" }
+	{ event 6001 65 "0" }
+	fadein 0.2
+	fadeout 0.2
+	fps 48 // Originally 40
+}
