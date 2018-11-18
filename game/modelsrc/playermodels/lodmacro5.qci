@@ -1,0 +1,31 @@
+$definemacro makelods refModelPath refModel \\
+$lod 7 \\
+{ \\
+	replacemodel $refModelPath$/$refModel$ $refModelPath$/lod1_$refModel$ \\
+	facial \\
+} \\
+$lod 14 \\
+{ \\
+	replacemodel $refModelPath$/$refModel$ $refModelPath$/lod2_$refModel$ \\
+	facial \\
+} \\
+$lod 24 \\
+{ \\
+	replacemodel $refModelPath$/$refModel$ $refModelPath$/lod3_$refModel$ \\
+	nofacial \\
+} \\
+$lod 35 \\
+{ \\
+	replacemodel $refModelPath$/$refModel$ $refModelPath$/lod4_$refModel$ \\
+	nofacial \\
+} \\
+$lod 60 \\
+{ \\
+	replacemodel $refModelPath$/$refModel$ $refModelPath$/lod5_$refModel$ \\
+	nofacial \\
+} \\
+$shadowlod \\
+{ \\
+	replacemodel $refModelPath$/$refModel$ $refModelPath$/lodshadow_$refModel$ \\
+	nofacial \\
+} \\

@@ -1,0 +1,13 @@
+
+$eyeposition 0 0 70
+
+$illumposition 0 0 32
+
+$surfaceprop "flesh"
+$contents "solid"
+
+$cbox 0 0 0 0 0 0
+
+$bbox -13 -13 0 13 13 72
+
+
