@@ -1,0 +1,78 @@
+$sequence "idle01" {
+	"rifle/idle01.smd"
+	activity "ACT_VM_IDLE" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 15
+	loop
+}
+
+$sequence "fire01" {
+	"rifle/fire01.smd"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	{ event AE_MUZZLEFLASH 0 "357 MUZZLE" }
+	fadein 0.2
+	fadeout 0.2
+	snap
+	fps 30
+}
+
+$sequence "draw" {
+	"rifle/draw.smd"
+	activity "ACT_VM_DRAW" 1
+	fadein 0.2
+	fadeout 0.2
+	snap
+	fps 30
+}
+
+$sequence "holster" {
+	"rifle/holster.smd"
+	activity "ACT_VM_HOLSTER" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "reload1" {
+	"rifle/reload1.smd"
+	activity "ACT_RIFLE_RELOAD_START" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 45
+}
+
+$sequence "reload2" {
+	"rifle/reload2.smd"
+	activity "ACT_VM_RELOAD" 1
+	{ event AE_CL_PLAYSOUND 18 "Weapon_Rifle_ZM.Reload" }
+	fadein 0.2
+	fadeout 0.2
+	fps 55
+}
+
+$sequence "reload3" {
+	"rifle/reload3.smd"
+	activity "ACT_RIFLE_RELOAD_FINISH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 35
+}
+
+$sequence "lever" {
+	"rifle/lever.smd"
+	activity "ACT_RIFLE_LEVER" 1
+	{ event 6001 28 "1" }
+	{ event AE_CL_PLAYSOUND 0 "Weapon_Rifle_ZM.Special1" }
+	fadein 0.2
+	fadeout 0.2
+	fps 50
+}
+
+$sequence "dryfire" {
+	"rifle/dryfire.smd"
+	activity "ACT_VM_DRYFIRE" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 60
+}
