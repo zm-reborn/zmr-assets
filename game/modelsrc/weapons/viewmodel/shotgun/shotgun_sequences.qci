@@ -62,6 +62,7 @@ $sequence "reload1" {
 $sequence "reload2" {
 	"shotgun/reload2.smd"
 	activity "ACT_VM_RELOAD" 1
+	{ event AE_WPN_INCREMENTAMMO 1 "" }
 	fadein 0.2
 	fadeout 0.2
 	node "0"

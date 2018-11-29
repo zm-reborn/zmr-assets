@@ -36,7 +36,7 @@ $sequence "holster" {
 
 $sequence "reload1" {
 	"rifle/reload1.smd"
-	activity "ACT_RIFLE_RELOAD_START" 1
+	activity "ACT_VM_RELOAD_START" 1
 	fadein 0.2
 	fadeout 0.2
 	fps 45
@@ -46,6 +46,7 @@ $sequence "reload2" {
 	"rifle/reload2.smd"
 	activity "ACT_VM_RELOAD" 1
 	{ event AE_CL_PLAYSOUND 18 "Weapon_Rifle_ZM.Reload" }
+	{ event AE_WPN_INCREMENTAMMO 20 "" }
 	fadein 0.2
 	fadeout 0.2
 	fps 55
@@ -53,7 +54,7 @@ $sequence "reload2" {
 
 $sequence "reload3" {
 	"rifle/reload3.smd"
-	activity "ACT_RIFLE_RELOAD_FINISH" 1
+	activity "ACT_VM_RELOAD_FINISH" 1
 	fadein 0.2
 	fadeout 0.2
 	fps 35
@@ -61,7 +62,7 @@ $sequence "reload3" {
 
 $sequence "lever" {
 	"rifle/lever.smd"
-	activity "ACT_RIFLE_LEVER" 1
+	activity "ACT_SHOTGUN_PUMP" 1
 	{ event 6001 28 "1" }
 	{ event AE_CL_PLAYSOUND 0 "Weapon_Rifle_ZM.Special1" }
 	fadein 0.2
