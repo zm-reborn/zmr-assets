@@ -1,0 +1,71 @@
+$sequence "idle01" {
+	"sporting/803_idle.smd"
+	activity "ACT_VM_IDLE" 1
+	fadein 0.2
+	fadeout 0.2
+	node "0"
+	fps 30
+	loop
+}
+
+$sequence "firesingle" {
+	"sporting/803_shoot.smd"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	{ event AE_MUZZLEFLASH 0 "SHOTGUN MUZZLE" }
+	fadein 0.2
+	fadeout 0.2
+	node "2"
+	snap
+	fps 30
+}
+
+$sequence "firedouble" {
+	"sporting/803_shoot.smd"
+	activity "ACT_VM_SECONDARYATTACK" 1
+	{ event AE_MUZZLEFLASH 0 "SHOTGUN MUZZLE" }
+	fadein 0.2
+	fadeout 0.2
+	node "2"
+	snap
+	fps 30
+}
+
+$sequence "draw" {
+	"sporting/803_draw.smd"
+	activity "ACT_VM_DRAW" 1
+	fadein 0.2
+	fadeout 0.2
+	node "0"
+	snap
+	fps 30
+}
+
+$sequence "reloadsingle" {
+	"sporting/803_reload.smd"
+	activity "ACT_VM_RELOAD_START" 1 // Hack for now
+	{ event AE_WPN_INCREMENTAMMO 30 "" }
+	fadein 0.2
+	fadeout 0.2
+	node "0"
+	fps 28 // 30, changed to simulate slower speed
+}
+
+$sequence "reloadboth" {
+	"sporting/803_reload.smd"
+	activity "ACT_VM_RELOAD" 1
+	{ event AE_WPN_INCREMENTAMMO 30 "" }
+	fadein 0.2
+	fadeout 0.2
+	node "0"
+	fps 22 // 30, changed to simulate slower speed
+}
+
+$sequence "dryfire" {
+	"sporting/803_idle.smd"
+	activity "ACT_VM_DRYFIRE" 1
+	{ event AE_WPN_INCREMENTAMMO 30 "" }
+	fadein 0.2
+	fadeout 0.2
+	node "2"
+	fps 30
+}
