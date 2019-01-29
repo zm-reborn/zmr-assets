@@ -1,0 +1,118 @@
+$sectionframes 30 133
+
+$sequence "idle01" {
+	"pistol\idle01.smd"
+	activity "ACT_VM_IDLE" 1
+	fadein 0.2
+	fadeout 0.2
+	node "0"
+	fps 60
+	loop
+}
+
+$sequence "idle01empty" {
+	"pistol\idle01empty.smd"
+	activity "ACT_VM_IDLE_EMPTY" 1
+	fadein 0.2
+	fadeout 0.2
+	node "0"
+	fps 60
+	loop
+}
+
+$sequence "fire" {
+	"pistol\fire.smd"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	{ event AE_MUZZLEFLASH 0 "PISTOL muzzle" }
+	{ event 5001 0 "PISTOL MUZZLE" }
+	fadein 0.2
+	fadeout 0.2
+	node "2"
+	snap
+	fps 60
+}
+
+$sequence "fire1" {
+	"pistol\fire1.smd"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	{ event AE_MUZZLEFLASH 0 "PISTOL muzzle" }
+	{ event 5001 0 "PISTOL MUZZLE" }
+	fadein 0.2
+	fadeout 0.2
+	node "2"
+	snap
+	fps 60
+}
+
+$sequence "fire2" {
+	"pistol\fire2.smd"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	{ event AE_MUZZLEFLASH 0 "PISTOL muzzle" }
+	{ event 5001 0 "PISTOL MUZZLE" }
+	fadein 0.2
+	fadeout 0.2
+	node "2"
+	snap
+	fps 60
+}
+
+$sequence "fire3" {
+	"pistol\fire3.smd"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	{ event AE_MUZZLEFLASH 0 "PISTOL muzzle" }
+	{ event 5001 0 "PISTOL MUZZLE" }
+	fadein 0.2
+	fadeout 0.2
+	node "2"
+	snap
+	fps 60
+}
+
+$sequence "firelast" {
+	"pistol\firelast.smd"
+	activity "ACT_VM_PRIMARYATTACK_EMPTY" 1
+	{ event AE_MUZZLEFLASH 0 "PISTOL muzzle" }
+	{ event 5001 0 "PISTOL MUZZLE" }
+	fadein 0.2
+	fadeout 0.2
+	node "2"
+	snap
+	fps 60
+}
+
+$sequence "fireempty" {
+	"pistol\fireempty.smd"
+	activity "ACT_VM_DRYFIRE" 1
+	fadein 0.2
+	fadeout 0.2
+	node "2"
+	fps 60
+}
+
+$sequence "draw" {
+	"pistol\draw.smd"
+	activity "ACT_VM_DRAW" 1
+	fadein 0.2
+	fadeout 0.2
+	node "0"
+	fps 60
+}
+
+$sequence "drawempty" {
+	"pistol\drawempty.smd"
+	activity "ACT_VM_DRAW_EMPTY" 1
+	fadein 0.2
+	fadeout 0.2
+	node "0"
+	fps 60
+}
+
+$sequence "reload" {
+	"pistol\reload.smd"
+	activity "ACT_VM_RELOAD" 1
+	{ event AE_WPN_INCREMENTAMMO 62 "" }
+	fadein 0.2
+	fadeout 0.2
+	node "0"
+	fps 60
+}

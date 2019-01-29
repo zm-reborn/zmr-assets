@@ -1,0 +1,75 @@
+$sectionframes 30 200
+
+$sequence "idle01" {
+	"shotgun_new\idle01.smd"
+	activity "ACT_VM_IDLE" 1
+	fadein 0.2
+	fadeout 0.2
+	node "0"
+	fps 60
+	loop
+}
+
+$sequence "fire01" {
+	"shotgun_new\fire01.smd"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	{ event AE_MUZZLEFLASH 0 "SMG1 MUZZLE" }
+	{ event 5001 0 "SHOTGUN MUZZLE" }
+	fadein 0.2
+	fadeout 0.2
+	node "2"
+	snap
+	fps 60
+}
+
+$sequence "draw" {
+	"shotgun_new\draw.smd"
+	activity "ACT_VM_DRAW" 1
+	fadein 0.2
+	fadeout 0.2
+	node "0"
+	snap
+	fps 60
+}
+
+$sequence "reload1" {
+	"shotgun_new\reload1.smd"
+	activity "ACT_SHOTGUN_RELOAD_START" 1
+	fadein 0.2
+	fadeout 0.2
+	node "0"
+	snap
+	fps 60
+}
+
+$sequence "reload2" {
+	"shotgun_new\reload2.smd"
+	activity "ACT_VM_RELOAD" 1
+	{ event AE_WPN_INCREMENTAMMO 5 "" }
+	fadein 0.2
+	fadeout 0.2
+	node "0"
+	snap
+	fps 60
+}
+
+$sequence "reload3" {
+	"shotgun_new\reload3.smd"
+	activity "ACT_SHOTGUN_RELOAD_FINISH" 1
+	fadein 0.2
+	fadeout 0.2
+	node "0"
+	snap
+	fps 60
+}
+
+$sequence "pump" {
+	"shotgun_new\pump.smd"
+	activity "ACT_SHOTGUN_PUMP" 1
+	{ event 6001 5 "2" }
+	fadein 0.2
+	fadeout 0.2
+	node "0"
+	snap
+	fps 60
+}

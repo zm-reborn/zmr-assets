@@ -1,0 +1,83 @@
+$sequence "idle01" {
+	"mac10\idle01.smd"
+	activity "ACT_VM_IDLE" 1
+	fadein 0.2
+	fadeout 0.2
+	node "Ready"
+	fps 60
+	loop
+}
+
+$sequence "fire01" {
+	"mac10\fire01.smd"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	{ event AE_MUZZLEFLASH 0 "SMG1 MUZZLE" }
+	{ event 5001 0 "SMG1 MUZZLE" }
+	{ event 6001 0 "0" }
+	fadein 0.2
+	fadeout 0.2
+	node "Fire"
+	snap
+	fps 60
+}
+
+$sequence "fire02" {
+	"mac10\fire02.smd"
+	activity "ACT_VM_RECOIL1" 1
+	{ event AE_MUZZLEFLASH 0 "SMG1 MUZZLE" }
+	{ event 5001 0 "SMG1 MUZZLE" }
+	{ event 6001 0 "0" }
+	fadein 0.2
+	fadeout 0.2
+	node "Fire"
+	snap
+	fps 60
+}
+
+$sequence "fire03" {
+	"mac10\fire03.smd"
+	activity "ACT_VM_RECOIL2" 1
+	{ event AE_MUZZLEFLASH 0 "SMG1 MUZZLE" }
+	{ event 5001 0 "SMG1 MUZZLE" }
+	{ event 6001 0 "0" }
+	fadein 0.2
+	fadeout 0.2
+	node "Fire"
+	snap
+	fps 60
+}
+
+$sequence "fire04" {
+	"mac10\fire04.smd"
+	activity "ACT_VM_RECOIL3" 1
+	{ event AE_MUZZLEFLASH 0 "357 MUZZLE" }
+	{ event 5001 0 "SMG1 MUZZLE" }
+	{ event 6001 0 "0" }
+	fadein 0.2
+	fadeout 0.2
+	node "Fire"
+	snap
+	fps 60
+}
+
+$sequence "reload" {
+	"mac10\reload.smd"
+	activity "ACT_VM_RELOAD" 1
+	{ event AE_WPN_INCREMENTAMMO 68 "" }
+	{ event AE_CL_PLAYSOUND 20 "Weapon_SMG_ZM.Reload1" }
+	{ event AE_CL_PLAYSOUND 69 "Weapon_SMG_ZM.Reload2" }
+	{ event AE_CL_PLAYSOUND 104 "Weapon_SMG_ZM.Reload3" }
+	fadein 0.2
+	fadeout 0.2
+	node "Ready"
+	fps 60
+}
+
+$sequence "draw" {
+	"mac10\draw.smd"
+	activity "ACT_VM_DRAW" 1
+	fadein 0.2
+	fadeout 0.2
+	node "0"
+	fps 60
+}
