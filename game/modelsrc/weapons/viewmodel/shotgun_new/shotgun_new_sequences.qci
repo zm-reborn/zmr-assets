@@ -66,10 +66,11 @@ $sequence "reload3" {
 $sequence "pump" {
 	"shotgun_new\pump.smd"
 	activity "ACT_SHOTGUN_PUMP" 1
+	{ event AE_WPN_PRIMARYATTACK 0 "0.8" } // Next attack
 	{ event 6001 5 "2" }
 	fadein 0.2
 	fadeout 0.2
 	node "0"
 	snap
-	fps 60
+	fps 55 // 60 intended
 }

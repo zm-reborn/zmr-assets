@@ -64,6 +64,7 @@ $sequence "reload" {
 	"mac10\reload.smd"
 	activity "ACT_VM_RELOAD" 1
 	{ event AE_WPN_INCREMENTAMMO 68 "" }
+	{ event AE_WPN_PRIMARYATTACK 80 "" }
 	{ event AE_CL_PLAYSOUND 20 "Weapon_SMG_ZM.Reload1" }
 	{ event AE_CL_PLAYSOUND 69 "Weapon_SMG_ZM.Reload2" }
 	{ event AE_CL_PLAYSOUND 104 "Weapon_SMG_ZM.Reload3" }
