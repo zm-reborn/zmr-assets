@@ -1,6 +1,5 @@
 $modelname "weapons/c_shotgun_new.mdl"
 $cdmaterials "models/weapons/new_shotgun"
-$cdmaterials "models/weapons/v_shotgun"
 
 
 $bodygroup "studio"
