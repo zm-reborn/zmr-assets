@@ -165,9 +165,24 @@ $sequence "slumprise_b" "slumprise_b" fps 30.00 {
   { event AE_ZOMBIE_GET_UP 57 }
 }
 
-//$animation mdldecompiler_delta.smd "mdldecompiler_delta.smd" fps 30
 
 
+$sequence ragdoll "ragdoll" ACT_DIERAGDOLL 1 fps 30.00
+
+
+//
+// Gestures
+//
+$sequence "gest_bigflinch" "physflinch1" ACT_GESTURE_FLINCH_CHEST 1 fps 30 subtract "Idle01" 0 delta
+$sequence "gest_rightflinch" "physflinch2" ACT_GESTURE_FLINCH_RIGHTARM 1 fps 30 subtract "Idle01" 0 delta
+$sequence "gest_leftflinch" "physflinch3" ACT_GESTURE_FLINCH_LEFTARM 1 fps 30 subtract "Idle01" 0 delta
+
+
+$sequence Tantrum "Tantrum" loop ACT_ZOMBIE_TANTRUM 1 fps 30.00
+$sequence WallPound "WallPound" loop ACT_ZOMBIE_WALLPOUND 1 fps 30.00 {
+  { event AE_ZOMBIE_POUND 14 }
+  { event AE_ZOMBIE_POUND 35 }
+}
 
 
 //
@@ -175,11 +190,11 @@ $sequence "slumprise_b" "slumprise_b" fps 30.00 {
 //
 
 
-//$sequence "gest_bigflinch" "physflinch1" ACT_GESTURE_BIG_FLINCH 1 fps 30 subtract "Idle01" 0 delta
-//$sequence "gest_smallflinch" "physflinch1" ACT_GESTURE_SMALL_FLINCH 1 fps 40 subtract "Idle01" 0 delta weightlist AllBones
-//$sequence "gest_stomachflinch" "physflinch1" ACT_GESTURE_FLINCH_STOMACH 1 fps 40 subtract "physflinch1" 0 delta weightlist AllBones
-//$sequence "gest_rightflinch" "physflinch2" ACT_GESTURE_FLINCH_RIGHTARM 1 fps 30 subtract "Idle01" 0 delta
-//$sequence "gest_leftflinch" "physflinch3" ACT_GESTURE_FLINCH_LEFTARM 1 fps 30 subtract "Idle01" 0 delta
+//$sequence "gest_bigflinch" "physflinch1" act_gesture_big_flinch 1 fps 30 subtract "idle01" 0 delta
+//$sequence "gest_smallflinch" "physflinch1" act_gesture_small_flinch 1 fps 40 subtract "idle01" 0 delta weightlist allbones
+//$sequence "gest_stomachflinch" "physflinch1" act_gesture_flinch_stomach 1 fps 40 subtract "physflinch1" 0 delta weightlist allbones
+//$sequence "gest_rightflinch" "physflinch2" act_gesture_flinch_rightarm 1 fps 30 subtract "idle01" 0 delta
+//$sequence "gest_leftflinch" "physflinch3" act_gesture_flinch_leftarm 1 fps 30 subtract "idle01" 0 delta
 
 
 //$sequence flinch1inDelta "flinch1inDelta" fps 30.00 subtract mdldecompiler_delta.smd 0 delta
@@ -201,13 +216,3 @@ $sequence "slumprise_b" "slumprise_b" fps 30.00 {
 //$sequence flinch3OutFrame "flinch3OutFrame" fps 30.00
 //$sequence flinch3outDelta "flinch3outDelta" fps 30.00 subtract mdldecompiler_delta.smd 0
 //$sequence flinch3 "flinch3" ACT_GESTURE_FLINCH_HEAD 1 fps 30.00 subtract mdldecompiler_delta.smd 0
-
-
-$sequence Tantrum "Tantrum" loop ACT_ZOMBIE_TANTRUM 1 fps 30.00
-$sequence WallPound "WallPound" loop ACT_ZOMBIE_WALLPOUND 1 fps 30.00 {
-  { event AE_ZOMBIE_POUND 14 }
-  { event AE_ZOMBIE_POUND 35 }
-}
-
-
-$sequence ragdoll "ragdoll" ACT_DIERAGDOLL 1 fps 30.00
