@@ -1,0 +1,85 @@
+$sectionframes 30 120
+
+$sequence "idle01" {
+	"fists\idle01.smd"
+	activity "ACT_VM_IDLE" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 10
+	loop
+}
+
+$sequence "hold_idle01" {
+	"fists\hold_idle01.smd"
+	activity "ACT_VM_RELOAD" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 10
+	loop
+}
+
+$sequence "idle02" {
+	"fists\idle02.smd"
+	activity "ACT_VM_IDLE" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 20
+	loop
+}
+
+$sequence "punch1" {
+	"fists\punch1.smd"
+	activity "ACT_VM_HITCENTER" 5
+	{ event AE_CL_PLAYSOUND 6 "Weapon_Fists_ZM.Melee_Hit" }
+	{ event AE_ZM_MELEEHIT 5 "" }
+	fadein 0.2
+	fadeout 0.2
+	fps 35
+}
+
+$sequence "punch2" {
+	"fists\punch2.smd"
+	activity "ACT_VM_HITCENTER" 3
+	{ event AE_CL_PLAYSOUND 4 "Weapon_Fists_ZM.Melee_Hit" }
+	{ event AE_ZM_MELEEHIT 4 "" }
+	fadein 0.2
+	fadeout 0.2
+	fps 20
+}
+
+$sequence "punchmiss1" {
+	"fists\punchmiss1.smd"
+	activity "ACT_VM_MISSCENTER" 2
+	{ event AE_CL_PLAYSOUND 6 "Weapon_Fists_ZM.Melee_Hit" }
+	{ event AE_ZM_MELEEHIT 5 "" }
+	fadein 0.2
+	fadeout 0.2
+	fps 35
+}
+
+$sequence "punchmiss2" {
+	"fists\punchmiss2.smd"
+	activity "ACT_VM_MISSCENTER" 4
+	{ event AE_CL_PLAYSOUND 4 "Weapon_Fists_ZM.Melee_Hit" }
+	{ event AE_ZM_MELEEHIT 4 "" }
+	fadein 0.2
+	fadeout 0.2
+	fps 20
+}
+
+$sequence "draw" {
+	"fists\draw.smd"
+	activity "ACT_VM_DRAW" 1
+	fadein 0.2
+	fadeout 0.2
+	snap
+	fps 35
+}
+
+$sequence "holster" {
+	"fists\holster.smd"
+	activity "ACT_VM_HOLSTER" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 55
+}
