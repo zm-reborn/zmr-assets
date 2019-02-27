@@ -1,10 +1,13 @@
 $collisionjoints "phymodel.smd" {
 
-	$mass 115.0
-	$inertia 10.00
-	$damping 0.01
-	$rotdamping 1.50
-	$rootbone "valvebiped.bip01_pelvis"
+	$mass			150
+	
+	$inertia		8
+	$damping		0
+	$rotdamping		7
+	
+	
+	$rootbone		"valvebiped.bip01_pelvis"
 
 	$jointconstrain "valvebiped.bip01_r_thigh" x limit -28.00 30.00 0.20
 	$jointconstrain "valvebiped.bip01_r_thigh" y limit -46.00 10.00 0.20

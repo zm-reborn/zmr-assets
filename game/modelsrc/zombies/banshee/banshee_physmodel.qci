@@ -1,10 +1,13 @@
 $collisionjoints "physmodeldecompiled.smd" {
 
-	$mass 90.0
-	$inertia 10.00
-	$damping 0.01
-	$rotdamping 1.50
-	$rootbone "valvebiped.bip01"
+	$mass			65
+	
+	$inertia		10.00
+	$damping		0.01
+	$rotdamping		1.50
+	
+	
+	$rootbone		"valvebiped.bip01"
 
 	$jointconstrain "valvebiped.bip01_spine2" x limit -48.00 48.00 0.20
 	$jointconstrain "valvebiped.bip01_spine2" y limit -25.00 25.00 0.20

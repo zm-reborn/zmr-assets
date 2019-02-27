@@ -1,12 +1,14 @@
 $CollisionJoints "burnzie_physics.smd"
 {
-	$mass 30
-	$inertia 10
-	$damping 0.5
-	$rotdamping 1.5
-	$rootbone "Bip01 Pelvis"
-
-
+	$mass			50
+	
+	$inertia		10
+	$damping		0.5
+	$rotdamping		1.5
+	
+	
+	$rootbone		"Bip01 Pelvis"
+	
 	$jointconstrain "Bip01 R Thigh" x limit -15 15 0.008
 	$jointconstrain "Bip01 R Thigh" y limit -20 27 0.008
 	$jointconstrain "Bip01 R Thigh" z limit -82 30 0.008

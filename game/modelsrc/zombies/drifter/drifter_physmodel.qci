@@ -1,10 +1,13 @@
 $collisionjoints "phymodel.smd" {
 
-	$mass 23.0
-	$inertia 10.00
-	$damping 0.01
-	$rotdamping 1.50
-	$rootbone "charple4.pelvis"
+	$mass			50
+	
+	$inertia		10.00
+	$damping		0.01
+	$rotdamping		1.50
+	
+	
+	$rootbone		"charple4.pelvis"
 
 	$jointconstrain "charple4.femur_r" x limit -15.00 15.00 0.20
 	$jointconstrain "charple4.femur_r" y limit -17.00 46.00 0.20

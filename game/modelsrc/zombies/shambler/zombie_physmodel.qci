@@ -2,12 +2,16 @@
 
 $collisionjoints "phymodel.smd" {
 
-	$mass 100.0
-	$inertia 10.00
-	$damping 0.10
-	$rotdamping 3.00
-	$rootbone "valvebiped.bip01_pelvis"
-	$jointmerge "ValveBiped.Bip01_Pelvis" "ValveBiped.Bip01_Spine1"
+	// Let's say average zombie height is 180 cm, this gives us average bodyweight of 60-80 kg (males)
+	$mass			80 // Was 100
+	
+	$inertia		10.00
+	$damping		0.10
+	$rotdamping		3.00
+	
+	
+	$rootbone		"valvebiped.bip01_pelvis"
+	$jointmerge		"ValveBiped.Bip01_Pelvis" "ValveBiped.Bip01_Spine1"
 
 	$jointconstrain "valvebiped.bip01_spine2" x limit -44.00 44.00 0.20
 	$jointconstrain "valvebiped.bip01_spine2" y limit -39.00 39.00 0.20
