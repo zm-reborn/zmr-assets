@@ -1,6 +1,6 @@
 $modelname "zombie/zm_classic_01.mdl"
 
-$model "fullbody" "male_01_reference.smd"
+$model "fullbody" "male_01/male_01_reference.smd"
 
 
 $texturegroup "skinfamilies"
@@ -12,7 +12,7 @@ $texturegroup "skinfamilies"
 
 // Creates LODs
 $include "zombie_lodmacro.qci"
-$makelods "male_01_reference"
+$makelods "male_01"
 
 
 // Shared settings like hitboxes
