@@ -77,6 +77,7 @@ $sequence "reload" {
 $sequence "draw" {
 	"mac10\draw.smd"
 	activity "ACT_VM_DRAW" 1
+	{ event AE_CL_PLAYSOUND 10 "Weapon_SMG_ZM.Draw" }
 	fadein 0.2
 	fadeout 0.2
 	node "0"
