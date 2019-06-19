@@ -11,7 +11,7 @@ $sequence "idle01" {
 $sequence "firesingle" {
 	"sporting/803_shoot.smd"
 	activity "ACT_VM_PRIMARYATTACK" 1
-	{ event AE_MUZZLEFLASH 0 "SHOTGUN MUZZLE" }
+	{ event AE_MUZZLEFLASH 0 "SHOTGUN muzzle" }
 	fadein 0.2
 	fadeout 0.2
 	node "2"
@@ -22,7 +22,7 @@ $sequence "firesingle" {
 $sequence "firedouble" {
 	"sporting/803_shoot.smd"
 	activity "ACT_VM_SECONDARYATTACK" 1
-	{ event AE_MUZZLEFLASH 0 "SHOTGUN MUZZLE" }
+	{ event AE_MUZZLEFLASH 0 "SHOTGUN muzzle" }
 	fadein 0.2
 	fadeout 0.2
 	node "2"

@@ -10,7 +10,7 @@ $sequence "idle01" {
 $sequence "fire01" {
 	"rifle/fire01.smd"
 	activity "ACT_VM_PRIMARYATTACK" 1
-	{ event AE_MUZZLEFLASH 0 "357 MUZZLE" }
+	{ event AE_MUZZLEFLASH 0 "357 muzzle" }
 	fadein 0.2
 	fadeout 0.2
 	snap

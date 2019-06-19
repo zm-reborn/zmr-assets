@@ -20,7 +20,7 @@ $sequence "draw" {
 $sequence "fire1" {
 	"revolver/fire1.smd"
 	activity "ACT_VM_PRIMARYATTACK" 1
-	{ event AE_MUZZLEFLASH 11 "DEFAULT MUZZLE" }
+	{ event AE_MUZZLEFLASH 11 "357 muzzle" }
 	{ event AE_ZM_REVOLVERSHOOT 11 "" } // IMPORTANT: We use this to do the actual attacking! KEEP IT THE SAME
 	fadein 0.1 // Fade in a bit faster
 	fadeout 0.2
@@ -31,7 +31,7 @@ $sequence "fire1" {
 $sequence "fire2" {
 	"revolver/fire2.smd"
 	activity "ACT_VM_SECONDARYATTACK" 1
-	{ event AE_MUZZLEFLASH 8 "AE_MUZZLEFLASH" }
+	{ event AE_MUZZLEFLASH 8 "357 muzzle" }
 	{ event AE_ZM_REVOLVERSHOOT 8 "" } // IMPORTANT: We use this to do the actual attacking! KEEP IT THE SAME
 	fadein 0.2
 	fadeout 0.2
