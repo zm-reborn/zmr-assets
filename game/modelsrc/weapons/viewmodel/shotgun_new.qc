@@ -10,8 +10,8 @@ $bodygroup "studio"
 
 $opaque
 
-$attachment "muzzle" "ValveBiped.Muzzle" 0 0 0 rotate 0 0 0
-$attachment "1" "ValveBiped.Eject" 0 0 0 rotate 0 0 0
+$attachment "muzzle" "ValveBiped.Muzzle" 0 0 0 rotate -70 -165 0
+$attachment "1" "ValveBiped.Eject" 0 0 0 rotate 50 -130 -130
 
 
 $include "shared.qci"
