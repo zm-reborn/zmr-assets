@@ -1,0 +1,35 @@
+$bodygroup "studio"
+{
+	studio orb/$orbsmd$.smd
+}
+
+$sequence "idle" {
+	orb/$orbsmd$.smd
+	fps 15
+	loop
+}
+
+$collisionmodel "orb/orb_16radius_collision.smd"
+{
+	$mass 100
+	$inertia 1
+	$damping 0
+	$rotdamping 0
+	$rootbone ""
+}
+
+$definebone "" "" 0 0 0 0 0 0 0 0 0 0 0 0
+
+// IMPORTANT: For some reason we need an attachment for the model
+// to be recognized by the ZM mouse click trace.
+$attachment "iamimportant" "" 0 0 0 absolute
+
+
+
+$surfaceprop "default"
+
+$contents "solid"
+
+$illumposition 0 0 0
+
+
