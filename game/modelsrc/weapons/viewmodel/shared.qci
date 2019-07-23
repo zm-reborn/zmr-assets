@@ -1,3 +1,9 @@
 // The position should always be the same!!
 // Otherwise the arms and the weapon will illuminate differently and look dumb.
 $illumposition 0 0 0
+
+
+// Compile all viewmodels with ambient boost.
+// This makes sure all the models are lit the same.
+// DO NOT COMPILE WITHOUT THIS OR IT WILL LOOK LIKE SHIT.
+$ambientboost

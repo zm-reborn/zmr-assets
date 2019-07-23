@@ -13,7 +13,6 @@ $sequence idle "arms_new/c_arms_citizen.smd" fps 30
 
 
 $opaque
-$ambientboost
 
 $include "shared.qci"
 
