@@ -1,0 +1,76 @@
+$sequence "idle01" {
+	"molotov/idle01.smd"
+	activity "ACT_VM_IDLE" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "light01" {
+	"molotov/light01.smd"
+	activity "ACT_VM_PRIMARYATTACK_1" 1
+	{ event 3900 38 "" }
+	{ event AE_ZM_LIGHTERFLAME 32 "" }
+	fadein 0.2
+	fadeout 0.2
+	fps 22
+}
+
+$sequence "light02" {
+	"molotov/light02.smd"
+	activity "ACT_VM_PRIMARYATTACK_2" 1
+	{ event 3900 18 "" }
+	{ event AE_ZM_LIGHTERFLAME 15 "" }
+	fadein 0.2
+	fadeout 0.2
+	fps 20
+}
+
+$sequence "light03" {
+	"molotov/light03.smd"
+	activity "ACT_VM_PRIMARYATTACK_3" 1
+	{ event 3900 25 "" }
+	{ event AE_ZM_LIGHTERFLAME 12 "" }
+	fadein 0.2
+	fadeout 0.2
+	fps 15
+}
+
+$sequence "draw" {
+	"molotov/draw.smd"
+	activity "ACT_VM_DRAW" 1
+	fadein 0.2
+	fadeout 0.2
+	snap
+	fps 20
+}
+
+//$sequence "holster" {
+//	"molotov/holster.smd"
+//	activity "ACT_VM_HOLSTER" 1
+//	fadein 0.2
+//	fadeout 0.2
+//	snap
+//	fps 25
+//}
+
+$sequence "ignite" {
+	"molotov/ignite.smd"
+	activity "ACT_VM_PRIMARYATTACK_4" 1
+	{ event 3900 35 "" }
+	{ event AE_ZM_CLOTHFLAME 4 "" }
+	{ event AE_ZM_LIGHTERFLAME 2 "" }
+	fadein 0.2
+	fadeout 0.2
+	fps 25
+}
+
+$sequence "throw" {
+	"molotov/throw.smd"
+	activity "ACT_VM_THROW" 1
+	{ event 3005 1 "" }
+	fadein 0.2
+	fadeout 0.2
+	fps 45
+}
