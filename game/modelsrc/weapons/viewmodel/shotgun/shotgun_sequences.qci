@@ -19,16 +19,16 @@ $sequence "fire01" {
 	fps 30
 }
 
-$sequence "altfire" {
-	"shotgun/altfire.smd"
-	activity "ACT_VM_SECONDARYATTACK" 1
-	{ event AE_MUZZLEFLASH 0 "SHOTGUN muzzle" }
-	fadein 0.2
-	fadeout 0.2
-	node "2"
-	snap
-	fps 30
-}
+//$sequence "altfire" {
+//	"shotgun/altfire.smd"
+//	activity "ACT_VM_SECONDARYATTACK" 1
+//	{ event AE_MUZZLEFLASH 0 "SHOTGUN muzzle" }
+//	fadein 0.2
+//	fadeout 0.2
+//	node "2"
+//	snap
+//	fps 30
+//}
 
 $sequence "draw" {
 	"shotgun/draw.smd"
