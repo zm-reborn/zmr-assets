@@ -65,7 +65,7 @@ $sequence "reload3" {
 $sequence "pump" {
 	"shotgun_new\pump.smd"
 	activity "ACT_SHOTGUN_PUMP" 1
-	{ event AE_WPN_PRIMARYATTACK 0 "0.8" } // Next attack
+	{ event AE_WPN_PRIMARYATTACK 0 "0.65" } // Next attack
 	{ event 6001 9 "2" } // Eject brass
 	fadein 0.2
 	fadeout 0.2
