@@ -1,71 +1,77 @@
 $sequence "idle01" {
-	"sporting/803_idle.smd"
+	"sporting/idle.smd"
 	activity "ACT_VM_IDLE" 1
 	fadein 0.2
 	fadeout 0.2
 	node "0"
-	fps 30
+	fps 60
 	loop
 }
 
 $sequence "firesingle" {
-	"sporting/803_shoot.smd"
+	"sporting/fire1.smd"
 	activity "ACT_VM_PRIMARYATTACK" 1
 	{ event AE_MUZZLEFLASH 0 "SHOTGUN muzzle" }
 	fadein 0.2
 	fadeout 0.2
 	node "2"
 	snap
-	fps 30
+	fps 60
 }
 
 $sequence "firedouble" {
-	"sporting/803_shoot.smd"
+	"sporting/fire2.smd"
 	activity "ACT_VM_SECONDARYATTACK" 1
 	{ event AE_MUZZLEFLASH 0 "SHOTGUN muzzle" }
 	fadein 0.2
 	fadeout 0.2
 	node "2"
 	snap
-	fps 30
+	fps 60
 }
 
 $sequence "draw" {
-	"sporting/803_draw.smd"
+	"sporting/draw.smd"
 	activity "ACT_VM_DRAW" 1
 	fadein 0.2
 	fadeout 0.2
 	node "0"
 	snap
-	fps 30
+	fps 60
 }
 
 $sequence "reloadsingle" {
-	"sporting/803_reload.smd"
-	activity "ACT_VM_RELOAD_START" 1 // Hack for now
-	{ event AE_WPN_INCREMENTAMMO 30 "" }
+	"sporting/reload1.smd"
+	activity "ACT_VM_RELOAD_START" 1
+	{ event 6001 114 "2" } // Eject brass
+	{ event AE_WPN_INCREMENTAMMO 140 "" }
+	{ event AE_WPN_PRIMARYATTACK 141 "" } // Next attack
 	fadein 0.2
 	fadeout 0.2
 	node "0"
-	fps 28 // 30, changed to simulate slower speed
+	fps 70 // 60 meant
 }
 
 $sequence "reloadboth" {
-	"sporting/803_reload.smd"
+	"sporting/reload2.smd"
 	activity "ACT_VM_RELOAD" 1
-	{ event AE_WPN_INCREMENTAMMO 30 "" }
+	{ event 6001 114 "2" } // Eject brass
+	{ event 6001 115 "2" }
+	//{ event AE_WPN_INCREMENTAMMO 150 "" }
+	{ event AE_WPN_INCREMENTAMMO 203 "" }
+	{ event AE_WPN_PRIMARYATTACK 204 "" } // Next attack
 	fadein 0.2
 	fadeout 0.2
 	node "0"
-	fps 22 // 30, changed to simulate slower speed
+	fps 70 // 60 meant
 }
 
-$sequence "dryfire" {
-	"sporting/803_idle.smd"
-	activity "ACT_VM_DRYFIRE" 1
-	{ event AE_WPN_INCREMENTAMMO 30 "" }
-	fadein 0.2
-	fadeout 0.2
-	node "2"
-	fps 30
-}
+//$sequence "dryfire" {
+//	"sporting/idle.smd"
+//	activity "ACT_VM_DRYFIRE" 1
+//	{ event AE_WPN_INCREMENTAMMO 30 "" }
+//	fadein 0.2
+//	fadeout 0.2
+//	node "2"
+//	fps 60
+//}
