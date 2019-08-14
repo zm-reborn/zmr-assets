@@ -1,5 +1,6 @@
 $modelname "weapons/c_sporting.mdl"
 $cdmaterials "models/weapons/sporting/"
+$cdmaterials "models/weapons/new_shotgun/"
 
 
 $bodygroup "studio"
