@@ -43,9 +43,13 @@ $sequence "draw" {
 $sequence "reloadsingle" {
 	"sporting/reload1.smd"
 	activity "ACT_VM_RELOAD_START" 1
+	{ event AE_CL_PLAYSOUND 43 "Weapon_OverUnder_ZM.Reload1" }
+	{ event AE_CL_PLAYSOUND 78 "Weapon_OverUnder_ZM.Reload2" }
 	{ event 6001 114 "2" } // Eject brass
+	{ event AE_CL_PLAYSOUND 133 "Weapon_OverUnder_ZM.Reload3" }
 	{ event AE_WPN_INCREMENTAMMO 140 "" }
 	{ event AE_WPN_PRIMARYATTACK 141 "" } // Next attack
+	{ event AE_CL_PLAYSOUND 160 "Weapon_OverUnder_ZM.Reload2" }
 	fadein 0.2
 	fadeout 0.2
 	node "0"
@@ -55,11 +59,16 @@ $sequence "reloadsingle" {
 $sequence "reloadboth" {
 	"sporting/reload2.smd"
 	activity "ACT_VM_RELOAD" 1
+	{ event AE_CL_PLAYSOUND 43 "Weapon_OverUnder_ZM.Reload1" }
+	{ event AE_CL_PLAYSOUND 78 "Weapon_OverUnder_ZM.Reload2" }
 	{ event 6001 114 "2" } // Eject brass
 	{ event 6001 115 "2" }
+	{ event AE_CL_PLAYSOUND 145 "Weapon_OverUnder_ZM.Reload3" }
 	//{ event AE_WPN_INCREMENTAMMO 150 "" }
+	{ event AE_CL_PLAYSOUND 200 "Weapon_OverUnder_ZM.Reload3" }
 	{ event AE_WPN_INCREMENTAMMO 203 "" }
 	{ event AE_WPN_PRIMARYATTACK 204 "" } // Next attack
+	{ event AE_CL_PLAYSOUND 246 "Weapon_OverUnder_ZM.Reload2" }
 	fadein 0.2
 	fadeout 0.2
 	node "0"
