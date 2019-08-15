@@ -19,12 +19,12 @@ $include "shared.qci"
 
 $texturegroup "skinfamilies"
 {
-	{ "tr_natary01_hand"       "female_01_sleeve" }
-	{ "tr_natary01_hand"       "female_02_sleeve" }
-	{ "tr_natary01_hand_black" "female_03_sleeve" }
-	{ "tr_natary01_hand"       "female_04_sleeve" }
-	{ "tr_natary01_hand"       "female_06_sleeve" }
-	{ "tr_natary01_hand_black" "female_07_sleeve" }
+	{ "female_hand"       "female_01_sleeve" }
+	{ "female_hand"       "female_02_sleeve" }
+	{ "female_hand_black" "female_03_sleeve" }
+	{ "female_hand"       "female_04_sleeve" }
+	{ "female_hand"       "female_06_sleeve" }
+	{ "female_hand_black" "female_07_sleeve" }
 }
 
 $include "arms_new/definebones.qci"
