@@ -12,8 +12,12 @@ $surfaceprop "weapon"
 
 $contents "solid"
 
-$attachment "muzzle" "wmodel" -26 0 0.4 rotate -0 180 0
-$attachment "1" "wmodel" 0 1 1 rotate -30 40 0
+// This needs to be defined so the collision model can use it.
+// The attachments must be relative to a bone that actually exists(?)
+$definebone "wmodel" "" 0 0 0 0 0 0 0 0 0 0 0 0
+
+$attachment "muzzle" "ValveBiped.Bip01_R_Hand" 32 -1.1 -9.6 rotate 15 0 -90
+$attachment "1" "ValveBiped.Bip01_R_Hand" 6 -1 -4.5 rotate 50 110 -80
 
 
 $sequence "idle1" {

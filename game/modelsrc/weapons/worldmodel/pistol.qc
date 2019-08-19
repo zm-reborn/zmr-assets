@@ -1,4 +1,4 @@
-$modelname "weapons/pistol3rd_zm.mdl"
+$modelname "weapons/w_pistol_zm.mdl"
 $cdmaterials "models/weapons/new_pistol"
 
 $bodygroup "studio"
@@ -12,8 +12,12 @@ $surfaceprop "weapon"
 
 $contents "solid"
 
-$attachment "muzzle" "ValveBiped.Weapon_bone" -1.53 10.823 3.526 rotate -173.978 4.645 88.323
-$attachment "1" "ValveBiped.Weapon_bone" -1.53 6.573 4.128 rotate -173.978 4.645 88.323
+// This needs to be defined so the collision model can use it.
+// The attachments must be relative to a bone that actually exists(?)
+$definebone "ValveBiped.Weapon_bone" "" 0 0 0 0 0 0 0 0 0 0 0 0
+
+$attachment "muzzle" "ValveBiped.Bip01_R_Hand" 11 -2.4 -4.3 rotate 5 0 0
+$attachment "1" "ValveBiped.Bip01_R_Hand" 6 -2 -4.5 rotate 20 90 0
 
 
 $sequence "idle" {
