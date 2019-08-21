@@ -70,6 +70,15 @@ $sequence "lever" {
 	fps 50
 }
 
+$sequence "leverempty" {
+	"rifle/lever.smd"
+	activity "ACT_VM_RELOAD_SILENCED" 1 // Shitty activity name, I know.
+	{ event AE_CL_PLAYSOUND 0 "Weapon_Rifle_ZM.Special1" }
+	fadein 0.2
+	fadeout 0.2
+	fps 50
+}
+
 $sequence "dryfire" {
 	"rifle/dryfire.smd"
 	activity "ACT_VM_DRYFIRE" 1

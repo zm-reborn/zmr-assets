@@ -73,3 +73,14 @@ $sequence "pump" {
 	snap
 	fps 55 // 60 intended
 }
+
+$sequence "pumpempty" {
+	"shotgun_new\pump.smd"
+	activity "ACT_VM_RELOAD_SILENCED" 1 // Shitty activity name, I know.
+	{ event AE_WPN_PRIMARYATTACK 0 "0.5" } // Next attack
+	fadein 0.2
+	fadeout 0.2
+	node "0"
+	snap
+	fps 55 // 60 intended
+}
