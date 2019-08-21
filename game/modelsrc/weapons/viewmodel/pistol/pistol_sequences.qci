@@ -113,7 +113,6 @@ $sequence "reload" {
 	{ event AE_CL_PLAYSOUND 60 "Weapon_Pistol_ZM.Reload2" }
 	{ event AE_CL_PLAYSOUND 89 "Weapon_Pistol_ZM.Reload3" }
 	{ event AE_WPN_INCREMENTAMMO 62 "" }
-	{ event AE_WPN_PRIMARYATTACK 88 "" }
 	fadein 0.2
 	fadeout 0.2
 	node "0"
