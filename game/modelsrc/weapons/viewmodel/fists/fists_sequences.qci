@@ -30,7 +30,7 @@ $sequence "idle02" {
 $sequence "punch1" {
 	"fists\punch1.smd"
 	activity "ACT_VM_HITCENTER" 5
-	{ event AE_CL_PLAYSOUND 6 "Weapon_Fists_ZM.Melee_Hit" }
+	//{ event AE_CL_PLAYSOUND 6 "Weapon_Fists_ZM.Melee_Hit" }
 	{ event AE_ZM_MELEEHIT 5 "" }
 	fadein 0.2
 	fadeout 0.2
@@ -40,7 +40,7 @@ $sequence "punch1" {
 $sequence "punch2" {
 	"fists\punch2.smd"
 	activity "ACT_VM_HITCENTER" 3
-	{ event AE_CL_PLAYSOUND 4 "Weapon_Fists_ZM.Melee_Hit" }
+	//{ event AE_CL_PLAYSOUND 4 "Weapon_Fists_ZM.Melee_Hit" }
 	{ event AE_ZM_MELEEHIT 4 "" }
 	fadein 0.2
 	fadeout 0.2
