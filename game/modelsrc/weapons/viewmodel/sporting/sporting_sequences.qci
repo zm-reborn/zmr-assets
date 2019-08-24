@@ -49,7 +49,7 @@ $sequence "reloadsingle" {
 	{ event AE_CL_PLAYSOUND 133 "Weapon_OverUnder_ZM.Reload3" }
 	{ event AE_WPN_INCREMENTAMMO 140 "" }
 	{ event AE_WPN_PRIMARYATTACK 141 "" } // Next attack
-	{ event AE_CL_PLAYSOUND 160 "Weapon_OverUnder_ZM.Reload2" }
+	{ event AE_CL_PLAYSOUND 160 "Weapon_OverUnder_ZM.Reload4" }
 	fadein 0.2
 	fadeout 0.2
 	node "0"
@@ -67,8 +67,8 @@ $sequence "reloadboth" {
 	//{ event AE_WPN_INCREMENTAMMO 150 "" }
 	{ event AE_CL_PLAYSOUND 200 "Weapon_OverUnder_ZM.Reload3" }
 	{ event AE_WPN_INCREMENTAMMO 203 "" }
-	{ event AE_WPN_PRIMARYATTACK 204 "" } // Next attack
-	{ event AE_CL_PLAYSOUND 246 "Weapon_OverUnder_ZM.Reload2" }
+	{ event AE_CL_PLAYSOUND 246 "Weapon_OverUnder_ZM.Reload4" }
+	{ event AE_WPN_PRIMARYATTACK 250 "" } // Next attack
 	fadein 0.2
 	fadeout 0.2
 	node "0"
