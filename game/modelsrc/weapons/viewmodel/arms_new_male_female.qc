@@ -4,7 +4,7 @@ $cdmaterials "models/weapons/c_arms_citizen"
 
 $bodygroup "studio"
 {
-	studio "arms_new_female_bare/bare.smd"
+	studio "arms_new_female_bare/bare_fixed_lefthand_weights_somewhat.smd"
 }
 
 
