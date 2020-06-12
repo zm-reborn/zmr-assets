@@ -20,43 +20,6 @@ $sequence "fire01" {
 	fps 60
 }
 
-$sequence "fire02" {
-	"mac10\fire02.smd"
-	activity "ACT_VM_RECOIL1" 1
-	{ event AE_MUZZLEFLASH 0 "SMG1 muzzle" }
-	{ event 6001 0 "0" }
-	fadein 0.2
-	fadeout 0.2
-	node "Fire"
-	snap
-	fps 60
-}
-
-$sequence "fire03" {
-	"mac10\fire03.smd"
-	activity "ACT_VM_RECOIL2" 1
-	{ event AE_MUZZLEFLASH 0 "SMG1 muzzle" }
-	{ event 6001 0 "0" }
-	fadein 0.2
-	fadeout 0.2
-	node "Fire"
-	snap
-	fps 60
-}
-
-$sequence "fire04" {
-	"mac10\fire04.smd"
-	activity "ACT_VM_RECOIL3" 1
-	{ event AE_MUZZLEFLASH 0 "357 MUZZLE" }
-	{ event 5001 0 "SMG1 MUZZLE" }
-	{ event 6001 0 "0" }
-	fadein 0.2
-	fadeout 0.2
-	node "Fire"
-	snap
-	fps 60
-}
-
 $sequence "reload" {
 	"mac10\reload.smd"
 	activity "ACT_VM_RELOAD" 1
