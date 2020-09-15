@@ -1,0 +1,80 @@
+$sequence "idle01" {
+	"crowbar\idle01.smd"
+	activity "ACT_VM_IDLE" -1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "draw" {
+	"crowbar\draw.smd"
+	activity "ACT_VM_DRAW" -1
+	fadein 0.2
+	fadeout 0.2
+
+	fps 30
+}
+
+$sequence "misscenter1" {
+	"crowbar\misscenter1.smd"
+	activity "ACT_VM_MISSCENTER" -1
+	fadein 0.2
+	fadeout 0.2
+
+	fps 30
+}
+
+$sequence "misscenter2" {
+	"crowbar\misscenter2.smd"
+	activity "ACT_VM_MISSCENTER" -1
+	fadein 0.2
+	fadeout 0.2
+
+	fps 30
+}
+
+$sequence "hitcenter1" {
+	"crowbar\hitcenter1.smd"
+	activity "ACT_VM_HITCENTER" -1
+	fadein 0.2
+	fadeout 0.2
+
+	fps 30
+}
+
+$sequence "hitcenter2" {
+	"crowbar\hitcenter2.smd"
+	activity "ACT_VM_HITCENTER" -1
+	fadein 0.2
+	fadeout 0.2
+
+	fps 30
+}
+
+$sequence "hitcenter3" {
+	"crowbar\hitcenter3.smd"
+	activity "ACT_VM_HITCENTER" -1
+	fadein 0.2
+	fadeout 0.2
+
+	fps 30
+}
+
+$sequence "hitkill1" {
+	"crowbar\hitkill1.smd"
+	activity "ACT_VM_HITKILL" -1
+	fadein 0.2
+	fadeout 0.2
+
+	fps 30
+}
+
+$sequence "holster" {
+	"crowbar\holster.smd"
+	activity "ACT_VM_HOLSTER" -1
+	fadein 0.2
+	fadeout 0.2
+
+	fps 30
+}
