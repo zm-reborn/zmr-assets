@@ -1,0 +1,111 @@
+
+$poseparameter "move_x" -1 1 loop 0
+
+$animation "walk_ws" "r870shotgun/walkcycle.smd" {
+	fps 74.3
+	loop
+}
+
+$animation "idle_delta" "r870shotgun/idle.smd" {
+	fps 60
+}
+
+$sequence "idle" {
+	r870shotgun/idle.smd
+	idle_delta
+	walk_ws
+	activity "ACT_VM_IDLE" -1
+	blend "move_x" -1 1
+	blendwidth 3
+	loop
+}
+
+
+$sequence "fire" {
+	r870shotgun/fire.smd
+	activity "ACT_VM_PRIMARYATTACK" -1
+	{ event AE_MUZZLEFLASH 0 "SHOTGUN muzzle" }
+	fadein 0
+	fadeout 0.1
+	snap
+	node "2"
+	fps 55
+}
+
+$sequence "draw" {
+	"r870shotgun/draw.smd"
+	activity "ACT_VM_DRAW" -1
+	fadein 0
+	fadeout 0.1
+	node "0"
+	snap
+	fps 60
+}
+
+$sequence "reload_start" {
+	"r870shotgun/reload_start.smd"
+	activity "ACT_SHOTGUN_RELOAD_START" -1
+	fadein 0.05
+	fadeout 0
+	node "0"
+	fps 90
+}
+
+$sequence "reloadstyle_1" {
+	"r870shotgun/reload_1.smd"
+	activity "ACT_VM_RELOAD" 1
+	{ event AE_WPN_INCREMENTAMMO 23 "" }
+	fadein 0.05
+	fadeout 0.05
+	node "0"
+	fps 120
+}
+
+$sequence "reloadstyle_2" {
+	"r870shotgun/reload_2.smd"
+	activity "ACT_VM_RELOAD" 1
+	{ event AE_WPN_INCREMENTAMMO 23 "" }
+	fadein 0.05
+	fadeout 0.05
+	node "0"
+	fps 120
+}
+
+$sequence "reload_end" {
+	"r870shotgun/reload_end.smd"
+	activity "ACT_SHOTGUN_RELOAD_FINISH" -1
+	fadein 0.05
+	fadeout 0.05
+	node "0"
+	fps 70
+}
+
+$sequence "pumpstyle_1" {
+	"r870shotgun/pump_1.smd"
+	activity "ACT_SHOTGUN_PUMP" 1
+	{ event AE_WPN_PRIMARYATTACK 0 "0.5" }
+	{ event 6001 5 "2" }
+	fadein 0.1
+	fadeout 0.1
+	fps 50
+}
+
+$sequence "pumpstyle_2" {
+	"r870shotgun/pump_2.smd"
+	activity "ACT_SHOTGUN_PUMP" 1
+	{ event AE_WPN_PRIMARYATTACK 0 "0.5" }
+	{ event 6001 5 "2" }
+	fadein 0.1
+	fadeout 0.1
+	fps 50
+}
+
+$sequence "pumpstyle_3" {
+	"r870shotgun/pump_3.smd"
+	activity "ACT_SHOTGUN_PUMP" 1
+	{ event AE_WPN_PRIMARYATTACK 0 "0.5" }
+	{ event 6001 5 "2" }
+	fadein 0.1
+	fadeout 0.1
+	fps 50
+}

@@ -46,10 +46,10 @@ $sequence "reloadsingle" {
 	{ event AE_CL_PLAYSOUND 43 "Weapon_OverUnder_ZM.Reload1" }
 	{ event AE_CL_PLAYSOUND 78 "Weapon_OverUnder_ZM.Reload2" }
 	{ event 6001 114 "2" } // Eject brass
-	{ event AE_CL_PLAYSOUND 133 "Weapon_OverUnder_ZM.Reload3" }
-	{ event AE_WPN_INCREMENTAMMO 140 "" }
+	{ event AE_CL_PLAYSOUND 127 "Weapon_OverUnder_ZM.Reload3" }
+	{ event AE_WPN_INCREMENTAMMO 135 "" }
 	//{ event AE_WPN_PRIMARYATTACK 141 "" } // Next attack
-	{ event AE_CL_PLAYSOUND 160 "Weapon_OverUnder_ZM.Reload4" }
+	{ event AE_CL_PLAYSOUND 155 "Weapon_OverUnder_ZM.Reload4" }
 	fadein 0.2
 	fadeout 0.2
 	node "0"

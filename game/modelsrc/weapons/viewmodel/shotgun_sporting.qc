@@ -1,15 +1,12 @@
 $modelname "weapons/c_sporting.mdl"
 $cdmaterials "models/weapons/sporting/"
-$cdmaterials "models/weapons/new_shotgun/"
 
 
 $bodygroup "studio"
 {
-	studio "sporting/gun.smd"
+	studio "sporting/90_weighted.smd"
 }
 
-
-$opaque
 
 $attachment "muzzle" "dum_gunbody" 43 0 1.5 rotate 0 0 0
 $attachment "1" "dum_gunbody" -20 0 10 rotate 70 0 0

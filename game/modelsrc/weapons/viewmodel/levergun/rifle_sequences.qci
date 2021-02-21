@@ -1,0 +1,134 @@
+// numbers after activities indicate weights
+// -1 saves performance on single selections
+// 2 + 2 + 1 = 2/5th of the time 2/5th of the time 1/5th of the time
+
+$poseparameter "move_x" -1 1 loop 0
+
+$animation "walk_ws" "levergun/walkcycle.smd" {
+	fps 74.3
+	loop
+}
+
+$animation "idle_delta" "levergun/idle.smd" {
+	fps 60
+}
+
+$sequence "idle" {
+	levergun/idle.smd
+	idle_delta
+	walk_ws
+	activity "ACT_VM_IDLE" -1
+	blend "move_x" -1 1
+	blendwidth 3
+	snap
+	loop
+}
+
+
+// FRAMES fire 0-27, lever 28-97
+$sequence "fire" {
+	levergun/fire.smd
+	activity "ACT_VM_PRIMARYATTACK" -1
+	{ event AE_MUZZLEFLASH 1 "357 MUZZLE" }
+	snap
+	fps 60
+}
+
+$sequence "draw" {
+	levergun/draw.smd
+	activity "ACT_VM_DRAW" -1
+	snap
+	fps 60
+}
+
+$sequence "holster" {
+	levergun/idle.smd
+	activity "ACT_VM_HOLSTER" -1
+	snap
+	fps 9999
+}
+
+$sequence "reload_start" {
+	levergun/reload_start.smd
+	activity "ACT_VM_RELOAD_START" -1
+	fadein 0.1
+	fadeout 0.1
+	fps 45
+}
+
+$sequence "reload1" {
+	levergun/reload_1.smd
+	activity "ACT_VM_RELOAD" 1
+	{ event AE_CL_PLAYSOUND 20 "Weapon_Rifle_ZM.Reload" }
+	{ event AE_WPN_INCREMENTAMMO 20 ""}
+	fadein 0.1
+	fadeout 0.1
+	fps 70
+}
+
+$sequence "reload2" {
+	levergun/reload_2.smd
+	activity "ACT_VM_RELOAD" 1
+	{ event AE_CL_PLAYSOUND 20 "Weapon_Rifle_ZM.Reload" }
+	{ event AE_WPN_INCREMENTAMMO 20 ""}
+	fadein 0.1
+	fadeout 0.1
+	fps 70
+}
+
+
+$sequence "reload3" {
+	levergun/reload_3.smd
+	activity "ACT_VM_RELOAD" 1
+	{ event AE_CL_PLAYSOUND 20 "Weapon_Rifle_ZM.Reload" }
+	{ event AE_WPN_INCREMENTAMMO 20 ""}
+	fadein 0.1
+	fadeout 0.1
+	fps 70
+}
+
+$sequence "reload_end" {
+	levergun/reload_end.smd
+	activity "ACT_VM_RELOAD_FINISH" -1
+	fadein 0.1
+	fadeout 0.1
+	fps 45
+}
+
+$sequence "lever_side" {
+	levergun/lever_1.smd
+	activity "ACT_SHOTGUN_PUMP" 2
+	{ event 6001 67 "1" }
+	{ event AE_CL_PLAYSOUND 15 "Weapon_Rifle_ZM.Special1" }
+	fadein 0.2
+//	fadeout 0.1
+	fadeout 0
+	fps 60
+}
+
+$sequence "lever_normal" {
+	levergun/lever_2.smd
+	activity "ACT_SHOTGUN_PUMP" 2
+	{ event 6001 32 "1" }
+	{ event AE_CL_PLAYSOUND 15 "Weapon_Rifle_ZM.Special1" }
+	fadein 0.1
+	fadeout 0
+	fps 60
+}
+
+$sequence "lever_down" {
+	levergun/lever_3.smd
+	activity "ACT_SHOTGUN_PUMP" 1
+	{ event 6001 32 "1" }
+	{ event AE_CL_PLAYSOUND 15 "Weapon_Rifle_ZM.Special1" }
+	fadein 0.1
+	fadeout 0
+	fps 60
+}
+
+$sequence "dryfire" {
+	levergun/idle.smd
+	activity "ACT_VM_DRYFIRE" -1
+	snap
+	fps 9999
+}

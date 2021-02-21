@@ -1,0 +1,86 @@
+
+$sequence "idle" {
+	"huntingrifle/idle.smd"
+	// idle_delta
+	// walk_ws
+	activity "ACT_VM_IDLE" -1
+	fps 60
+	snap
+	loop
+}
+
+
+$sequence "fire" {
+	"huntingrifle/fire.smd"
+	activity "ACT_VM_PRIMARYATTACK" -1
+	{ event AE_MUZZLEFLASH 1 "357 MUZZLE" }
+	snap
+	fps 60
+}
+
+$sequence "draw" {
+	"huntingrifle/draw.smd"
+	activity "ACT_VM_DRAW" -1
+	snap
+	fps 60
+}
+
+$sequence "holster" {
+	"huntingrifle/idle.smd"
+	activity "ACT_VM_HOLSTER" -1
+	snap
+	fps 9999
+}
+
+$sequence "reload_start" {
+	"huntingrifle/reload_start.smd"
+	activity "ACT_VM_RELOAD_START" -1
+	fadein 0.1
+	fadeout 0.1
+	fps 60
+}
+
+
+$sequence "reload_cycle" {
+	"huntingrifle/reload.smd"
+	activity "ACT_VM_RELOAD" -1
+	{ event AE_CL_PLAYSOUND 45 "Weapon_Rifle_ZM.Reload" }
+	{ event AE_WPN_INCREMENTAMMO 45 ""}
+	fadein 0.2
+	fadeout 0.2
+	fps 60
+}
+
+$sequence "reload_end" {
+	"huntingrifle/reload_end.smd"
+	activity "ACT_VM_RELOAD_FINISH" -1
+	fadein 0.1
+	fadeout 0
+	fps 60
+}
+
+$sequence "bolt_cycle" {
+	"huntingrifle/bolt_1.smd"
+	activity "ACT_SHOTGUN_PUMP" 1
+	{ event 6001 59 "1" }
+	// { event AE_CL_PLAYSOUND 17 "Weapon_Rifle_ZM.Special1" }
+	fadein 0.1
+	fadeout 0.1
+	fps 60
+}
+$sequence "bolt_cycle2" {
+	"huntingrifle/bolt_2.smd"
+	activity "ACT_SHOTGUN_PUMP" 1
+	{ event 6001 59 "1" }
+	// { event AE_CL_PLAYSOUND 17 "Weapon_Rifle_ZM.Special1" }
+	fadein 0.1
+	fadeout 0.1
+	fps 60
+}
+
+$sequence "dryfire" {
+	"huntingrifle/idle.smd"
+	activity "ACT_VM_DRYFIRE" -1
+	snap
+	fps 9999
+}
