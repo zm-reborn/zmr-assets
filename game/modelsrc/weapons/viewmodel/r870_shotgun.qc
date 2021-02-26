@@ -2,7 +2,7 @@ $modelname "weapons/c_shotgun_new.mdl"
 
 $bodygroup "stoodio"
 {
-	studio "r870shotgun/gun_ref.smd"
+	studio "r870shotgun/gun_ref_noshells.smd"
 }
 
 $cdmaterials "models\weapons\new_shotgun2\"

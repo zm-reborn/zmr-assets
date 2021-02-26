@@ -18,15 +18,27 @@ $include "../shared.qci"
 
 $include "../arm_bonemerge.qci"
 
-$sequence "idle" {
-	"anims/idle.smd"
-	activity "ACT_VM_IDLE" 1
-	fadein 0.1
-	fadeout 0.1
-	fps 60
+
+$poseparameter "move_x" -1 1 loop 0
+
+$animation "walk_ws" "anims/walk_r3152.smd" {
+	fps 74.3
 	loop
 }
 
+$animation "idle_delta" "anims/idle.smd" {
+	fps 60
+}
+
+$sequence "idle" {
+	"anims/idle.smd"
+	idle_delta
+	walk_ws
+	activity "ACT_VM_IDLE" -1
+	blend "move_x" -1 1
+	blendwidth 3
+	loop
+}
 $sequence "draw" {
 	"anims/draw.smd"
 	activity "ACT_VM_DRAW" 1
