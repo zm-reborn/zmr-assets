@@ -1,22 +1,11 @@
 
-$poseparameter "move_x" -1 1 loop 0
-
-$animation "walk_ws" "huntingrifle/walk_r3152.smd" {
-	fps 74.3
-	loop
-}
-
-$animation "idle_delta" "huntingrifle/idle.smd" {
-	fps 60
-}
-
 $sequence "idle" {
 	"huntingrifle/idle.smd"
-	idle_delta
-	walk_ws
+	// idle_delta
+	// walk_ws
 	activity "ACT_VM_IDLE" -1
-	blend "move_x" -1 1
-	blendwidth 3
+	fps 60
+	snap
 	loop
 }
 
