@@ -36,6 +36,7 @@ $sequence "idle_empty" {
 $sequence "draw" {
 	"r870shotgun/draw.smd"
 	activity "ACT_VM_DRAW" -1
+	{ event AE_CL_PLAYSOUND 16 "Weapon_Shotgun_ZM.DrawPump" }
 	fadein 0
 	fadeout 0.1
 	snap
