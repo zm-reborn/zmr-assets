@@ -1,22 +1,40 @@
-$sectionframes 30 133
 
-$sequence "idle01" {
-	"pistol\idle01.smd"
-	activity "ACT_VM_IDLE" 1
-	fadein 0.2
-	fadeout 0.2
-	node "0"
-	fps 60
+$poseparameter "move_x" -1 1 loop 0
+
+$animation "walk_ws" "pistol/pistol_walk_r3152.smd" {
+	fps 74.3
+	loop
+}
+$animation "walk_ws_e" "pistol/pistolempty_walk_r3152.smd" {
+	fps 74.3
 	loop
 }
 
+$animation "idle_delta" "pistol/idle01.smd" {
+	fps 60
+}
+$animation "idleempty_delta" "pistol/idle01empty.smd" {
+	fps 60
+}
+
+$sequence "idle01" {
+	"pistol\idle01.smd"
+	idle_delta
+	walk_ws
+	activity "ACT_VM_IDLE" -1
+	blend "move_x" -1 1
+	blendwidth 3
+	loop
+}
+
+
 $sequence "idle01empty" {
 	"pistol\idle01empty.smd"
+	idleempty_delta
+	walk_ws_e
 	activity "ACT_VM_IDLE_EMPTY" 1
-	fadein 0.2
-	fadeout 0.2
-	node "0"
-	fps 60
+	blend "move_x" -1 1
+	blendwidth 3
 	loop
 }
 
