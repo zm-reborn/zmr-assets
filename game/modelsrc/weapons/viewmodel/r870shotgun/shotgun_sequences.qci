@@ -71,6 +71,7 @@ $sequence "dryfire" {
 
 // FIRE THE LAST BOOLET
 // PRIMARYATTACK_EMPTY
+/*
 $sequence "fire_last" {
 	"r870shotgun/test_firelast.smd"
 	activity "ACT_VM_PRIMARYATTACK_EMPTY" -1
@@ -79,6 +80,7 @@ $sequence "fire_last" {
 	fadeout 0
 	fps 30
 }
+*/
 // $skiptransition flast relemp rel1
 
 
