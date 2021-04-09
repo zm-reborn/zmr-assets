@@ -20,6 +20,7 @@ $sequence "idle" {
 $sequence "swing_miss" {
 	"crowbar_zmr\swing_miss.smd"
 	activity "ACT_VM_MISSCENTER" 2
+	event AE_ZM_MELEEHIT 15
 	fadein 0.1
 	fadeout 0.1
 	fps 60
@@ -28,6 +29,7 @@ $sequence "swing_miss" {
 $sequence "stab_miss" {
 	"crowbar_zmr\stab_miss.smd"
 	activity "ACT_VM_MISSCENTER" 1
+	event AE_ZM_MELEEHIT 15
 	fadein 0.1
 	fadeout 0.1
 	fps 60
