@@ -35,7 +35,7 @@ $sequence "stab_miss" {
 
 $sequence "swing_hit1" {
 	"crowbar_zmr\swing_hit1.smd"
-	activity "ACT_VM_HITCENTER" 2
+	activity "ACT_VM_HITCENTER" 1
 	event AE_ZM_MELEEHIT 15
 	fadein 0.1
 	fadeout 0.1
