@@ -1,0 +1,104 @@
+// TODO: overswing_* --> activity ACT_VM_*
+
+$sequence "draw" {
+	"crowbar_zmr\draw.smd"
+	activity "ACT_VM_DRAW" -1
+	fadein 0.1
+	fadeout 0.1
+	fps 60
+}
+
+$sequence "idle" {
+	"crowbar_zmr\idle.smd"
+	activity "ACT_VM_IDLE" -1
+	fadein 0.1
+	fadeout 0.1
+	fps 60
+	loop
+}
+
+$sequence "swing_miss" {
+	"crowbar_zmr\swing_miss.smd"
+	activity "ACT_VM_MISSCENTER" 2
+	fadein 0.1
+	fadeout 0.1
+	fps 60
+}
+
+$sequence "stab_miss" {
+	"crowbar_zmr\stab_miss.smd"
+	activity "ACT_VM_MISSCENTER" 1
+	fadein 0.1
+	fadeout 0.1
+	fps 60
+}
+
+$sequence "swing_hit1" {
+	"crowbar_zmr\swing_hit1.smd"
+	activity "ACT_VM_HITCENTER" 2
+	event AE_ZM_MELEEHIT 15
+	fadein 0.1
+	fadeout 0.1
+	fps 60
+}
+
+$sequence "swing_hit2" {
+	"crowbar_zmr\swing_hit2.smd"
+	activity "ACT_VM_HITCENTER" 1
+	event AE_ZM_MELEEHIT 15
+	fadein 0.1
+	fadeout 0.1
+	fps 60
+}
+
+$sequence "stab_hit" {
+	"crowbar_zmr\stab_hit.smd"
+	activity "ACT_VM_HITCENTER" 1
+	event AE_ZM_MELEEHIT 15
+	fadein 0.1
+	fadeout 0.1
+	fps 60
+}
+
+/*
+$sequence "overswing_windup" {
+	"crowbar_zmr\smash_windup.smd"
+	activity "ACT_VM_SOMETHING" -1
+	fadein 0.1
+	fadeout 0.1
+	fps 60
+}
+
+$sequence "overswing_hold" {
+	"crowbar_zmr\smash_hold.smd"
+	activity "ACT_VM_SOMETHING" -1
+	fadein 0.1
+	fadeout 0.1
+	fps 60
+}
+
+$sequence "overswing_miss" {
+	"crowbar_zmr\smash_miss.smd"
+	activity "ACT_VM_SOMETHING" -1
+	fadein 0.1
+	fadeout 0.1
+	fps 60
+}
+
+$sequence "overswing_hit" {
+	"crowbar_zmr\smash_hit.smd"
+	activity "ACT_VM_SOMETHING" -1
+	event AE_ZM_MELEEHIT 6
+	fadein 0.1
+	fadeout 0.1
+	fps 60
+}
+*/
+
+$sequence "holster" {
+	"crowbar_zmr\draw.smd"
+	activity "ACT_VM_HOLSTER" -1
+	fadein 0.1
+	fadeout 0.1
+	fps 99999
+}
