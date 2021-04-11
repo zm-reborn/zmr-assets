@@ -1,0 +1,48 @@
+$sequence "deploy" {
+	"pipebomb/deploy.smd"
+	activity "ACT_VM_DRAW" -1
+	snap
+	fps 60
+}
+
+$sequence "idle" {
+	"pipebomb/idle.smd"
+	activity "ACT_VM_IDLE" -1
+	fadein 0.1
+	fadeout 0.1
+	fps 60
+	loop
+}
+
+$sequence "dial" {
+	"pipebomb/dial_normally.smd"
+	activity "ACT_VM_PRIMARYATTACK_1" -1
+	fadein 0.1
+	fadeout 0.1
+	fps 60
+}
+
+
+//$sequence "holster" {
+//	"molotov/holster.smd"
+//	activity "ACT_VM_HOLSTER" 1
+//	fadein 0.2
+//	fadeout 0.2
+//	snap
+//	fps 25
+//}
+
+$sequence "hold" {
+	"pipebomb/throwready_hold.smd"
+//	activity "ACT_VM_THROW" -1
+	snap
+	fps 60
+}
+
+$sequence "throw" {
+	"pipebomb/yeet.smd"
+	activity "ACT_VM_THROW" -1
+	fadein 0.1
+	fadeout 0.1
+	fps 60
+}
