@@ -31,7 +31,7 @@ $collisionmodel "shotty_ammo_collision.smd" {
 	$mass 5.0
 
 }
-$surfaceprop "cardboard" 
+$surfaceprop "item"
 $contents "solid"
 $cdmaterials "models/items/zmr_ammo"
 // ammo_buckshot.vmt
