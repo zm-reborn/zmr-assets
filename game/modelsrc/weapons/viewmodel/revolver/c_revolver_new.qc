@@ -5,7 +5,7 @@ $modelname "weapons/c_revolver_new.mdl"
 
 $bodygroup "studio"
 {
-	studio "gun.smd"
+	studio "gun_wspeedloader.smd"
 }
 
 $cdmaterials "models\weapons\revolver_zmr\"
@@ -41,6 +41,13 @@ $sequence "idle" {
 }
 $sequence "draw" {
 	"anims/draw.smd"
+	activity "ACT_VM_DRAW" 2
+	fadein 0
+	fadeout 0.1
+	fps 60
+}
+$sequence "drawalt" {
+	"anims/draw2.smd"
 	activity "ACT_VM_DRAW" 1
 	fadein 0
 	fadeout 0.1
@@ -49,7 +56,7 @@ $sequence "draw" {
 
 $sequence "fire" {
 	"anims/fire.smd"
-	activity "ACT_VM_PRIMARYATTACK" 1
+	activity "ACT_VM_PRIMARYATTACK" -1
 	{ event AE_MUZZLEFLASH 22 "357 MUZZLE" }
 	{ event AE_ZM_REVOLVERSHOOT 22 "" }
 	fadein 0.1
@@ -59,7 +66,7 @@ $sequence "fire" {
 
 $sequence "altfire" {
 	"anims/altfire.smd"
-	activity "ACT_VM_SECONDARYATTACK" 1
+	activity "ACT_VM_SECONDARYATTACK" -1
 	{ event AE_MUZZLEFLASH 10 "357 MUZZLE" }
 	{ event AE_ZM_REVOLVERSHOOT 10 "" }
 	fadein 0.05
@@ -70,7 +77,7 @@ $sequence "altfire" {
 
 $sequence "dryfire" {
 	"anims/idle.smd"
-	activity "ACT_VM_DRYFIRE" 1
+	activity "ACT_VM_DRYFIRE" -1
 	fadein 0.1
 	fadeout 0.2
 	// snap
@@ -78,8 +85,8 @@ $sequence "dryfire" {
 }
 
 $sequence "reload" {
-	"anims/reload21.smd"
-	activity "ACT_VM_RELOAD" 1
+	"anims/reload_wspdloader.smd"
+	activity "ACT_VM_RELOAD" -1
 	{ event AE_CL_PLAYSOUND 11 "Weapon_Revolver_ZM.Reload" }
 	{ event 6001 50 "0" }
 	{ event 6001 50 "0" }
