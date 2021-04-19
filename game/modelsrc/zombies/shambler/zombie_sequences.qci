@@ -11,460 +11,134 @@ $heirarchy "valvebiped.Bip01_R_Clavicle" "valvebiped.Bip01_Spine4"
 $heirarchy "valvebiped.Bip01_L_Thigh" "valvebiped.Bip01_Pelvis" 
 $heirarchy "valvebiped.Bip01_R_Thigh" "valvebiped.Bip01_Pelvis" 
 
-
-$animation "a_walk1" "matrix_walk\a_walk1.smd" {
-	fps 24
-	loop
-	walkframe 46 LX LY LZ
-}
-
-$animation "a_walk2" "matrix_walk\a_walk2.smd" {
-	fps 24
-	loop
-	walkframe 46 LX LY LZ
-}
-
-$animation "a_walk3" "matrix_walk\a_walk3.smd" {
-	fps 24
-	loop
-	walkframe 50 LX LY LZ
-}
-
-$animation "a_Walk4" "matrix_walk\a_Walk4.smd" {
-	fps 24
-	loop
-	walkframe 72 LX LY LZ
-}
-
-$animation "a_WalkS" "matrix_walk\a_WalkS.smd" {
-	fps 24
-	loop
-	walkframe 45 LX LY LZ
-}
-
-$animation "a_WalkSE" "matrix_walk\a_WalkSE.smd" {
-	fps 24
-	loop
-	walkframe 45 LX LY LZ
-}
-
-$animation "a_WalkE" "matrix_walk\a_WalkE.smd" {
-	fps 24
-	loop
-	walkframe 45 LX LY LZ
-}
-
-$animation "a_WalkNE" "matrix_walk\a_WalkNE.smd" {
-	fps 24
-	loop
-	walkframe 45 LX LY LZ
-}
-
-$animation "a_WalkNW" "matrix_walk\a_WalkNW.smd" {
-	fps 24
-	loop
-	walkframe 45 LX LY LZ
-}
-
-$animation "a_WalkW" "matrix_walk\a_WalkW.smd" {
-	fps 24
-	loop
-	walkframe 45 LX LY LZ
-}
-
-$animation "a_WalkSW" "matrix_walk\a_WalkSW.smd" {
-	fps 24
-	loop
-	walkframe 45 LX LY LZ
-}
-
-$animation "a_idle" "matrix_walk\Idle01.smd" {
-	fps 30
-	loop
-}
-
-
-//================================================================================
-//================================================================================
-// look matrix
-$animation referencepose "matrix_look/referencepose"
-$animation "lookDR" "matrix_look/lookDR" subtract "referencepose" 0 fps 1
-$animation "lookD" "matrix_look/lookD" subtract "referencepose" 0 fps 1
-$animation "lookDL" "matrix_look/lookDL" subtract "referencepose" 0 fps 1
-$animation "lookR" "matrix_look/lookR" subtract "referencepose" 0 fps 1
-$animation "lookL" "matrix_look/lookL" subtract "referencepose" 0 fps 1
-$animation "lookUR" "matrix_look/lookUR" subtract "referencepose" 0 fps 1
-$animation "lookU" "matrix_look/lookU" subtract "referencepose" 0 fps 1
-$animation "lookUL" "matrix_look/lookUL" subtract "referencepose" 0 fps 1
-
-//================================================================================
-//================================================================================
-
-// this attachment doesnt do anything but but calcblend requires one
-$attachment "anim_attachment_head" "ValveBiped.Bip01_Head1" 0 0 0 rotate 0 0 0
-$sequence look {
-	lookDR	lookD   lookDL 
-	lookR    "matrix_look\referencepose.smd"   lookL
-	lookUR   lookU   lookUL
-	
-	blendwidth 3
-	blendref "referencepose"
- 	calcblend head_yaw "anim_attachment_head" YR  
- 	calcblend head_pitch "anim_attachment_head" ZR
-	delta
-	
-}
-
-//================================================================================
-//================================================================================
-
-/// NOTE: idle01 is currently needed for subtractions for something somewhere
 $sequence "Idle01" {
-	"matrix_walk\Idle01.smd"
-	activity "ACT_IDLE" 1
-	fadein 0.2
-	fadeout 0.2
-	fps 30
+	"male_anims/Idle01"
+	activity ACT_IDLE 1
 	loop
-	ikrule "lfoot" footstep contact 0 fakeorigin -0.45 7.1 0 fakerotate 0 0 0 floor 0 height 20 radius 2.5 range 0 0 53 53 target 3
-	ikrule "rfoot" footstep contact 0 fakeorigin 1.83 -10.44 0 fakerotate 0 0 0 floor 0 height 20 radius 2.5 range 0 0 53 53 target 2
-	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 53 53 target 0
-	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 53 53 target 1
-}
-
-
-$sequence "walk" {
-	"a_WalkSW"
-	"a_WalkS"
-	"a_WalkSE"
-	"a_WalkW"
-	"a_idle"
-	"a_WalkE"
-	"a_WalkNW"
-	"a_Walk1"
-	"a_WalkNE"
-	activity "ACT_WALK" 1
+	fps 30.00
 	
-	blendwidth 3 // 3 = 3x3 matrix
- 	blend move_x -1 1
- 	blend move_y -1 1
-	
-	{ event AE_ZOMBIE_STEP_LEFT 5 "" }
-	{ event AE_ZOMBIE_STEP_RIGHT 15 "" }
-	{ event AE_ZOMBIE_SCUFF_LEFT 20 "" }
-	{ event AE_ZOMBIE_STEP_LEFT 28 "" }
-	{ event AE_ZOMBIE_STEP_RIGHT 38 "" }
-	{ event AE_ZOMBIE_SCUFF_LEFT 40 "" }
-	
-	addlayer look // blends look/aim direction on top of walk direction
-	
-	fadein 0.2
-	fadeout 0.2
+	// IK testing. Uncomment these for IK.
+	//ikrule rfoot footstep
+	//ikrule lfoot footstep
+}
+//$animation a_Walk1 "a_Walk1" loop fps 24.000000
+//$animation a_WalkSE "a_WalkSE" loop fps 24.000000
+//$animation a_WalkE "a_WalkE" loop fps 24.000000
+//$animation a_WalkNE "a_WalkNE" loop fps 24.000000
+//$animation a_walk1 "a_walk1" loop fps 24.000000
+//$animation a_WalkNW "a_WalkNW" loop fps 24.000000
+//$animation a_WalkW "a_WalkW" loop fps 24.000000
+//$animation a_WalkSW "a_WalkSW" loop fps 24.000000
+$sequence "a_walk1" "male_anims/a_Walk1" LX loop ACT_WALK 1 fps 28.00 {
+  { event AE_ZOMBIE_STEP_LEFT 5 }
+  { event AE_ZOMBIE_STEP_RIGHT 15 }
+  { event AE_ZOMBIE_SCUFF_LEFT 20 }
+  { event AE_ZOMBIE_STEP_LEFT 28 }
+  { event AE_ZOMBIE_STEP_RIGHT 38 }
+  { event AE_ZOMBIE_SCUFF_LEFT 40 }
+// blendwidth 9
+//  blend move_yaw -180.000000 180.000000
+// a_WalkSE a_WalkE a_WalkNE a_walk1 a_WalkNW a_WalkW a_WalkSW a_WalkS
 }
 
-$sequence "walk2" {
-	"a_WalkSW"
-	"a_WalkS"
-	"a_WalkSE"
-	"a_WalkW"
-	"a_idle"
-	"a_WalkE"
-	"a_WalkNW"
-	"a_Walk2"
-	"a_WalkNE"
-	activity "ACT_WALK" 1
-	
-	blendwidth 3 // 3 = 3x3 matrix
- 	blend move_x -1 1
- 	blend move_y -1 1
-	
-	{ event AE_ZOMBIE_STEP_LEFT 7 "" }
-	{ event AE_ZOMBIE_SCUFF_RIGHT 10 "" }
-	{ event AE_ZOMBIE_STEP_RIGHT 21 "" }
-	{ event AE_ZOMBIE_STEP_LEFT 31 "" }
-	{ event AE_ZOMBIE_SCUFF_RIGHT 34 "" }
-	{ event AE_ZOMBIE_STEP_RIGHT 44 "" }
-	
-	addlayer look // blends look/aim direction on top of walk direction
-	
-	fadein 0.2
-	fadeout 0.2
+//$animation a_walk2 "male_anims/a_walk2" loop fps 24.000000
+$sequence walk2 "male_anims/a_Walk2" LX loop ACT_WALK 1 fps 28.00 {
+  { event AE_ZOMBIE_STEP_LEFT 7 }
+  { event AE_ZOMBIE_SCUFF_RIGHT 10 }
+  { event AE_ZOMBIE_STEP_RIGHT 21 }
+  { event AE_ZOMBIE_STEP_LEFT 31 }
+  { event AE_ZOMBIE_SCUFF_RIGHT 34 }
+  { event AE_ZOMBIE_STEP_RIGHT 44 }
+//  blendwidth 9
+//  blend move_yaw -180.000000 180.000000
+// a_WalkSE a_WalkE a_WalkNE a_walk2 a_WalkNW a_WalkW a_WalkSW a_WalkS
+}
+//$animation a_walk3 "a_walk3" loop fps 24.000000
+$sequence "walk3" "male_anims/a_Walk3" LX loop ACT_WALK 1 fps 28.00 {
+  { event AE_ZOMBIE_STEP_LEFT 7 }
+  { event AE_ZOMBIE_STEP_RIGHT 18 }
+  { event AE_ZOMBIE_SCUFF_LEFT 21 }
+  { event AE_ZOMBIE_STEP_LEFT 32 }
+  { event AE_ZOMBIE_STEP_RIGHT 40 }
+  { event AE_ZOMBIE_SCUFF_LEFT 44 }
+//  blendwidth 9
+//  blend move_yaw -180.000000 180.000000
+// a_WalkSE a_WalkE a_WalkNE a_walk3 a_WalkNW a_WalkW a_WalkSW a_WalkS
+}
+//$animation a_Walk4 "a_Walk4" loop fps 24.000000
+$sequence "walk4" "male_anims/a_Walk4" LX loop ACT_WALK 1 fps 28.00 {
+  { event AE_ZOMBIE_STEP_LEFT 4 }
+  { event AE_ZOMBIE_STEP_RIGHT 16 }
+  { event AE_ZOMBIE_STEP_LEFT 22 }
+  { event AE_ZOMBIE_STEP_RIGHT 28 }
+  { event AE_ZOMBIE_STEP_LEFT 43 }
+  { event AE_ZOMBIE_STEP_RIGHT 49 }
+  { event AE_ZOMBIE_STEP_LEFT 58 }
+  { event AE_ZOMBIE_STEP_RIGHT 67 }
 }
 
-$sequence "walk3" {
-	"a_WalkSW"
-	"a_WalkS"
-	"a_WalkSE"
-	"a_WalkW"
-	"a_idle"
-	"a_WalkE"
-	"a_WalkNW"
-	"a_Walk3"
-	"a_WalkNE"
-	
-	blendwidth 3 // 3 = 3x3 matrix
- 	blend move_x -1 1
- 	blend move_y -1 1
-	
-	{ event AE_ZOMBIE_STEP_LEFT 7 "" }
-	{ event AE_ZOMBIE_STEP_RIGHT 18 "" }
-	{ event AE_ZOMBIE_SCUFF_LEFT 21 "" }
-	{ event AE_ZOMBIE_STEP_LEFT 32 "" }
-	{ event AE_ZOMBIE_STEP_RIGHT 40 "" }
-	{ event AE_ZOMBIE_SCUFF_LEFT 44 "" }
-	
-	addlayer look // blends look/aim direction on top of walk direction
-	
-	fadein 0.2
-	fadeout 0.2
+$sequence "FireWalk" "male_anims/FireWalk" LX loop ACT_WALK_ON_FIRE 1 fps 30.00
+//$sequence FireWalk "FireWalk" LX LY LZ loop ACT_WALK_ON_FIRE 1 fps 30.00
+$sequence "FireIdle" "male_anims/FireIdle" loop ACT_IDLE_ON_FIRE 1 fps 30.00
+$sequence "attackA" "male_anims/attackA" ACT_MELEE_ATTACK1 2 fps 30.00 {
+  { event AE_ZOMBIE_ATTACK_SCREAM 5 }
+  { event AE_ZOMBIE_ATTACK_RIGHT 25 }
 }
 
-$sequence "walk4" {
-	"a_WalkSW"
-	"a_WalkS"
-	"a_WalkSE"
-	"a_WalkW"
-	"a_idle"
-	"a_WalkE"
-	"a_WalkNW"
-	"a_Walk4"
-	"a_WalkNE"
-	
-	blendwidth 3 // 3 = 3x3 matrix
- 	blend move_x -1 1
- 	blend move_y -1 1
-	
-	{ event AE_ZOMBIE_STEP_LEFT 4 "" }
-	{ event AE_ZOMBIE_STEP_RIGHT 16 "" }
-	{ event AE_ZOMBIE_STEP_LEFT 22 "" }
-	{ event AE_ZOMBIE_STEP_RIGHT 28 "" }
-	{ event AE_ZOMBIE_STEP_LEFT 43 "" }
-/// NOTE: directional blend anims are only like 46 frames long
-///			walk4.smd is like 73 frames long
-///			these go out of range and stops the compile
-//	{ event AE_ZOMBIE_STEP_RIGHT 49 "" }
-//	{ event AE_ZOMBIE_STEP_LEFT 58 "" }
-//	{ event AE_ZOMBIE_STEP_RIGHT 67 "" }
-
-	addlayer look // blends look/aim direction on top of walk direction
-	
-	fadein 0.2
-	fadeout 0.2
+$sequence attackB "male_anims/attackB" ACT_MELEE_ATTACK1 2 fps 30.00 {
+  { event AE_ZOMBIE_ATTACK_SCREAM 5 }
+  { event AE_ZOMBIE_ATTACK_RIGHT 25 }
 }
 
-//================================================================================
-//================================================================================
-//================================================================================
-//================================================================================
-
-$sequence "FireWalk" {
-	"male_anims\FireWalk.smd"
-	activity "ACT_WALK_ON_FIRE" 1
-	fadein 0.2
-	fadeout 0.2
-	fps 30
-	loop
-	ikrule "lfoot" footstep contact 2 fakeorigin 6.31 8.8 0 fakerotate 0 0 0 floor 0 height 18 radius 2.5 range 25 2 18 25 target 3 usesequence 
-	ikrule "rfoot" footstep contact 17 fakeorigin 5.16 -6.5 0 fakerotate 0 0 0 floor 0 height 18 radius 2.5 range 10 17 4 10 target 2 usesequence 
-	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 0 usesequence 
-	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 1 usesequence 
-	walkframe 30 LX LY
+$sequence attackC "male_anims/attackC" ACT_MELEE_ATTACK1 2 fps 30.00 {
+  { event AE_ZOMBIE_ATTACK_SCREAM 5 }
+  { event AE_ZOMBIE_ATTACK_LEFT 25 }
 }
 
-$sequence "FireIdle" {
-	"male_anims\FireIdle.smd"
-	activity "ACT_IDLE_ON_FIRE" 1
-	fadein 0.2
-	fadeout 0.2
-	fps 30
-	loop
-	ikrule "lfoot" footstep contact 0 fakeorigin -0.71 0.77 0 fakerotate 0 0 0 floor 0 height 20 radius 2.5 range 0 0 30 30 target 3
-	ikrule "rfoot" footstep contact 0 fakeorigin 1.56 -16.77 0 fakerotate 0 0 0 floor 0 height 20 radius 2.5 range 0 0 30 30 target 2
-	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 0
-	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 1
+$sequence attackD "male_anims/attackD" ACT_MELEE_ATTACK1 2 fps 30.00 {
+  { event AE_ZOMBIE_ATTACK_SCREAM 5 }
+  { event AE_ZOMBIE_ATTACK_LEFT 25 }
 }
 
-//================================================================================
-//================================================================================
-//=======attacks==================================================================
-//================================================================================
-
-$sequence "attackATEST" {
-	"male_anims\attackA.smd"
-	activity "ACT_MELEE_ATTACK1" 2
-	{ event AE_ZOMBIE_ATTACK_SCREAM 5 "" }
-	{ event AE_ZOMBIE_ATTACK_RIGHT 25 "" }
-	{ event AE_NPC_ATTACK_BROADCAST 10 "" }
-	fadein 0.2
-	fadeout 0.2
-	fps 30
-	ikrule "lfoot" footstep contact 0 fakeorigin -0.45 6.89 0 fakerotate 0 0 0 floor 0 height 18 radius 2.5 range 0 0 22 34 target 3 usesequence 
-	ikrule "lfoot" footstep contact 46 fakeorigin 0.26 5.74 0 fakerotate 0 0 0 floor 0 height 18 radius 2.5 range 34 46 56 56 target 3 usesequence 
-	ikrule "rfoot" footstep contact 0 fakeorigin 1.83 -10.64 0 fakerotate 0 0 0 floor 0 height 18 radius 2.5 range 0 0 22 29 target 2 usesequence 
-	ikrule "rfoot" footstep contact 36 fakeorigin 4.77 -10.44 0 fakerotate 0 0 0 floor 0 height 18 radius 2.5 range 29 36 56 56 target 2 usesequence 
-	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 56 56 target 0 usesequence 
-	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 56 56 target 1 usesequence 
-	walkframe 47 LX LY
-}
-// $sequence "gest_bigflinch" "male_anims/physflinch1" ACT_GESTURE_FLINCH_CHEST 1 fps 30 subtract "Idle01" 0 delta
-
-
-$sequence "attackA" {
-	"male_anims\attackA.smd"
-	activity "ACT_MELEE_ATTACK1" 2
-	{ event AE_ZOMBIE_ATTACK_SCREAM 5 "" }
-	{ event AE_ZOMBIE_ATTACK_RIGHT 25 "" }
-	{ event AE_NPC_ATTACK_BROADCAST 10 "" }
-	fadein 0.2
-	fadeout 0.2
-	fps 30
-	ikrule "lfoot" footstep contact 0 fakeorigin -0.45 6.89 0 fakerotate 0 0 0 floor 0 height 18 radius 2.5 range 0 0 22 34 target 3 usesequence 
-	ikrule "lfoot" footstep contact 46 fakeorigin 0.26 5.74 0 fakerotate 0 0 0 floor 0 height 18 radius 2.5 range 34 46 56 56 target 3 usesequence 
-	ikrule "rfoot" footstep contact 0 fakeorigin 1.83 -10.64 0 fakerotate 0 0 0 floor 0 height 18 radius 2.5 range 0 0 22 29 target 2 usesequence 
-	ikrule "rfoot" footstep contact 36 fakeorigin 4.77 -10.44 0 fakerotate 0 0 0 floor 0 height 18 radius 2.5 range 29 36 56 56 target 2 usesequence 
-	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 56 56 target 0 usesequence 
-	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 56 56 target 1 usesequence 
-	walkframe 47 LX LY
+$sequence "attackE" "male_anims/attackE" ACT_MELEE_ATTACK1 2 fps 30.00 {
+  { event AE_ZOMBIE_ATTACK_SCREAM 5 }
+  { event AE_ZOMBIE_ATTACK_BOTH 25 }
 }
 
-$sequence "attackB" {
-	"male_anims\attackB.smd"
-	activity "ACT_MELEE_ATTACK1" 2
-	{ event AE_ZOMBIE_ATTACK_SCREAM 5 "" }
-	{ event AE_ZOMBIE_ATTACK_RIGHT 25 "" }
-	{ event AE_NPC_ATTACK_BROADCAST 10 "" }
-	fadein 0.2
-	fadeout 0.2
-	fps 30
-	ikrule "lfoot" footstep contact 0 fakeorigin -0.45 6.89 0 fakerotate 0 0 0 floor 0 height 20 radius 2.5 range 0 0 56 56 target 3
-	ikrule "rfoot" footstep contact 0 fakeorigin 1.83 -10.64 0 fakerotate 0 0 0 floor 0 height 20 radius 2.5 range 0 0 56 56 target 2
-	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 56 56 target 0
-	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 56 56 target 1
+$sequence "attackF" "male_anims/attackF" ACT_MELEE_ATTACK1 2 fps 30.00 {
+  { event AE_ZOMBIE_ATTACK_SCREAM 5 }
+  { event AE_ZOMBIE_ATTACK_BOTH 25 }
 }
 
-$sequence "attackC" {
-	"male_anims\attackC.smd"
-	activity "ACT_MELEE_ATTACK1" 2
-	{ event AE_ZOMBIE_ATTACK_SCREAM 5 "" }
-	{ event AE_ZOMBIE_ATTACK_LEFT 25 "" }
-	{ event AE_NPC_ATTACK_BROADCAST 10 "" }
-	fadein 0.2
-	fadeout 0.2
-	fps 30
-	ikrule "lfoot" footstep contact 0 fakeorigin -0.92 6.83 0 fakerotate 0 0 0 floor 0 height 18 radius 2.5 range 0 0 22 28 target 3 usesequence 
-	ikrule "lfoot" footstep contact 34 fakeorigin 3.47 7.06 0 fakerotate 0 0 0 floor 0 height 18 radius 2.5 range 28 34 56 56 target 3 usesequence 
-	ikrule "rfoot" footstep contact 0 fakeorigin 1.72 -11.24 0 fakerotate 0 0 0 floor 0 height 18 radius 2.5 range 0 0 22 34 target 2 usesequence 
-	ikrule "rfoot" footstep contact 46 fakeorigin 1.83 -10.42 0 fakerotate 0 0 0 floor 0 height 18 radius 2.5 range 34 46 56 56 target 2 usesequence 
-	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 56 56 target 0 usesequence 
-	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 56 56 target 1 usesequence 
-	walkframe 47 LX LY
+//quick attacks using swat anims
+$sequence "attackG_quick" "male_anims/swatleftmid" ACT_MELEE_ATTACK1 2 fps 36.00 {
+  { event AE_ZOMBIE_ATTACK_SCREAM 1 }
+  { event AE_ZOMBIE_ATTACK_LEFT 9 }
 }
 
-$sequence "attackD" {
-	"male_anims\attackD.smd"
-	activity "ACT_MELEE_ATTACK1" 2
-	{ event AE_ZOMBIE_ATTACK_SCREAM 5 "" }
-	{ event AE_ZOMBIE_ATTACK_LEFT 25 "" }
-	{ event AE_NPC_ATTACK_BROADCAST 10 "" }
-	fadein 0.2
-	fadeout 0.2
-	fps 30
-	ikrule "lfoot" footstep contact 0 fakeorigin -0.5 6.83 0 fakerotate 0 0 0 floor 0 height 20 radius 2.5 range 0 0 56 56 target 3
-	ikrule "rfoot" footstep contact 0 fakeorigin 1.84 -10.74 0 fakerotate 0 0 0 floor 0 height 20 radius 2.5 range 0 0 56 56 target 2
-	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 56 56 target 0
-	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 56 56 target 1
+$sequence "attackH_quick" "male_anims/swatrightmid" ACT_MELEE_ATTACK1 2 fps 36.00 {
+  { event AE_ZOMBIE_ATTACK_SCREAM 1 }
+  { event AE_ZOMBIE_ATTACK_RIGHT 9 }
 }
 
-$sequence "attackE" {
-	"male_anims\attackE.smd"
-	activity "ACT_MELEE_ATTACK1" 2
-	{ event AE_ZOMBIE_ATTACK_SCREAM 5 "" }
-	{ event AE_ZOMBIE_ATTACK_BOTH 25 "" }
-	fadein 0.2
-	fadeout 0.2
-	fps 30
-	ikrule "lfoot" footstep contact 0 fakeorigin -0.5 6.83 0 fakerotate 0 0 0 floor 0 height 18 radius 2.5 range 0 0 41 41 target 3
-	ikrule "rfoot" footstep contact 0 fakeorigin 1.84 -10.74 0 fakerotate 0 0 0 floor 0 height 18 radius 2.5 range 0 0 6 15 target 2
-	ikrule "rfoot" footstep contact 23 fakeorigin 13.99 -14.48 0 fakerotate 0 0 0 floor 0 height 18 radius 2.5 range 15 23 32 35 target 2
-	ikrule "rfoot" footstep contact 38 fakeorigin 1.84 -10.74 0 fakerotate 0 0 0 floor 0 height 18 radius 2.5 range 35 38 41 41 target 2
-	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 41 41 target 0
-	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 41 41 target 1
+$sequence "swatleftmid" "male_anims/swatleftmid" ACT_ZOM_SWATLEFTMID 1 fps 30.00 {
+  { event AE_ZOMBIE_STARTSWAT 1 }
+  { event AE_ZOMBIE_SWATITEM 9 }
 }
 
-$sequence "attackF" {
-	"male_anims\attackF.smd"
-	activity "ACT_MELEE_ATTACK1" 2
-	{ event AE_ZOMBIE_ATTACK_SCREAM 5 "" }
-	{ event AE_ZOMBIE_ATTACK_BOTH 25 "" }
-	fadein 0.2
-	fadeout 0.2
-	fps 30
-	ikrule "lfoot" footstep contact 0 fakeorigin -0.77 6.81 0 fakerotate 0 0 0 floor 0 height 20 radius 2.5 range 0 0 41 41 target 3
-	ikrule "rfoot" footstep contact 0 fakeorigin 1.98 -10.7 0 fakerotate 0 0 0 floor 0 height 20 radius 2.5 range 0 0 41 41 target 2
-	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 41 41 target 0
-	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 41 41 target 1
+$sequence "swatrightmid" "male_anims/swatrightmid" ACT_ZOM_SWATRIGHTMID 1 fps 30.00 {
+  { event AE_ZOMBIE_STARTSWAT 1 }
+  { event AE_ZOMBIE_SWATITEM 9 }
 }
 
-$sequence "swatleftmid" {
-	"male_anims\swatleftmid.smd"
-	activity "ACT_ZOM_SWATLEFTMID" 1
-	{ event AE_ZOMBIE_STARTSWAT 1 "" }
-	{ event AE_ZOMBIE_SWATITEM 9 "" }
-	fadein 0.2
-	fadeout 0.2
-	fps 30
-	ikrule "lfoot" footstep contact 0 fakeorigin -0.5 6.83 0 fakerotate 0 0 0 floor 0 height 20 radius 2.5 range 0 0 36 36 target 3
-	ikrule "rfoot" footstep contact 0 fakeorigin 1.84 -10.74 0 fakerotate 0 0 0 floor 0 height 20 radius 2.5 range 0 0 36 36 target 2
-	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 36 36 target 0
-	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 36 36 target 1
+$sequence "swatleftlow" "male_anims/swatleftlow" ACT_ZOM_SWATLEFTLOW 1 fps 30.00 {
+  { event AE_ZOMBIE_STARTSWAT 1 }
+  { event AE_ZOMBIE_SWATITEM 15 }
 }
 
-$sequence "swatrightmid" {
-	"male_anims\swatrightmid.smd"
-	activity "ACT_ZOM_SWATRIGHTMID" 1
-	{ event AE_ZOMBIE_STARTSWAT 1 "" }
-	{ event AE_ZOMBIE_SWATITEM 9 "" }
-	fadein 0.2
-	fadeout 0.2
-	fps 30
-	ikrule "lfoot" footstep contact 0 fakeorigin -0.45 6.89 0 fakerotate 0 0 0 floor 0 height 20 radius 2.5 range 0 0 36 36 target 3
-	ikrule "rfoot" footstep contact 0 fakeorigin 1.83 -10.64 0 fakerotate 0 0 0 floor 0 height 20 radius 2.5 range 0 0 36 36 target 2
-	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 36 36 target 0
-	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 36 36 target 1
-}
-
-$sequence "swatleftlow" {
-	"male_anims\swatleftlow.smd"
-	activity "ACT_ZOM_SWATLEFTLOW" 1
-	{ event AE_ZOMBIE_STARTSWAT 1 "" }
-	{ event AE_ZOMBIE_SWATITEM 15 "" }
-	fadein 0.2
-	fadeout 0.2
-	fps 30
-	ikrule "lfoot" footstep contact 0 fakeorigin -0.92 6.83 0 fakerotate 0 0 0 floor 0 height 18 radius 2.5 range 0 0 17 22 target 3 usesequence 
-	ikrule "lfoot" footstep contact 26 fakeorigin 2.29 5.37 0 fakerotate 0 0 0 floor 0 height 18 radius 2.5 range 22 26 45 45 target 3 usesequence 
-	ikrule "rfoot" footstep contact 0 fakeorigin 1.72 -11.24 0 fakerotate 0 0 0 floor 0 height 18 radius 2.5 range 0 0 17 28 target 2 usesequence 
-	ikrule "rfoot" footstep contact 39 fakeorigin 1.79 -11.08 0 fakerotate 0 0 0 floor 0 height 18 radius 2.5 range 28 39 45 45 target 2 usesequence 
-	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 45 45 target 0 usesequence 
-	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 45 45 target 1 usesequence 
-	walkframe 36 LX LY
-}
-
-$sequence "swatrightlow" {
-	"male_anims\swatrightlow.smd"
-	activity "ACT_ZOM_SWATRIGHTLOW" 1
-	{ event AE_ZOMBIE_STARTSWAT 1 "" }
-	{ event AE_ZOMBIE_SWATITEM 18 "" }
-	fadein 0.2
-	fadeout 0.2
-	fps 30
-	ikrule "lfoot" footstep contact 0 fakeorigin -0.45 6.89 0 fakerotate 0 0 0 floor 0 height 18 radius 2.5 range 0 0 15 27 target 3 usesequence 
-	ikrule "lfoot" footstep contact 38 fakeorigin 0.03 5.78 0 fakerotate 0 0 0 floor 0 height 18 radius 2.5 range 27 38 47 47 target 3 usesequence 
-	ikrule "rfoot" footstep contact 0 fakeorigin 1.83 -10.64 0 fakerotate 0 0 0 floor 0 height 18 radius 2.5 range 0 0 23 26 target 2 usesequence 
-	ikrule "rfoot" footstep contact 29 fakeorigin 4.62 -10.41 0 fakerotate 0 0 0 floor 0 height 18 radius 2.5 range 26 29 47 47 target 2 usesequence 
-	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 47 47 target 0 usesequence 
-	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 47 47 target 1 usesequence 
-	walkframe 38 LX LY
+$sequence "swatrightlow" "male_anims/swatrightlow" ACT_ZOM_SWATRIGHTLOW 1 fps 30.00 {
+  { event AE_ZOMBIE_STARTSWAT 1 }
+  { event AE_ZOMBIE_SWATITEM 18 }
 }
 
 //$sequence "physflinch1" "physflinch1" ACT_FLINCH_PHYSICS 1 fps 30.00
