@@ -15,6 +15,7 @@ $texturegroup "skinfamilies"
 	{ "sticker_weapon_mac" }
 }
 
+$mostlyopaque
 
 $surfaceprop "wood"
 
