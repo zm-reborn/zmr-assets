@@ -1,23 +1,23 @@
 $definemacro makelods refModel \\
 $lod 10 \\
 { \\
-	replacemodel $refModel$ $refModel$_lod1 \\
+	replacemodel $refModel$ burnzie_bz_reference_lod1 \\
 	bonetreecollapse "Bip01 L Hand" \\
 	bonetreecollapse "Bip01 R Hand" \\
 } \\
 $lod 18 \\
 { \\
-	replacemodel $refModel$ $refModel$_lod2 \\
+	replacemodel $refModel$ burnzie_bz_reference_lod2 \\
 } \\
 $lod 35 \\
 { \\
-	replacemodel $refModel$ $refModel$_lod3 \\
+	replacemodel $refModel$ burnzie_bz_reference_lod3 \\
 } \\
 $lod 55 \\
 { \\
-	replacemodel $refModel$ $refModel$_lod4 \\
+	replacemodel $refModel$ burnzie_bz_reference_lod4 \\
 } \\
 $shadowlod \\
 { \\
-	replacemodel $refModel$ $refModel$_lod5 \\
+	replacemodel $refModel$ burnzie_bz_reference_lod5 \\
 } \\

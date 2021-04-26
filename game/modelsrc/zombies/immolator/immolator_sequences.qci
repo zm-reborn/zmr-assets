@@ -1,6 +1,6 @@
 $sequence "idle1" {
 	"decompiled/idle1.smd"
-	activity "ACT_IDLE" 3
+	activity "ACT_IDLE" 1
 	fadein 0.2
 	fadeout 0.2
 	fps 15
@@ -9,7 +9,7 @@ $sequence "idle1" {
 
 $sequence "idle2" {
 	"decompiled/idle2.smd"
-	activity "ACT_IDLE" 3
+	activity "ACT_IDLE" 1
 	fadein 0.2
 	fadeout 0.2
 	fps 15
@@ -18,7 +18,7 @@ $sequence "idle2" {
 
 $sequence "idle3" {
 	"decompiled/idle3.smd"
-	activity "ACT_IDLE" 6
+	activity "ACT_IDLE" 2
 	fadein 0.2
 	fadeout 0.2
 	fps 15
@@ -27,19 +27,44 @@ $sequence "idle3" {
 
 $sequence "ragdoll" {
 	"decompiled/ragdoll.smd"
-	activity "ACT_DIERAGDOLL" 1
+	activity "ACT_DIERAGDOLL" -1
 	fadein 0.2
 	fadeout 0.2
 	fps 30
 }
 
-$sequence walk "decompiled/walk" loop ACT_WALK 1 LX LY LZ fps 30.00
-$sequence walk2 "decompiled/walk2" loop ACT_WALK 1 LX LY LZ fps 30.00
-$sequence Walk_OnFire "decompiled/Walk_OnFire" loop ACT_WALK_ON_FIRE 1 LX LY LZ fps 24.00
+ $sequence walk "decompiled/walk" loop ACT_WALK 1 LX LY LZ fps 30.00
+ $sequence walk2 "decompiled/walk2" loop ACT_WALK 1 LX LY LZ fps 30.00
+$sequence Walk_OnFire "running_onfire" loop ACT_WALK_ON_FIRE -1 LX LY LZ fps 60
+
+/*
+$animation walk_SW "a_walkSW" LX LY LZ loop fps 30
+$animation walk_S "a_walkS" LX LY LZ loop fps 30
+$animation walk_Se "a_walkSe" LX LY LZ loop fps 30
+$animation walk_w "a_walkw" LX LY LZ loop fps 30
+$animation walk_c "a_walkzero" LX LY LZ loop fps 30
+$animation walk_e "a_walke" LX LY LZ loop fps 30
+$animation walk_nw "a_walknw" LX LY LZ loop fps 30
+$animation walk_n "a_walkn" LX LY LZ loop fps 30
+$animation walk_ne "a_walkne" LX LY LZ loop fps 30
+
+$sequence walk {
+	walk_SW   walk_S   walk_SE
+	walk_W    walk_C   walk_E
+	walk_NW   walk_N   walk_NE // line breaks are for readability only
+
+	blendwidth 3
+ 	blend move_x -1 1
+ 	blend move_y -1 1
+
+	// addlayer look // blends look/aim direction on top of walk direction
+}
+*/
 
 $sequence "Idle_OnFire" {
+	// "best_mates_standstill.smd"
 	"decompiled/Idle_OnFire.smd"
-	activity "ACT_IDLE_ON_FIRE" 1
+	activity "ACT_IDLE_ON_FIRE" -1
 	fadein 0.2
 	fadeout 0.2
 	fps 16
@@ -48,7 +73,7 @@ $sequence "Idle_OnFire" {
 
 $sequence "attackleft" {
 	"decompiled/attackleft.smd"
-	activity "ACT_MELEE_ATTACK1" 2
+	activity "ACT_MELEE_ATTACK1" 1
 	{ event AE_ZOMBIE_ATTACK_SCREAM 1 "" }
 	{ event AE_ZOMBIE_ATTACK_LEFT 16 "" }
 	fadein 0.2
@@ -58,7 +83,7 @@ $sequence "attackleft" {
 
 $sequence "attackleft2" {
 	"decompiled/attackleft2.smd"
-	activity "ACT_MELEE_ATTACK1" 2
+	activity "ACT_MELEE_ATTACK1" 1
 	{ event AE_ZOMBIE_ATTACK_SCREAM 1 "" }
 	{ event AE_ZOMBIE_ATTACK_LEFT 17 "" }
 	fadein 0.2
@@ -78,7 +103,7 @@ $sequence "attackright" {
 
 $sequence "attackright2" {
 	"decompiled/attackright2.smd"
-	activity "ACT_MELEE_ATTACK1" 2
+	activity "ACT_MELEE_ATTACK1" 1
 	{ event AE_ZOMBIE_ATTACK_SCREAM 1 "" }
 	{ event AE_ZOMBIE_ATTACK_RIGHT 14 "" }
 	fadein 0.2

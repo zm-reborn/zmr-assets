@@ -1,11 +1,11 @@
 $modelname "zombie/burnzie.mdl"
 
-$model "fullbody" "burnzie_bz_reference.smd"
+$model "fullbody" "burnzie_smoothed_ref.smd"
 
 
 // Creates LODs
 $include "immolator_lodmacro.qci"
-$makelods "burnzie_bz_reference"
+$makelods "burnzie_smoothed_ref"
 
 
 // Shared settings like hitboxes
