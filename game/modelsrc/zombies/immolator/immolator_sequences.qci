@@ -26,7 +26,7 @@ $sequence "idle3" {
 }
 
 $sequence "ragdoll" {
-	"decompiled/ragdoll.smd"
+	"ragdoll.smd"
 	activity "ACT_DIERAGDOLL" -1
 	fadein 0.2
 	fadeout 0.2
