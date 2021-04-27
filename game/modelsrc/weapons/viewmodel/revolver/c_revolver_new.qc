@@ -57,6 +57,7 @@ $sequence "drawalt" {
 $sequence "fire" {
 	"anims/fire.smd"
 	activity "ACT_VM_PRIMARYATTACK" -1
+	{ event AE_CL_PLAYSOUND 0 "Weapon_Revolver_ZM.Prepare" }
 	{ event AE_MUZZLEFLASH 22 "357 MUZZLE" }
 	{ event AE_ZM_REVOLVERSHOOT 22 "" }
 	fadein 0.1
@@ -94,6 +95,7 @@ $sequence "reload" {
 	{ event 6001 50 "0" }
 	{ event 6001 50 "0" }
 	{ event 6001 50 "0" }
+	{ event AE_WPN_INCREMENTAMMO 110 "" }
 	fadein 0.1
 	fadeout 0.2
 	fps 60
