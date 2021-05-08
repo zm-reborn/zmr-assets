@@ -60,7 +60,7 @@ $sequence "reload_cycle" {
 	{ event AE_WPN_INCREMENTAMMO 45 ""}
 	fadein 0.2
 	fadeout 0.2
-	fps 60
+	fps 70
 }
 
 $sequence "reload_end" {
