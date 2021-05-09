@@ -33,13 +33,12 @@ $sequence "idle_empty" {
 }
 */
 
-$sequence "draw" {
+$sequence "deploy" {
 	"r870shotgun/draw.smd"
 	activity "ACT_VM_DRAW" -1
 	{ event AE_CL_PLAYSOUND 16 "Weapon_Shotgun_ZM.DrawPump" }
 	fadein 0
 	fadeout 0.1
-	snap
 	fps 60
 }
 
@@ -63,11 +62,11 @@ $sequence "fire" {
 }
 
 $sequence "dryfire" {
-	"r870shotgun/draw_empty.smd"
+	"r870shotgun/dryfire.smd"
 	activity "ACT_VM_DRYFIRE" -1
-	fadein 0
+	fadein 0.1
 	fadeout 0.1
-	fps 75
+	fps 60
 }
 
 // FIRE THE LAST BOOLET
