@@ -49,6 +49,7 @@ $sequence "holster" {
 $sequence "dryfire" {
 	levergun/dryfire.smd
 	activity "ACT_VM_DRYFIRE" -1
+	{ event AE_CL_PLAYSOUND 42 "Weapon_Rifle_ZM.Special1" }
 	fadein 0.1
 	fadeout 0.1
 	fps 60
