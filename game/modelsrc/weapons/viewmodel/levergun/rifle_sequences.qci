@@ -46,6 +46,13 @@ $sequence "holster" {
 // ===================================================
 // =======fires=======================================
 
+$sequence "dryfire" {
+	levergun/dryfire.smd
+	activity "ACT_VM_DRYFIRE" -1
+	fadein 0.1
+	fadeout 0.1
+	fps 60
+}
 
 // FRAMES fire 0-27, lever 28-97
 $sequence "fire" {
@@ -159,11 +166,4 @@ $sequence "reload_end" {
 	fadein 0.1
 	fadeout 0.1
 	fps 45
-}
-
-$sequence "dryfire" {
-	levergun/idle.smd
-	activity "ACT_VM_DRYFIRE" -1
-	snap
-	fps 9999
 }
