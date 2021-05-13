@@ -6,7 +6,7 @@ $bodygroup "stoodio"
 }
 
 
-$cdmaterials "models\weapons\zmr_pipe\"
+$cdmaterials "models\weapons\pipe_zmr\"
 
 
 
