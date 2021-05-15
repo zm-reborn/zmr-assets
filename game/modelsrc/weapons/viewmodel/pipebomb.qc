@@ -2,7 +2,7 @@ $modelname "weapons/c_pipebomb.mdl"
 
 $bodygroup "stoodio"
 {
-	studio "pipebomb/ref_001.smd"
+	studio "pipebomb/ref.smd"
 }
 
 
