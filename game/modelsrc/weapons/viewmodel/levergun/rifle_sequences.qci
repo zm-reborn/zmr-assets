@@ -98,10 +98,9 @@ $sequence "lever_down" {
 // ===================================================
 // ===================================================
 // =====irons=========================================
-/*
 $sequence "iron_fire" {
 	levergun/iron_fire.smd
-	activity "ACT_VM_PRIMARYATTACK" -1
+	activity "ACT_VM_PRIMARYATTACK_SILENCED" -1
 	{ event AE_MUZZLEFLASH 1 "357 MUZZLE" }
 	snap
 	fps 60
@@ -109,14 +108,13 @@ $sequence "iron_fire" {
 
 $sequence "iron_lever" {
 	levergun/iron_lever.smd
-	activity "ACT_SHOTGUN_PUMP" -1
+	activity "ACT_VM_RELOAD_SILENCED" -1
 	{ event 6001 32 "1" }
 	{ event AE_CL_PLAYSOUND 15 "Weapon_Rifle_ZM.Special1" }
 	fadein 0.1
 	fadeout 0.1
 	fps 60
 }
-*/
 // ===================================================
 // ===================================================
 // ======reloads======================================
