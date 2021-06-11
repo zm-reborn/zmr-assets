@@ -75,23 +75,22 @@ $sequence "reload_end" {
 $sequence "bolt_cycle" {
 	"huntingrifle/bolt_1.smd"
 	activity "ACT_SHOTGUN_PUMP" 1
-	{ event AE_CL_PLAYSOUND 19 "Weapon_R700_ZM.BoltOpen" }
-	{ event 6001 59 "1" }
-	{ event AE_CL_PLAYSOUND 50 "Weapon_R700_ZM.BoltClose" }
-	fadein 0.1
-	fadeout 0.1
-	fps 60
-}
-$sequence "bolt_cycle2" {
-	"huntingrifle/bolt_2.smd"
-	activity "ACT_SHOTGUN_PUMP" 1
-	{ event AE_CL_PLAYSOUND 22 "Weapon_R700_ZM.BoltOpen" }
-	{ event AE_CL_PLAYSOUND 45 "Weapon_R700_ZM.BoltClose" }
+	{ event AE_CL_PLAYSOUND 19 "Weapon_R700_ZM.Reload1" }
 	{ event 6001 59 "1" }
 	fadein 0.1
 	fadeout 0.1
 	fps 60
 }
+
+//$sequence "bolt_cycle2" {
+//	"huntingrifle/bolt_2.smd"
+//	activity "ACT_SHOTGUN_PUMP" 1
+//	{ event AE_CL_PLAYSOUND 22 "Weapon_R700_ZM.Reload2" }
+//	{ event 6001 59 "1" }
+//	fadein 0.1
+//	fadeout 0.1
+//	fps 60
+//}
 
 $sequence "dryfire" {
 	"huntingrifle/idle.smd"
