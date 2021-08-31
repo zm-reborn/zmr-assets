@@ -6,14 +6,17 @@
 $scale 1.0
 $modelname	"weapons/w_snub.mdl"
 $body w_snub "w_snub.smd"
-$collisionjoints "w_snub_hull.smd" {
-	$concaveperjoint
-
+$collisionmodel "w_snub_hull.smd" {
+	$inertia 1.0
+	$damping 0.0
+	$rotdamping 0.0
+	$drag 0.0
+	$mass 3.0
+	
 }
 $surfaceprop "weapon" 
 $contents "solid"
 $cdmaterials "models/weapons/w_snub_zmr"
+// w_snub.vmt
 $sequence idle "w_snub.smd"  activity ACT_IDLE -1 loop fps 30
-$attachment "ValveBiped.Muzzle" "w_model_WWMT" 0.0604939 -5.0095 2.46443 rotate 0 0 89.9999
-
-$include	"w_snub_wwmt_custom.qci"
+$attachment "ValveBiped.Muzzle" "w_snub_wwmt" 0.00 -4.75 5.90 rotate -0 -90 0
