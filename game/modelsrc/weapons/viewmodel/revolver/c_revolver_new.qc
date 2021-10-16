@@ -77,10 +77,10 @@ $sequence "altfire" {
 }
 
 $sequence "dryfire" {
-	"anims/idle.smd"
+	"anims/dryfire.smd"
 	activity "ACT_VM_DRYFIRE" -1
 	fadein 0.1
-	fadeout 0.2
+	fadeout 0.1
 	// snap
 	fps 60
 }

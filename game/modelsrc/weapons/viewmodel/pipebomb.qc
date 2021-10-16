@@ -2,11 +2,11 @@ $modelname "weapons/c_pipebomb.mdl"
 
 $bodygroup "stoodio"
 {
-	studio "pipebomb/ref_001.smd"
+	studio "pipebomb/ref.smd"
 }
 
 
-$cdmaterials "models\weapons\zmr_pipe\"
+$cdmaterials "models\weapons\pipe_zmr\"
 
 
 
