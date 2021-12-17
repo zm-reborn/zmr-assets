@@ -258,7 +258,7 @@ $sequence "walk4" {
 //================================================================================
 
 $sequence "FireWalk" {
-	"male_anims\FireWalk.smd"
+	"gestures\FireWalk_gest.smd"
 	activity "ACT_WALK_ON_FIRE" 1
 	fadein 0.2
 	fadeout 0.2
@@ -272,7 +272,7 @@ $sequence "FireWalk" {
 }
 
 $sequence "FireIdle" {
-	"male_anims\FireIdle.smd"
+	"gestures\FireIdle_gest.smd"
 	activity "ACT_IDLE_ON_FIRE" 1
 	fadein 0.2
 	fadeout 0.2
@@ -288,9 +288,9 @@ $sequence "FireIdle" {
 //================================================================================
 //=======attacks==================================================================
 //================================================================================
-
-$sequence "attackATEST" {
-	"male_anims\attackA.smd"
+/*
+$sequence "attackA_gestTEST" {
+	"gestures\attackA_gest.smd"
 	activity "ACT_MELEE_ATTACK1" 2
 	{ event AE_ZOMBIE_ATTACK_SCREAM 5 "" }
 	{ event AE_ZOMBIE_ATTACK_RIGHT 25 "" }
@@ -306,11 +306,11 @@ $sequence "attackATEST" {
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 56 56 target 1 usesequence 
 	walkframe 47 LX LY
 }
-// $sequence "gest_bigflinch" "male_anims/physflinch1" ACT_GESTURE_FLINCH_CHEST 1 fps 30 subtract "Idle01" 0 delta
+// $sequence "gest_bigflinch" "gestures/physflinch1" ACT_GESTURE_FLINCH_CHEST 1 fps 30 subtract "Idle01" 0 delta
+*/
 
-
-$sequence "attackA" {
-	"male_anims\attackA.smd"
+$sequence "attackA_gest" {
+	"gestures\attackA_gest.smd"
 	activity "ACT_MELEE_ATTACK1" 2
 	{ event AE_ZOMBIE_ATTACK_SCREAM 5 "" }
 	{ event AE_ZOMBIE_ATTACK_RIGHT 25 "" }
@@ -327,8 +327,8 @@ $sequence "attackA" {
 	walkframe 47 LX LY
 }
 
-$sequence "attackB" {
-	"male_anims\attackB.smd"
+$sequence "attackB_gest" {
+	"gestures\attackB_gest.smd"
 	activity "ACT_MELEE_ATTACK1" 2
 	{ event AE_ZOMBIE_ATTACK_SCREAM 5 "" }
 	{ event AE_ZOMBIE_ATTACK_RIGHT 25 "" }
@@ -342,8 +342,8 @@ $sequence "attackB" {
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 56 56 target 1
 }
 
-$sequence "attackC" {
-	"male_anims\attackC.smd"
+$sequence "attackC_gest" {
+	"gestures\attackC_gest.smd"
 	activity "ACT_MELEE_ATTACK1" 2
 	{ event AE_ZOMBIE_ATTACK_SCREAM 5 "" }
 	{ event AE_ZOMBIE_ATTACK_LEFT 25 "" }
@@ -360,8 +360,8 @@ $sequence "attackC" {
 	walkframe 47 LX LY
 }
 
-$sequence "attackD" {
-	"male_anims\attackD.smd"
+$sequence "attackD_gest" {
+	"gestures\attackD_gest.smd"
 	activity "ACT_MELEE_ATTACK1" 2
 	{ event AE_ZOMBIE_ATTACK_SCREAM 5 "" }
 	{ event AE_ZOMBIE_ATTACK_LEFT 25 "" }
@@ -375,8 +375,8 @@ $sequence "attackD" {
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 56 56 target 1
 }
 
-$sequence "attackE" {
-	"male_anims\attackE.smd"
+$sequence "attackE_gest" {
+	"gestures\attackE_gest.smd"
 	activity "ACT_MELEE_ATTACK1" 2
 	{ event AE_ZOMBIE_ATTACK_SCREAM 5 "" }
 	{ event AE_ZOMBIE_ATTACK_BOTH 25 "" }
@@ -391,8 +391,8 @@ $sequence "attackE" {
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 41 41 target 1
 }
 
-$sequence "attackF" {
-	"male_anims\attackF.smd"
+$sequence "attackf_gest" {
+	"gestures\attackf_gest.smd"
 	activity "ACT_MELEE_ATTACK1" 2
 	{ event AE_ZOMBIE_ATTACK_SCREAM 5 "" }
 	{ event AE_ZOMBIE_ATTACK_BOTH 25 "" }
@@ -406,7 +406,7 @@ $sequence "attackF" {
 }
 
 $sequence "swatleftmid" {
-	"male_anims\swatleftmid.smd"
+	"gestures\swatleftmid_gest.smd"
 	activity "ACT_ZOM_SWATLEFTMID" 1
 	{ event AE_ZOMBIE_STARTSWAT 1 "" }
 	{ event AE_ZOMBIE_SWATITEM 9 "" }
@@ -420,7 +420,7 @@ $sequence "swatleftmid" {
 }
 
 $sequence "swatrightmid" {
-	"male_anims\swatrightmid.smd"
+	"gestures\swatrightmid_gest.smd"
 	activity "ACT_ZOM_SWATRIGHTMID" 1
 	{ event AE_ZOMBIE_STARTSWAT 1 "" }
 	{ event AE_ZOMBIE_SWATITEM 9 "" }
@@ -434,7 +434,7 @@ $sequence "swatrightmid" {
 }
 
 $sequence "swatleftlow" {
-	"male_anims\swatleftlow.smd"
+	"gestures\swatleftlow_gest.smd"
 	activity "ACT_ZOM_SWATLEFTLOW" 1
 	{ event AE_ZOMBIE_STARTSWAT 1 "" }
 	{ event AE_ZOMBIE_SWATITEM 15 "" }
@@ -451,7 +451,7 @@ $sequence "swatleftlow" {
 }
 
 $sequence "swatrightlow" {
-	"male_anims\swatrightlow.smd"
+	"gestures\swatrightlow_gest.smd"
 	activity "ACT_ZOM_SWATRIGHTLOW" 1
 	{ event AE_ZOMBIE_STARTSWAT 1 "" }
 	{ event AE_ZOMBIE_SWATITEM 18 "" }
@@ -484,12 +484,12 @@ $Weightlist "AllBones" "valvebiped.Bip01_Pelvis" 0.3
 
 
 
-$sequence "slump_b" "male_anims/slump_b" loop fps 30.00
-$sequence "slumprise_b" "male_anims/slumprise_b" fps 30.00 {
-  { event AE_NPC_LEFTFOOT 13 }
-  { event AE_NPC_RIGHTFOOT 27 }
-  { event AE_ZOMBIE_GET_UP 57 }
-}
+//$sequence "slump_b" "gestures/slump_b_gest" loop fps 30.00
+//$sequence "slumprise_b" "gestures/slumprise_b_gest" fps 30.00 {
+//  { event AE_NPC_LEFTFOOT 13 }
+//  { event AE_NPC_RIGHTFOOT 27 }
+//  { event AE_ZOMBIE_GET_UP 57 }
+//}
 
 
 
@@ -499,13 +499,13 @@ $sequence ragdoll "male_anims/ragdoll" ACT_DIERAGDOLL 1 fps 30.00
 //
 // Gestures
 //
-$sequence "gest_bigflinch" "male_anims/physflinch1" ACT_GESTURE_FLINCH_CHEST 1 fps 30 subtract "Idle01" 0 delta
-$sequence "gest_rightflinch" "male_anims/physflinch2" ACT_GESTURE_FLINCH_RIGHTARM 1 fps 30 subtract "Idle01" 0 delta
-$sequence "gest_leftflinch" "male_anims/physflinch3" ACT_GESTURE_FLINCH_LEFTARM 1 fps 30 subtract "Idle01" 0 delta
+$sequence "gest_bigflinch" "gestures/physflinch1" ACT_GESTURE_FLINCH_CHEST 1 fps 30 subtract "Idle01" 0 delta
+$sequence "gest_rightflinch" "gestures/physflinch2" ACT_GESTURE_FLINCH_RIGHTARM 1 fps 30 subtract "Idle01" 0 delta
+$sequence "gest_leftflinch" "gestures/physflinch3" ACT_GESTURE_FLINCH_LEFTARM 1 fps 30 subtract "Idle01" 0 delta
 
 
-$sequence Tantrum "male_anims/Tantrum" loop ACT_ZOMBIE_TANTRUM 1 fps 30.00
-$sequence WallPound "male_anims/WallPound" loop ACT_ZOMBIE_WALLPOUND 1 fps 30.00 {
+$sequence Tantrum "gestures/Tantrum_gest" loop ACT_ZOMBIE_TANTRUM 1 fps 30.00
+$sequence WallPound "gestures/WallPound_gest" loop ACT_ZOMBIE_WALLPOUND 1 fps 30.00 {
   { event AE_ZOMBIE_POUND 14 }
   { event AE_ZOMBIE_POUND 35 }
 }
