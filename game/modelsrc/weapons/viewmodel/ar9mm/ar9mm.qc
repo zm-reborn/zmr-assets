@@ -55,6 +55,7 @@ $sequence "fire1" {
 	snap
 	fps 60
 }
+
 $sequence "fire2" {
 	"anims/fire2.smd"
 	activity "ACT_VM_PRIMARYATTACK" 1
@@ -66,6 +67,15 @@ $sequence "fire2" {
 $sequence "fire3" {
 	"anims/fire3.smd"
 	activity "ACT_VM_PRIMARYATTACK" 1
+	{ event AE_MUZZLEFLASH 0 "SMG1 muzzle" }
+	{ event 6001 0 "0" }
+	snap
+	fps 60
+}
+
+$sequence "fire1_secondary" {
+	"anims/fire1.smd"
+	activity "ACT_VM_SECONDARYATTACK" 1
 	{ event AE_MUZZLEFLASH 0 "SMG1 muzzle" }
 	{ event 6001 0 "0" }
 	snap
