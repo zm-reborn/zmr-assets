@@ -94,6 +94,68 @@ $jigglebone "bone003"
 		}
 }
 
+
+$jigglebone "flame1"
+{
+	is_flexible
+	{
+		length 10
+		tip_mass 0
+		pitch_stiffness 1000
+		pitch_damping 10
+		yaw_stiffness 1000
+		yaw_damping 10
+		along_stiffness 100
+		along_damping 0
+		angle_constraint 10
+	}
+}
+$jigglebone "flame2"
+{
+	is_flexible
+	{
+		length 5
+		tip_mass 0
+		pitch_stiffness 1000
+		pitch_damping 10
+		yaw_stiffness 1000
+		yaw_damping 10
+		along_stiffness 100
+		along_damping 0
+		angle_constraint 39.999999
+	}
+}
+$jigglebone "flame3"
+{
+	is_flexible
+	{
+		length 5
+		tip_mass 0
+		pitch_stiffness 1000
+		pitch_damping 10
+		yaw_stiffness 1000
+		yaw_damping 10
+		along_stiffness 100
+		along_damping 0
+		angle_constraint 90.000003
+	}
+}
+$jigglebone "flame4"
+{
+	is_flexible
+	{
+		length 5
+		tip_mass 0
+		pitch_stiffness 1000
+		pitch_damping 10
+		yaw_stiffness 1000
+		yaw_damping 10
+		along_stiffness 100
+		along_damping 0
+		angle_constraint 90.000003
+	}
+}
+
 ///////////////////////////////////////////////////////
 // end.of jigglebones
 ///////////////////////////////////////////////////////
