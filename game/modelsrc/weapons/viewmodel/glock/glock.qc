@@ -1,4 +1,4 @@
-$modelname "weapons/c_glock.mdl"
+$modelname "weapons/c_glock17.mdl"
 $cdmaterials "models/weapons/glock17"
 // glock.vmt
 
@@ -169,24 +169,19 @@ $sequence "reload" {
 	fps 60
 }
 
-/* /////////////////////////////////////
 // g15_reload_empty22.max
 $sequence "reload_empty" {
 	"anims\g15_reload_empty.smd"
-=========================================
-	activity "ACT_VM_RELOAD" -1 TODO: which activity is the empty reload?
+	activity "ACT_VM_RELOAD_EMPTY" -1
 	{ event AE_CL_PLAYSOUND 20 "Weapon_glock_ZM.Reload1" }
 	{ event AE_CL_PLAYSOUND 40 "Weapon_glock_ZM.Reload2" }
 	{ event AE_CL_PLAYSOUND 80 "Weapon_glock_ZM.Reload3" }
-=========================================
 	{ event AE_WPN_INCREMENTAMMO 100 "" }
 	fadein 0.2
 	fadeout 0.1
 	node "0"
 	fps 60
 }
-/////////////////////////////////////
-*/
 
 
 
