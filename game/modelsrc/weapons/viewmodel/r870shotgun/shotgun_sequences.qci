@@ -20,23 +20,10 @@ $sequence "idle" {
 	loop
 }
 
-// ACT_VM_IDLE_EMPTY
-/*
-$sequence "idle_empty" {
-	r870shotgun/idle.smd
-	idle_delta
-	walk_ws
-	activity "ACT_VM_IDLE_EMPTY" -1
-	blend "move_x" -1 1
-	blendwidth 3
-	loop
-}
-*/
-
 $sequence "deploy" {
 	"r870shotgun/draw.smd"
 	activity "ACT_VM_DRAW" -1
-	{ event AE_CL_PLAYSOUND 16 "Weapon_Shotgun_ZM.DrawPump" }
+//	{ event AE_CL_PLAYSOUND 16 "Weapon_Shotgun_ZM.DrawPump" }
 	fadein 0
 	fadeout 0.1
 	fps 60
@@ -69,20 +56,6 @@ $sequence "dryfire" {
 	fps 60
 }
 
-// FIRE THE LAST BOOLET
-// PRIMARYATTACK_EMPTY
-/*
-$sequence "fire_last" {
-	"r870shotgun/test_firelast.smd"
-	activity "ACT_VM_PRIMARYATTACK_EMPTY" -1
-	node "flast"
-	fadein 0.05
-	fadeout 0
-	fps 30
-}
-*/
-// $skiptransition flast relemp rel1
-
 
 $sequence "reload_start" {
 	"r870shotgun/reload_start.smd"
@@ -95,18 +68,16 @@ $sequence "reload_start" {
 
 
 // RELOAD_FROM_EMPTY
-// plays reload_start and then this RIP
-/*
+
 $sequence "reload_empty" {
-	"r870shotgun/test_reloadempty.smd"
+	"r870shotgun/reload_empty.smd"
 	activity "ACT_VM_RELOAD_EMPTY" -1
 	node "relemp"
-	{ event AE_WPN_INCREMENTAMMO 10 "" }
+	{ event AE_WPN_INCREMENTAMMO 53 "" }
 	fadein 0.05
 	fadeout 0
-	fps 30
+	fps 60
 }
-*/
 
 $sequence "reloadstyle_1" {
 	"r870shotgun/reload_1.smd"
@@ -135,7 +106,7 @@ $sequence "reload_end" {
 	fadein 0.05
 	fadeout 0.05
 	node "0"
-	fps 70
+	fps 40
 }
 
 $sequence "pumpstyle_1" {
