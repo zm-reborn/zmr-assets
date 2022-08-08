@@ -30,7 +30,14 @@ $sequence "idle" {
 
 $sequence "deploy" {
 	levergun/draw.smd
-	activity "ACT_VM_DRAW" -1
+	activity "ACT_VM_DRAW" 9
+	snap
+	fps 60
+}
+$sequence "deploy_spin" {
+	levergun/deploy_spin.smd
+	activity "ACT_VM_DRAW" 1
+	{ event AE_CL_PLAYSOUND 3 "Weapon_Rifle_ZM.Special1" }
 	snap
 	fps 60
 }
@@ -127,6 +134,17 @@ $sequence "reload_start" {
 	fadeout 0.1
 	fps 45
 }
+
+$sequence "reload_empty" {
+	levergun/reload_empty.smd
+	activity "ACT_VM_RELOAD_EMPTY" -1
+	{ event AE_CL_PLAYSOUND 63 "Weapon_Rifle_ZM.Reload" }
+	{ event AE_WPN_INCREMENTAMMO 63 ""}
+	fadein 0.1
+	fadeout 0.1
+	fps 45
+}
+
 
 $sequence "reload1" {
 	levergun/reload_1.smd
