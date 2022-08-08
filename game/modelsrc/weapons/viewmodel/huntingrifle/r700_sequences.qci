@@ -32,7 +32,8 @@ $sequence "fire" {
 $sequence "draw" {
 	"huntingrifle/draw.smd"
 	activity "ACT_VM_DRAW" -1
-	snap
+	fadein 0.1
+	fadeout 0.1
 	fps 60
 }
 
@@ -46,29 +47,39 @@ $sequence "holster" {
 $sequence "reload_start" {
 	"huntingrifle/reload_start.smd"
 	activity "ACT_VM_RELOAD_START" -1
-	{ event AE_CL_PLAYSOUND 16 "Weapon_R700_ZM.BoltOpen" }
+	{ event AE_CL_PLAYSOUND 38 "Weapon_R700_ZM.BoltOpen" }
 	fadein 0.1
 	fadeout 0.1
 	fps 60
 }
 
+$sequence "reload_empty" {
+	"huntingrifle/reload_empty.smd"
+	activity "ACT_VM_RELOAD_EMPTY" -1
+	{ event AE_CL_PLAYSOUND 20 "Weapon_R700_ZM.BoltOpen" }
+	{ event AE_CL_PLAYSOUND 100 "Weapon_R700_ZM.InsertRound" }
+	{ event AE_WPN_INCREMENTAMMO 102 ""}
+	fadein 0.1
+	fadeout 0.1
+	fps 60
+}
 
 $sequence "reload_cycle" {
 	"huntingrifle/reload.smd"
 	activity "ACT_VM_RELOAD" -1
-	{ event AE_CL_PLAYSOUND 45 "Weapon_R700_ZM.InsertRound" }
-	{ event AE_WPN_INCREMENTAMMO 45 ""}
-	fadein 0.2
-	fadeout 0.2
-	fps 70
+	{ event AE_CL_PLAYSOUND 19 "Weapon_R700_ZM.InsertRound" }
+	{ event AE_WPN_INCREMENTAMMO 21 ""}
+	fadein 0.1
+	fadeout 0.1
+	fps 60
 }
 
 $sequence "reload_end" {
 	"huntingrifle/reload_end.smd"
 	activity "ACT_VM_RELOAD_FINISH" -1
-	{ event AE_CL_PLAYSOUND 8 "Weapon_R700_ZM.BoltClose" }
+	{ event AE_CL_PLAYSOUND 32 "Weapon_R700_ZM.BoltClose" }
 	fadein 0.1
-	fadeout 0
+	fadeout 0.1
 	fps 60
 }
 
@@ -82,15 +93,15 @@ $sequence "bolt_cycle" {
 	fps 60
 }
 
-//$sequence "bolt_cycle2" {
-//	"huntingrifle/bolt_2.smd"
-//	activity "ACT_SHOTGUN_PUMP" 1
-//	{ event AE_CL_PLAYSOUND 22 "Weapon_R700_ZM.Reload2" }
-//	{ event 6001 59 "1" }
-//	fadein 0.1
-//	fadeout 0.1
-//	fps 60
-//}
+$sequence "bolt_cycle2" {
+	"huntingrifle/bolt_2.smd"
+	activity "ACT_SHOTGUN_PUMP" 1
+	{ event AE_CL_PLAYSOUND 22 "Weapon_R700_ZM.Reload2" }
+	{ event 6001 59 "1" }
+	fadein 0.1
+	fadeout 0.1
+	fps 60
+}
 
 $sequence "dryfire" {
 	"huntingrifle/idle.smd"

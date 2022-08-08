@@ -16,6 +16,11 @@ $cdmaterials "models\weapons\r700\"
 $cdmaterials "dev"
 // scope.vmt
 
+// not actually
+// $cdmaterials "models\weapons\scope\"
+// all the other materials
+
+
 $attachment "muzzle" "d_gun" 0 -38.90 1.80 rotate 0 -90 0
 $attachment "1" "d_gun" -20.00 -5.00 -3.50 rotate 90 0 0
 $attachment "ironsight" "Dummy001" 0 0 0 rotate 0 -90 0
