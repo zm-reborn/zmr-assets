@@ -1,24 +1,24 @@
 
 $poseparameter "move_x" -1 1 loop 0
 
-$animation "walk_ws" "pistol/pistol_walk_r3152.smd" {
+$animation "walk_ws" "pistol/walk.smd" {
 	fps 74.3
 	loop
 }
-$animation "walk_ws_e" "pistol/pistolempty_walk_r3152.smd" {
+$animation "walk_ws_e" "pistol/walk_empty.smd" {
 	fps 74.3
 	loop
 }
 
-$animation "idle_delta" "pistol/idle01.smd" {
-	fps 60
+$animation "idle_delta" "pistol/idle.smd" {
+	fps 30
 }
-$animation "idleempty_delta" "pistol/idle01empty.smd" {
-	fps 60
+$animation "idleempty_delta" "pistol/idle_empty.smd" {
+	fps 30
 }
 
-$sequence "idle01" {
-	"pistol\idle01.smd"
+$sequence "idle" {
+	"pistol\idle.smd"
 	idle_delta
 	walk_ws
 	activity "ACT_VM_IDLE" -1
@@ -28,8 +28,8 @@ $sequence "idle01" {
 }
 
 
-$sequence "idle01empty" {
-	"pistol\idle01empty.smd"
+$sequence "idle_empty" {
+	"pistol\idle_empty.smd"
 	idleempty_delta
 	walk_ws_e
 	activity "ACT_VM_IDLE_EMPTY" 1
@@ -39,100 +39,103 @@ $sequence "idle01empty" {
 }
 
 $sequence "fire" {
-	"pistol\fire.smd"
+	"pistol\fire1.smd"
 	activity "ACT_VM_PRIMARYATTACK" 1
 	{ event AE_MUZZLEFLASH 0 "PISTOL muzzle" }
-	fadein 0.2
-	fadeout 0.2
-	node "2"
+	node "1"
 	snap
 	fps 60
 }
 
 $sequence "fire1" {
-	"pistol\fire1.smd"
+	"pistol\fire2.smd"
 	activity "ACT_VM_PRIMARYATTACK" 1
 	{ event AE_MUZZLEFLASH 0 "PISTOL muzzle" }
 	{ event 6001 2 0 } // Eject brass, 0 = normal shell, 1 = rifle shell, 2 = shotgun shell
-	fadein 0.2
-	fadeout 0.2
 	node "2"
 	snap
 	fps 60
 }
 
 $sequence "fire2" {
-	"pistol\fire2.smd"
+	"pistol\fire3.smd"
 	activity "ACT_VM_PRIMARYATTACK" 1
 	{ event AE_MUZZLEFLASH 0 "PISTOL muzzle" }
 	{ event 6001 2 0 } // Eject brass, 0 = normal shell, 1 = rifle shell, 2 = shotgun shell
-	fadein 0.2
-	fadeout 0.2
 	node "2"
 	snap
 	fps 60
 }
-
+/*
 $sequence "fire3" {
 	"pistol\fire3.smd"
 	activity "ACT_VM_PRIMARYATTACK" 1
 	{ event AE_MUZZLEFLASH 0 "PISTOL muzzle" }
 	{ event 6001 2 0 } // Eject brass, 0 = normal shell, 1 = rifle shell, 2 = shotgun shell
-	fadein 0.2
-	fadeout 0.2
 	node "2"
 	snap
 	fps 60
 }
-
+*/
 $sequence "firelast" {
-	"pistol\firelast.smd"
-	activity "ACT_VM_PRIMARYATTACK_EMPTY" 1
+	"pistol\fire_last.smd"
+	activity "ACT_VM_PRIMARYATTACK_EMPTY" -1
 	{ event AE_MUZZLEFLASH 0 "PISTOL muzzle" }
 	{ event 6001 2 0 } // Eject brass, 0 = normal shell, 1 = rifle shell, 2 = shotgun shell
-	fadein 0.2
-	fadeout 0.2
 	node "2"
 	snap
 	fps 60
 }
-
+/*
 $sequence "fireempty" {
-	"pistol\fireempty.smd"
-	activity "ACT_VM_DRYFIRE" 1
-	fadein 0.2
-	fadeout 0.2
+	"pistol\idle_empty.smd"
+	activity "ACT_VM_DRYFIRE" -1
+	fadein 0.1
+	fadeout 0.1
 	node "2"
-	fps 60
+	fps 30
 }
-
-$sequence "draw" {
-	"pistol\draw.smd"
-	activity "ACT_VM_DRAW" 1
-	fadein 0.2
-	fadeout 0.2
+*/
+$sequence "deploy" {
+	"pistol\deploy.smd"
+	activity "ACT_VM_DRAW" -1
+	fadein 0.1
+	fadeout 0.1
 	node "0"
 	fps 60
 }
 
-$sequence "drawempty" {
-	"pistol\drawempty.smd"
-	activity "ACT_VM_DRAW_EMPTY" 1
-	fadein 0.2
-	fadeout 0.2
+$sequence "deploy_empty" {
+	"pistol\deploy_empty.smd"
+	activity "ACT_VM_DRAW_EMPTY" -1
+	fadein 0.1
+	fadeout 0.1
 	node "0"
 	fps 60
 }
 
 $sequence "reload" {
 	"pistol\reload.smd"
-	activity "ACT_VM_RELOAD" 1
+	activity "ACT_VM_RELOAD" -1
 	{ event AE_CL_PLAYSOUND 18 "Weapon_Pistol_ZM.Reload1" }
 	{ event AE_CL_PLAYSOUND 60 "Weapon_Pistol_ZM.Reload2" }
 	{ event AE_CL_PLAYSOUND 89 "Weapon_Pistol_ZM.Reload3" }
 	{ event AE_WPN_INCREMENTAMMO 62 "" }
-	fadein 0.2
-	fadeout 0.2
+	fadein 0.1
+	fadeout 0
+	node "0"
+	fps 60
+}
+
+$sequence "reload_empty" {
+	"pistol\reload_empty.smd"
+	activity "ACT_VM_RELOAD_EMPTY" -1
+	{ event AE_CL_PLAYSOUND 18 "Weapon_Pistol_ZM.Reload1" }
+	{ event AE_CL_PLAYSOUND 60 "Weapon_Pistol_ZM.Reload2" }
+	{ event AE_CL_PLAYSOUND 89 "Weapon_Pistol_ZM.Reload3" }
+	{ event AE_WPN_INCREMENTAMMO 62 "" }
+	fadein 0.1
+	fadeout 0
 	node "0"
 	fps 60
 }
