@@ -75,7 +75,7 @@ $sequence "fire3" {
 
 $sequence "fire_secondary" {
 	"anims/3roundburst.smd"
-	activity "ACT_VM_SECONDARYATTACK" 1
+	activity "ACT_VM_SECONDARYATTACK" -1
 	{ event AE_MUZZLEFLASH 0 "SMG1 muzzle" }
 	{ event AE_MUZZLEFLASH 5 "SMG1 muzzle" }
 	{ event AE_MUZZLEFLASH 10 "SMG1 muzzle" }
@@ -88,7 +88,6 @@ $sequence "reload" {
 	"anims\reload.smd"
 	activity "ACT_VM_RELOAD" 1
 	{ event AE_WPN_INCREMENTAMMO 125 "" }
-//	{ event AE_WPN_INCREMENTAMMO 68 "" } from mac10
 	{ event AE_CL_PLAYSOUND 40 "Weapon_SMG_ZM.Reload1" }
 	{ event AE_CL_PLAYSOUND 125 "Weapon_SMG_ZM.Reload2" }
 	{ event AE_CL_PLAYSOUND 179 "Weapon_SMG_ZM.Reload3" }
@@ -100,7 +99,6 @@ $sequence "reload_empty" {
 	"anims\reload_empty.smd"
 	activity "ACT_VM_RELOAD" 1
 	{ event AE_WPN_INCREMENTAMMO 105 "" }
-//	{ event AE_WPN_INCREMENTAMMO 68 "" }
 	{ event AE_CL_PLAYSOUND 40 "Weapon_SMG_ZM.Reload1" }
 	{ event AE_CL_PLAYSOUND 125 "Weapon_SMG_ZM.Reload2" }
 	{ event AE_CL_PLAYSOUND 179 "Weapon_SMG_ZM.Reload3" }
