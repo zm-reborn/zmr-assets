@@ -13,11 +13,11 @@ $opaque
 $attachment "muzzle" "d_gun" 0.00 -8.50 1.20 rotate -0 -90 0
 $attachment "1" "d_gun" -0.80 -0.70 1.50 rotate 0 180 0
 
-$include "../../shared.qci"
+$include "../shared.qci"
 
 
 // Bone merge the arms.
-$include "../../arm_bonemerge.qci"
+$include "../arm_bonemerge.qci"
 
 ///////////////////////////////////////////////////////
 // pose params
