@@ -42,6 +42,7 @@ $sequence "fire" {
 	"pistol\fire1.smd"
 	activity "ACT_VM_PRIMARYATTACK" 1
 	{ event AE_MUZZLEFLASH 0 "PISTOL muzzle" }
+	{ event 6001 2 0 } // Eject brass, 0 = normal shell, 1 = rifle shell, 2 = shotgun shell
 	node "1"
 	snap
 	fps 60
@@ -51,7 +52,7 @@ $sequence "fire1" {
 	"pistol\fire2.smd"
 	activity "ACT_VM_PRIMARYATTACK" 1
 	{ event AE_MUZZLEFLASH 0 "PISTOL muzzle" }
-	{ event 6001 2 0 } // Eject brass, 0 = normal shell, 1 = rifle shell, 2 = shotgun shell
+	{ event 6001 2 0 }
 	node "2"
 	snap
 	fps 60
@@ -61,27 +62,16 @@ $sequence "fire2" {
 	"pistol\fire3.smd"
 	activity "ACT_VM_PRIMARYATTACK" 1
 	{ event AE_MUZZLEFLASH 0 "PISTOL muzzle" }
-	{ event 6001 2 0 } // Eject brass, 0 = normal shell, 1 = rifle shell, 2 = shotgun shell
+	{ event 6001 2 0 }
 	node "2"
 	snap
 	fps 60
 }
-/*
-$sequence "fire3" {
-	"pistol\fire3.smd"
-	activity "ACT_VM_PRIMARYATTACK" 1
-	{ event AE_MUZZLEFLASH 0 "PISTOL muzzle" }
-	{ event 6001 2 0 } // Eject brass, 0 = normal shell, 1 = rifle shell, 2 = shotgun shell
-	node "2"
-	snap
-	fps 60
-}
-*/
 $sequence "firelast" {
 	"pistol\fire_last.smd"
 	activity "ACT_VM_PRIMARYATTACK_EMPTY" -1
 	{ event AE_MUZZLEFLASH 0 "PISTOL muzzle" }
-	{ event 6001 2 0 } // Eject brass, 0 = normal shell, 1 = rifle shell, 2 = shotgun shell
+	{ event 6001 2 0 }
 	node "2"
 	snap
 	fps 60
