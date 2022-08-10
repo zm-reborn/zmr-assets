@@ -11,7 +11,7 @@ $bodygroup "studio"
 
 $opaque
 
-$attachment "muzzle" "d_gun" 0.00 -20.30 2.20 rotate 0 -90 0
+$attachment "muzzle" "d_gun" 0.00 -20.60 2.20 rotate -0 -90 0
 $attachment "1" "d_dustcover" 0.00 0.00 -0.50 rotate 0 0 0
 
 $include "../shared.qci"
@@ -89,19 +89,18 @@ $sequence "reload" {
 	activity "ACT_VM_RELOAD" 1
 	{ event AE_WPN_INCREMENTAMMO 125 "" }
 	{ event AE_CL_PLAYSOUND 40 "Weapon_SMG_ZM.Reload1" }
-	{ event AE_CL_PLAYSOUND 125 "Weapon_SMG_ZM.Reload2" }
-	{ event AE_CL_PLAYSOUND 179 "Weapon_SMG_ZM.Reload3" }
+	{ event AE_CL_PLAYSOUND 123 "Weapon_SMG_ZM.Reload2" }
 	snap
 	fps 60
 }
 
 $sequence "reload_empty" {
 	"anims\reload_empty.smd"
-	activity "ACT_VM_RELOAD" 1
+	activity "ACT_VM_RELOAD_EMPTY" 1
 	{ event AE_WPN_INCREMENTAMMO 105 "" }
-	{ event AE_CL_PLAYSOUND 40 "Weapon_SMG_ZM.Reload1" }
-	{ event AE_CL_PLAYSOUND 125 "Weapon_SMG_ZM.Reload2" }
-	{ event AE_CL_PLAYSOUND 179 "Weapon_SMG_ZM.Reload3" }
+	{ event AE_CL_PLAYSOUND 32 "Weapon_SMG_ZM.Reload1" }
+	{ event AE_CL_PLAYSOUND 96 "Weapon_SMG_ZM.Reload2" }
+	{ event AE_CL_PLAYSOUND 135 "Weapon_SMG_ZM.Reload3" }
 	snap
 	fps 60
 }
