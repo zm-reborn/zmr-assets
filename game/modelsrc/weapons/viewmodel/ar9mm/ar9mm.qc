@@ -2,11 +2,11 @@ $modelname "weapons/c_ar9mm.mdl"
 $cdmaterials "models/weapons/ar9mm"
 // ar9.vmt
 $cdmaterials "models/weapons/glock17"
-// glock.vmt (trigger and 9mm boolet)
+// glock.vmt (9mm boolet)
 
 $bodygroup "studio"
 {
-	studio "g7.smd"
+	studio "g71.smd"
 }
 
 $opaque
