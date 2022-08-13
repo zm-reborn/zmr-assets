@@ -4,7 +4,7 @@ version 1
 nodes
 0 "w_bottle" -1
 1 "w_rag" -1
-2 "WMODEL ValveBiped.Bip01_R_Hand" -1
+2 "ValveBiped.Bip01_R_Hand" -1
 3 "bottle" 2
 4 "molotov3rd_zm_physics" -1
 end
