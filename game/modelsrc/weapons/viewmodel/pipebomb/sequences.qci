@@ -1,6 +1,9 @@
 $sequence "deploy" {
 	"pipebomb/deploy.smd"
 	activity "ACT_VM_DRAW" -1
+
+	{ event AE_CL_PLAYSOUND 59 "Weapon_Pipebomb_ZM.PowerOn" }
+
 	snap
 	fps 60
 }
@@ -17,6 +20,13 @@ $sequence "idle" {
 $sequence "dial" {
 	"pipebomb/dial_normally.smd"
 	activity "ACT_VM_PRIMARYATTACK_1" -1
+
+	{ event AE_CL_PLAYSOUND 48 "Weapon_Pipebomb_ZM.Dial2" }
+	{ event AE_CL_PLAYSOUND 77 "Weapon_Pipebomb_ZM.Dial0" }
+	{ event AE_CL_PLAYSOUND 89 "Weapon_Pipebomb_ZM.Dial0" }
+	{ event AE_CL_PLAYSOUND 120 "Weapon_Pipebomb_ZM.Dial7" }
+	{ event AE_CL_PLAYSOUND 155 "Weapon_Pipebomb_ZM.Call" }
+
 	fadein 0.1
 	fadeout 0.1
 	fps 60
