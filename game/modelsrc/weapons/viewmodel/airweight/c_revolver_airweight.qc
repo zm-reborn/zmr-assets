@@ -54,7 +54,7 @@ $sequence "deploy" {
 $sequence "fire" {
 	"anims/fire1.smd"
 	activity "ACT_VM_PRIMARYATTACK" -1
-	{ event AE_CL_PLAYSOUND 0 "Weapon_Revolver_ZM.Prepare" }
+	{ event AE_CL_PLAYSOUND 0 "Weapon_Snubnose_ZM.Prepare" }
 	{ event AE_MUZZLEFLASH 25 "357 MUZZLE" }
 	{ event AE_ZM_REVOLVERSHOOT 25 "" }
 	fadein 0
@@ -76,7 +76,7 @@ $sequence "altfire" {
 $sequence "dryfire" {
 	"anims/dryfire.smd"
 	activity "ACT_VM_DRYFIRE" -1
-	{ event AE_CL_PLAYSOUND 0 "Weapon_Revolver_ZM.Prepare" }
+	{ event AE_CL_PLAYSOUND 0 "Weapon_Snubnose_ZM.Prepare" }
 	snap
 	fps 60
 }
@@ -84,7 +84,7 @@ $sequence "dryfire" {
 $sequence "reload" {
 	"anims/reload.smd"
 	activity "ACT_VM_RELOAD" -1
-	{ event AE_CL_PLAYSOUND 25 "Weapon_Revolver_ZM.Reload" }
+	{ event AE_CL_PLAYSOUND 11 "Weapon_Snubnose_ZM.Reload" }
 	{ event 6001 60 "0" }
 	{ event 6001 61 "0" }
 	{ event 6001 62 "0" }
