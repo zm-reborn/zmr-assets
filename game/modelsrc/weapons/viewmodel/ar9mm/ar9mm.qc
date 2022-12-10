@@ -88,8 +88,8 @@ $sequence "reload" {
 	"anims\reload.smd"
 	activity "ACT_VM_RELOAD" 1
 	{ event AE_WPN_INCREMENTAMMO 125 "" }
-	{ event AE_CL_PLAYSOUND 40 "Weapon_SMG_ZM.Reload1" }
-	{ event AE_CL_PLAYSOUND 123 "Weapon_SMG_ZM.Reload2" }
+	{ event AE_CL_PLAYSOUND 30 "Weapon_Ar9mm_ZM.Reload1_1" }
+	{ event AE_CL_PLAYSOUND 122 "Weapon_Ar9mm_ZM.Reload1_2" }
 	snap
 	fps 60
 }
@@ -98,9 +98,9 @@ $sequence "reload_empty" {
 	"anims\reload_empty.smd"
 	activity "ACT_VM_RELOAD_EMPTY" 1
 	{ event AE_WPN_INCREMENTAMMO 105 "" }
-	{ event AE_CL_PLAYSOUND 32 "Weapon_SMG_ZM.Reload1" }
-	{ event AE_CL_PLAYSOUND 96 "Weapon_SMG_ZM.Reload2" }
-	{ event AE_CL_PLAYSOUND 135 "Weapon_SMG_ZM.Reload3" }
+	{ event AE_CL_PLAYSOUND 23 "Weapon_Ar9mm_ZM.Reload2_1" }
+	{ event AE_CL_PLAYSOUND 80 "Weapon_Ar9mm_ZM.Reload2_2" }
+	{ event AE_CL_PLAYSOUND 133 "Weapon_Ar9mm_ZM.Reload2_3" }
 	snap
 	fps 60
 }
@@ -109,7 +109,7 @@ $sequence "reload_empty" {
 $sequence "deploy" {
 	"anims\deploy.smd"
 	activity "ACT_VM_DRAW" 1
-	{ event AE_CL_PLAYSOUND 10 "Weapon_SMG_ZM.Draw" }
+//	{ event AE_CL_PLAYSOUND 10 "Weapon_Ar9mm_ZM.Draw1" }
 	snap
 	fps 60
 }
@@ -117,7 +117,7 @@ $sequence "deploy" {
 $sequence "deploy_alt" {
 	"anims\deploy_mw2.smd"
 	activity "ACT_VM_DRAW" 1
-	{ event AE_CL_PLAYSOUND 10 "Weapon_SMG_ZM.Draw" }
+	{ event AE_CL_PLAYSOUND 10 "Weapon_Ar9mm_ZM.Draw2" }
 	snap
 	fps 60
 }
