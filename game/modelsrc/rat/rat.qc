@@ -45,7 +45,7 @@ $animation "lookU" "anims/look_U" subtract "lookNeutral" 0 fps 1
 $animation "lookUL" "anims/look_UL" subtract "lookNeutral" 0 fps 1
 
 // this attachment doesnt do anything but but calcblend requires one
-$attachment "anim_attachment_head" "rat_neck" 0 0 0 rotate 0 0 0
+$attachment "anim_attachment_head" "rat_neck" 0 0 0 rotate 180 0 0
 
 $sequence look {
 	lookDR	lookD   lookDL 
