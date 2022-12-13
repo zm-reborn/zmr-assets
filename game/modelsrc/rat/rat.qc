@@ -34,7 +34,7 @@ $hboxset "default"
 
 $sequence "idle" {
 	"anims\rat_idle.smd"
-	activity "ACT_IDLE" -1
+	activity "ACT_MP_STAND_IDLE" -1
 	fps 30
 	loop
 }
@@ -88,7 +88,7 @@ $sequence walk {
 	walk_S    walk_C   walk_N
 	walk_SE   walk_E   walk_NE
 
-	activity "ACT_WALK" -1
+	activity "ACT_MP_WALK" -1
 	
 	blendwidth 3
  	blend move_x -1 1
@@ -100,7 +100,7 @@ $sequence walk {
 $sequence "run" {
 	"anims\run.smd"
 	LX LY LZ
-	activity "ACT_RUN" -1
+	activity "ACT_MP_RUN" -1
 	fps 60
 	fadein 0.1
 	fadeout 0.1
@@ -112,7 +112,7 @@ $sequence "run" {
 $sequence "jump" {
 	"anims\jump.smd"
 //	LX LY LZ
-	activity "ACT_JUMP" -1
+	activity "ACT_MP_JUMP" -1
 	fps 60
 	fadein 0.1
 	fadeout 0.1
