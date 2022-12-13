@@ -32,13 +32,6 @@ $texturegroup "skinfamilies"
 $cbox 0 0 0 0 0 0
 $hboxset "default"
 
-$sequence "idle" {
-	"anims\rat_idle.smd"
-	activity "ACT_MP_STAND_IDLE" -1
-	fps 30
-	loop
-}
-
 //====================================================
 // look matrix
 $animation "lookNeutral" "anims/look_neutral"
@@ -65,6 +58,15 @@ $sequence look {
  	calcblend head_pitch "anim_attachment_head" ZR
 	delta
 	
+}
+
+$sequence "idle" {
+	"anims\rat_idle.smd"
+	activity "ACT_MP_STAND_IDLE" -1
+	fps 30
+	loop
+
+	addlayer look
 }
 
 // walk matrix
