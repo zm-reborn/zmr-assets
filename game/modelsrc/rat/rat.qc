@@ -94,7 +94,7 @@ $sequence walk {
 	
 	blendwidth 3
  	blend move_x -1 1
- 	blend move_y -1 1
+ 	blend move_y 1 -1
 
 	addlayer look // blends look/aim direction on top of walk direction
 }
