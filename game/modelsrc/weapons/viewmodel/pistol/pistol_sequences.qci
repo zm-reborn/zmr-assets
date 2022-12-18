@@ -89,6 +89,7 @@ $sequence "fireempty" {
 $sequence "deploy" {
 	"pistol\deploy.smd"
 	activity "ACT_VM_DRAW" -1
+	{ event AE_CL_PLAYSOUND 17 "Weapon_Pistol_ZM.Draw" }
 	fadein 0.1
 	fadeout 0.1
 	node "0"
