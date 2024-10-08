@@ -97,19 +97,20 @@ $sequence "firelast" {
 	snap
 	fps 60
 }
-/*
-$sequence "fireempty" {
-	"right\s_idleempty.smd"
-	activity "ACT_VM_DRYFIRE" -1
-	fadein 0.1
-	fadeout 0.1
-	node "2"
-	fps 30
-}
-*/
+
+
 $sequence "deploy" {
 	"right\s_deploy.smd"
-	activity "ACT_VM_DRAW" -1
+	activity "ACT_VM_DRAW" 9
+//	{ event AE_CL_PLAYSOUND 17 "Weapon_Pistol_ZM.Draw" }
+	fadein 0.1
+	fadeout 0.1
+	node "0"
+	fps 60
+}
+$sequence "deploy_presscheck" {
+	"right\s_deploy_presscheck.smd"
+	activity "ACT_VM_DRAW" 1
 	{ event AE_CL_PLAYSOUND 17 "Weapon_Pistol_ZM.Draw" }
 	fadein 0.1
 	fadeout 0.1
@@ -119,7 +120,15 @@ $sequence "deploy" {
 
 $sequence "deploy_empty" {
 	"right\s_deployempty.smd"
-	activity "ACT_VM_DRAW_EMPTY" -1
+	activity "ACT_VM_DRAW_EMPTY" 9
+	fadein 0.1
+	fadeout 0.1
+	node "0"
+	fps 60
+}
+$sequence "deploy_empty_spin" {
+	"right\s_deployempty_spin.smd"
+	activity "ACT_VM_DRAW_EMPTY" 1
 	fadein 0.1
 	fadeout 0.1
 	node "0"
