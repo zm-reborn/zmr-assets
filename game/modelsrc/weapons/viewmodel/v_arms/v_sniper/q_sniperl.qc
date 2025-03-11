@@ -18,7 +18,7 @@ $cdmaterials "dev"
 
 $attachment "muzzle" "d_gun" 0 -38.90 1.80 rotate 0 -90 0
 $attachment "1" "d_gun" -0.00 -3.30 1.50 rotate 0 180 0
-$attachment "ironsight" "b_zero" 2 -6.841 -2.262 rotate 0 0 0
+$attachment "ironsight" "b_zero" 2 6.723 -3.068 rotate 0 0 0
 $attachment "scope_end" "Dummy002" 0 0 0 rotate 0 -90 0
 //  3dMax x y z -> ironsight origin -y -x z
 // -y is dist to scope
@@ -28,17 +28,17 @@ $include "../_bonemerger.qci"
 
 $poseparameter "move_x" -1 1 loop 0
 
-$animation "walk_ws" "right/s_walk.smd" {
+$animation "walk_ws" "left/s_walk.smd" {
 	fps 74.3
 	loop
 }
 
-$animation "idle_delta" "right/s_idle.smd" {
+$animation "idle_delta" "left/s_idle.smd" {
 	fps 60
 }
 
 $sequence "idle" {
-	right/s_idle.smd
+	left/s_idle.smd
 	idle_delta
 	walk_ws
 	activity "ACT_VM_IDLE" -1
@@ -56,14 +56,14 @@ $sequence "idle" {
 // =======draw========================================
 
 $sequence "deploy" {
-	right/s_deploy.smd
+	left/s_deploy.smd
 	activity "ACT_VM_DRAW" -1 // 9
 	snap
 	fps 60
 }
 
 $sequence "holster" {
-	right/s_idle.smd
+	left/s_idle.smd
 	activity "ACT_VM_HOLSTER" -1
 	snap
 	fps 9999
@@ -74,7 +74,7 @@ $sequence "holster" {
 // =======fires=======================================
 
 $sequence "fire" {
-	right/s_fire.smd
+	left/s_fire.smd
 	activity "ACT_VM_PRIMARYATTACK" -1
 	{ event AE_MUZZLEFLASH 1 "357 MUZZLE" }
 	snap
@@ -82,12 +82,11 @@ $sequence "fire" {
 }
 
 $sequence "bolt_cycle" {
-	"right/s_boltcycle.smd"
+	"left/s_boltcycle.smd"
 	activity "ACT_SHOTGUN_PUMP" -1
-	{ event AE_CL_PLAYSOUND 19 "Weapon_R700_ZM.Reload1" }
-	{ event 6001 32 "1" }
-	fadein 0.1
-	fadeout 0.1
+	{ event AE_CL_PLAYSOUND 20 "Weapon_R700_ZM.Reload1" }
+	{ event 6001 33 "1" }
+	snap
 	fps 60
 }
 
@@ -95,7 +94,7 @@ $sequence "bolt_cycle" {
 // ===================================================
 // =====irons=========================================
 /*$sequence "ads_fire" {
-	right/s_fire.smd
+	left/s_fire.smd
 	activity "ACT_VM_PRIMARYATTACK_SILENCED" -1
 	{ event AE_MUZZLEFLASH 1 "357 MUZZLE" }
 	snap
@@ -103,12 +102,10 @@ $sequence "bolt_cycle" {
 }
 */
 $sequence "ads_bolt_cycle" {
-	right/s_boltcycle_ads.smd
+	left/s_boltcycle_ads.smd
 	activity "ACT_VM_RELOAD_SILENCED" -1
-	{ event AE_CL_PLAYSOUND 19 "Weapon_R700_ZM.Reload1" }
+	{ event AE_CL_PLAYSOUND 18 "Weapon_R700_ZM.Reload1" }
 	{ event 6001 32 "1" }
-//	fadein 0.1
-//	fadeout 0
 	snap
 	fps 60
 }
@@ -117,38 +114,37 @@ $sequence "ads_bolt_cycle" {
 // ======reloads======================================
 
 $sequence "reload_empty" {
-	"right/s_reload_empty.smd"
+	"left/s_reload_empty.smd"
 	activity "ACT_VM_RELOAD_EMPTY" -1
-	{ event AE_CL_PLAYSOUND 18 "Weapon_R700_ZM.BoltOpen" }
-	{ event AE_CL_PLAYSOUND 94 "Weapon_R700_ZM.InsertRound" }
-	{ event AE_WPN_INCREMENTAMMO 101 ""}
+	{ event AE_CL_PLAYSOUND 20 "Weapon_R700_ZM.BoltOpen" }
+	{ event AE_CL_PLAYSOUND 89 "Weapon_R700_ZM.InsertRound" }
+	{ event AE_WPN_INCREMENTAMMO 95 ""}
 	snap
 	fps 60
 }
 
 $sequence "reload_start" {
-	"right/s_reload_start.smd"
+	"left/s_reload_start.smd"
 	activity "ACT_VM_RELOAD_START" -1
-	{ event AE_CL_PLAYSOUND 38 "Weapon_R700_ZM.BoltOpen" }
+	{ event AE_CL_PLAYSOUND 40 "Weapon_R700_ZM.BoltOpen" }
 	snap
 	fps 60
 }
 
 $sequence "reload" {
-	"right/s_reload.smd"
+	"left/s_reload.smd"
 	activity "ACT_VM_RELOAD" -1
 	{ event AE_CL_PLAYSOUND 14 "Weapon_R700_ZM.InsertRound" }
-	{ event AE_WPN_INCREMENTAMMO 21 ""}
+	{ event AE_WPN_INCREMENTAMMO 20 ""}
 	fadein 0.1
 	fadeout 0.1
 	fps 60
 }
 
 $sequence "reload_end" {
-	"right/s_reload_end.smd"
+	"left/s_reload_end.smd"
 	activity "ACT_VM_RELOAD_FINISH" -1
-	{ event AE_CL_PLAYSOUND 31 "Weapon_R700_ZM.BoltClose" }
-	fadein 0.1
-	fadeout 0.1
+	{ event AE_CL_PLAYSOUND 44 "Weapon_R700_ZM.BoltClose" }
+	snap
 	fps 60
 }
