@@ -97,7 +97,7 @@ $sequence "fire1" {
 	fps 60
 }
 $sequence "fire2" {
-	right/s_fire1.smd
+	right/s_fire2.smd
 	activity "ACT_VM_PRIMARYATTACK" 1
 	{ event AE_MUZZLEFLASH 0 "SMG1 muzzle" }
 	{ event 6001 0 "0" }
