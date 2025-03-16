@@ -17,7 +17,7 @@ $attachment "1" "d_gun" -0.50 0.40 3.00 rotate -0 -180 0
 
 
 // Bone merge the arms.
-$include "bonemerger.qci"
+$include "../_bonemerger.qci"
 
 
 
