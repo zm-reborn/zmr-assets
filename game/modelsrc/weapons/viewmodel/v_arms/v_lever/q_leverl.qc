@@ -78,7 +78,9 @@ $sequence "lever_normal" {
 	left/s_lever1.smd
 	activity "ACT_SHOTGUN_PUMP" 1
 	{ event 6001 18 "1" }
-	{ event AE_CL_PLAYSOUND 15 "Weapon_Rifle_ZM.Special1" }
+//	{ event AE_CL_PLAYSOUND 13 "Weapon_Rifle_ZM.Special1" }
+	{ event AE_CL_PLAYSOUND 13 "Weapon_Rifle_ZM.LeverBack" }
+	{ event AE_CL_PLAYSOUND 28 "Weapon_Rifle_ZM.LeverForward2" }
 	fadein 0.1
 	fadeout 0
 	node lever
@@ -90,7 +92,9 @@ $sequence "lever_side" {
 	left/s_lever2.smd
 	activity "ACT_SHOTGUN_PUMP" 1
 	{ event 6001 18 "1" }
-	{ event AE_CL_PLAYSOUND 15 "Weapon_Rifle_ZM.Special1" }
+//	{ event AE_CL_PLAYSOUND 13 "Weapon_Rifle_ZM.Special1" }
+	{ event AE_CL_PLAYSOUND 13 "Weapon_Rifle_ZM.LeverBack" }
+	{ event AE_CL_PLAYSOUND 28 "Weapon_Rifle_ZM.LeverForward2" }
 	fadein 0.1
 	fadeout 0
 	node lever
@@ -115,7 +119,9 @@ $sequence "ads_lever" {
 	left/s_ads_lever.smd
 	activity "ACT_VM_RELOAD_SILENCED" -1
 	{ event 6001 18 "1" }
-	{ event AE_CL_PLAYSOUND 15 "Weapon_Rifle_ZM.Special1" }
+//	{ event AE_CL_PLAYSOUND 13 "Weapon_Rifle_ZM.Special1" }
+	{ event AE_CL_PLAYSOUND 13 "Weapon_Rifle_ZM.LeverBack" }
+	{ event AE_CL_PLAYSOUND 28 "Weapon_Rifle_ZM.LeverForward2" }
 	fadein 0.1
 	fadeout 0
 	fps 60
@@ -127,7 +133,10 @@ $sequence "ads_lever" {
 $sequence "reload_empty" {
 	left/s_reload_empty.smd
 	activity "ACT_VM_RELOAD_EMPTY" -1
-	{ event AE_CL_PLAYSOUND 85 "Weapon_Rifle_ZM.Reload" }
+	{ event AE_CL_PLAYSOUND 15 "Weapon_Rifle_ZM.LeverBack" }
+	{ event AE_CL_PLAYSOUND 50 "Weapon_Rifle_ZM.Reload" }
+	{ event AE_CL_PLAYSOUND 72 "Weapon_Rifle_ZM.LeverForward" }
+	{ event AE_CL_PLAYSOUND 130 "Weapon_Rifle_ZM.Reload" }
 	{ event AE_WPN_INCREMENTAMMO 85 ""}
 //	{ event AE_WPN_INCREMENTAMMO 134 ""} // technically this happens but nope ok
 	fadein 0.1
