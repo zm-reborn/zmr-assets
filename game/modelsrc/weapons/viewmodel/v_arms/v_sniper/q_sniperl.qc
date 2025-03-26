@@ -84,7 +84,8 @@ $sequence "fire" {
 $sequence "bolt_cycle" {
 	"left/s_boltcycle.smd"
 	activity "ACT_SHOTGUN_PUMP" -1
-	{ event AE_CL_PLAYSOUND 20 "Weapon_R700_ZM.Reload1" }
+	{ event AE_CL_PLAYSOUND 19 "Weapon_R700_ZM.BoltOpen" }
+	{ event AE_CL_PLAYSOUND 34 "Weapon_R700_ZM.BoltClose" }
 	{ event 6001 33 "1" }
 	snap
 	fps 60
@@ -104,7 +105,8 @@ $sequence "bolt_cycle" {
 $sequence "ads_bolt_cycle" {
 	left/s_boltcycle_ads.smd
 	activity "ACT_VM_RELOAD_SILENCED" -1
-	{ event AE_CL_PLAYSOUND 18 "Weapon_R700_ZM.Reload1" }
+	{ event AE_CL_PLAYSOUND 19 "Weapon_R700_ZM.BoltOpen" }
+	{ event AE_CL_PLAYSOUND 34 "Weapon_R700_ZM.BoltClose" }
 	{ event 6001 32 "1" }
 	snap
 	fps 60
