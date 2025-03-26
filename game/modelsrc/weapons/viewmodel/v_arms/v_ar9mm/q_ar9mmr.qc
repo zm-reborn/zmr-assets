@@ -45,7 +45,7 @@ $animation "idleempty_delta" "right/s_idle_empty.smd" {
 $sequence "deploy" {
 	right/s_deploy.smd
 	activity "ACT_VM_DRAW" 1
-	{ event AE_CL_PLAYSOUND 15 "Weapon_Ar9mm_ZM.Draw1" }
+	{ event AE_CL_PLAYSOUND 15 "Weapon_Ar9mm_ZM.SafetyToggle" }
 	snap
 	node "0"
 	fps 60
@@ -154,9 +154,11 @@ $sequence "fire_last" {
 $sequence "reload" {
 	right/s_reload.smd
 	activity "ACT_VM_RELOAD" -1
+	{ event AE_CL_PLAYSOUND 11 "Weapon_Ar9mm_ZM.SafetyToggle" }
 	{ event AE_CL_PLAYSOUND 40 "Weapon_Ar9mm_ZM.Reload1_1" }
 	{ event AE_CL_PLAYSOUND 122 "Weapon_Ar9mm_ZM.Reload1_2" }
 	{ event AE_WPN_INCREMENTAMMO 125 "" }
+	{ event AE_CL_PLAYSOUND 146 "Weapon_Ar9mm_ZM.SafetyToggle" }
 	snap
 	node "Ready"
 	fps 60
