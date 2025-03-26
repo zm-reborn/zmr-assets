@@ -64,7 +64,7 @@ $sequence "holster" {
 $sequence "fire" {
 	right/s_fire.smd
 	activity "ACT_VM_PRIMARYATTACK" -1
-	{ event AE_CL_PLAYSOUND 2 "Weapon_Revolver_ZM.Prepare" }
+	{ event AE_CL_PLAYSOUND 2 "Weapon_Snubnose_ZM.Prepare" }
 	{ event AE_MUZZLEFLASH 16 "357 MUZZLE" }
 	{ event AE_ZM_REVOLVERSHOOT 16 "" }
 	snap
@@ -74,7 +74,7 @@ $sequence "fire" {
 $sequence "altfire" {
 	"right/s_fire_alt.smd"
 	activity "ACT_VM_SECONDARYATTACK" -1
-	{ event AE_CL_PLAYSOUND 0 "Weapon_Revolver_ZM.Prepare" }
+	{ event AE_CL_PLAYSOUND 0 "Weapon_Snubnose_ZM.Prepare" }
 	{ event AE_MUZZLEFLASH 7 "357 MUZZLE" }
 	{ event AE_ZM_REVOLVERSHOOT 7 "" }
 	snap
@@ -88,7 +88,12 @@ $sequence "altfire" {
 $sequence "reload" {
 	right/s_reload.smd
 	activity "ACT_VM_RELOAD" -1
-	{ event AE_CL_PLAYSOUND 16 "Weapon_Revolver_ZM.Reload" }
+	{ event AE_CL_PLAYSOUND 15 "Weapon_Snubnose_ZM.Reload1" } // open
+	{ event AE_CL_PLAYSOUND 35 "Weapon_Snubnose_ZM.Reload2" } // eject
+	{ event AE_CL_PLAYSOUND 102 "Weapon_Snubnose_ZM.Reload3" } // insert
+	{ event AE_CL_PLAYSOUND 159 "Weapon_Snubnose_ZM.Reload3" } // insert
+	{ event AE_CL_PLAYSOUND 195 "Weapon_Snubnose_ZM.Reload3" } // insert
+	{ event AE_CL_PLAYSOUND 243 "Weapon_Snubnose_ZM.Reload4" } // close
 	{ event 6001 45 "0" }
 	{ event 6001 45 "0" }
 	{ event 6001 45 "0" }
