@@ -100,7 +100,11 @@ $sequence "dryfire" {
 $sequence "reload" {
 	left/s_reload.smd
 	activity "ACT_VM_RELOAD" -1
-	{ event AE_CL_PLAYSOUND 11 "Weapon_Revolver_ZM.Reload" }
+	{ event AE_CL_PLAYSOUND 15 "Weapon_Revolver_ZM.Reload1" } //open
+	{ event AE_CL_PLAYSOUND 47 "Weapon_Revolver_ZM.Reload2" } //eject
+	{ event AE_CL_PLAYSOUND 106 "Weapon_Revolver_ZM.Reload3" } //insert
+	{ event AE_CL_PLAYSOUND 141 "Weapon_Revolver_ZM.Reload4" } //close
+	{ event AE_CL_PLAYSOUND 166 "Weapon_Revolver_ZM.Reload5" } //spin
 	{ event 6001 40 "0" }
 	{ event 6001 40 "0" }
 	{ event 6001 40 "0" }
