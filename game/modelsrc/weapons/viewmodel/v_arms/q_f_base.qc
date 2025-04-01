@@ -1,25 +1,29 @@
 
 $modelname	"weapons/v_f_arms.mdl"
+//$modelname	"weapons/c_arms_female_bare.mdl"
 $body studio "ref_f_hands.smd"
 
-/*
-	skinfamily for w/b hands
-*/
+$cdmaterials "models/arms"
 
 // mehis.cpp only
 // static int BodyGroup_Farms = FindBodygroupByName("f_arm_sleeves"); // calculate this value once
 // SetBodygroup( BodyGroup_Farms , 1 ); // red_pinstripe
-/*
+
 $bodygroup f_arm_sleeves
 {
 	studio "ref_f_rpinstripe"
-	studio "ref_f_cyanswacket"
-	studio "ref_f_greenswacket"
-	studio "ref_f_brownjacket"
-...etc
+//	studio "ref_f_cyanswacket"
+//	studio "ref_f_greenswacket"
+//	studio "ref_f_brownjacket"
+	blank
+	blank
+	blank
+	blank
+	blank
 	blank
 }
 
+/*
 // prep lod stuff with bodygroups
 $lod 1
 {
@@ -36,6 +40,5 @@ $lod 2
 }
 */
 
-$cdmaterials "models/arms"
 
 $sequence idle "s_armbase_idle.smd"  activity ACT_IDLE -1 loop fps 60
