@@ -1,0 +1,72 @@
+
+$modelname "weapons/c_fists_zm.mdl"
+
+$body studio "ref_nothing.smd"
+
+$include "../_bonemerger.qci"
+
+
+$poseparameter "move_x" -1 1 loop 0
+
+$animation "walk_ws" "s_walk.smd" {
+	fps 74.3
+	loop
+}
+$animation "walk_ws_h" "s_walk_hold.smd" {
+	fps 74.3
+	loop
+}
+
+$animation "idle_delta" "s_idle.smd" fps 60;
+$animation "hold_delta" "s_hold.smd" fps 60;
+
+$sequence "deploy" {
+	"s_deploy.smd"
+	activity "ACT_VM_DRAW" -1
+	snap
+	fps 60
+}
+
+$sequence "idle" {
+	"s_idle.smd"
+	idle_delta
+	walk_ws
+	activity "ACT_VM_IDLE" -1
+	blend "move_x" -1 1
+	blendwidth 3
+	loop
+}
+$sequence hold {
+	"s_hold.smd"
+	hold_delta
+	walk_ws_h
+	activity "ACT_VM_RELOAD" -1
+	blend "move_x" -1 1
+	blendwidth 3
+	loop
+}
+
+$sequence punch {
+	"s_punch.smd"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	activity "ACT_VM_HITCENTER" 13
+	{ event AE_ZM_MELEEHIT 13 "" }
+	snap
+	fps 60
+}
+
+$sequence haymaker {
+	"s_haymaker.smd"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	activity "ACT_VM_HITCENTER" 7
+	{ event AE_ZM_MELEEHIT 7 "" }
+	snap
+	fps 60
+}
+
+$sequence throw {
+	s_throw
+	activity "ACT_VM_SECONDARYATTACK" -1
+	snap
+	fps 60
+}
