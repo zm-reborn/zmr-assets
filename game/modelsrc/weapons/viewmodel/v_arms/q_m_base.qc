@@ -22,7 +22,7 @@ $bodygroup m_arm_sleeves
 	studio "ref_m_btartan"
 	studio "ref_m_btrack"
 	blank
-	blank
+	studio "ref_m_lawyer"
 }
 
 $renamematerial c_arms_citizen_hands c_arms_citizen_hands_black
