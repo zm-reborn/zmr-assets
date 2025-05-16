@@ -16,7 +16,7 @@ $bodygroup m_arm_sleeves
 	studio "ref_m_bdenim"
 	studio "ref_m_owool"
 	studio "ref_m_rhoodie"
-	blank //	studio "ref_m_wletter"
+	studio "ref_m_wletter"
 	studio "ref_m_gcotton"
 	studio "ref_m_bleather"
 	studio "ref_m_btartan"
