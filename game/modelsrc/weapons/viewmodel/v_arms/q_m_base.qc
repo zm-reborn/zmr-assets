@@ -21,7 +21,7 @@ $bodygroup m_arm_sleeves
 	studio "ref_m_bleather"
 	studio "ref_m_btartan"
 	studio "ref_m_btrack"
-	blank
+	studio "ref_m_mechanic"
 	studio "ref_m_lawyer"
 }
 
