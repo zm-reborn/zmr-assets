@@ -13,7 +13,7 @@ $bodygroup f_arm_sleeves
 {
 	studio "ref_f_rpinstripe"
 //	studio "ref_f_cyanswacket"
-//	studio "ref_f_greenswacket"
+	studio "ref_f_greenswacket"
 //	studio "ref_f_brownjacket"
 	blank
 	blank
