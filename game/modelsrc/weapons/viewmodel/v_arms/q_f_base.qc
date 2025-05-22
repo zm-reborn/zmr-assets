@@ -7,21 +7,29 @@ $cdmaterials "models/arms"
 
 // mehis.cpp only
 // static int BodyGroup_Farms = FindBodygroupByName("f_arm_sleeves"); // calculate this value once
-// SetBodygroup( BodyGroup_Farms , 1 ); // red_pinstripe
+// SetBodygroup( BodyGroup_Farms , 1 ); // greenswacket
 
 $bodygroup f_arm_sleeves
 {
-	studio "ref_f_rpinstripe"
-//	studio "ref_f_cyanswacket"
+	studio "ref_f_cyantracket"
 	studio "ref_f_greenswacket"
-//	studio "ref_f_brownjacket"
-	blank
-	blank
-	blank
-	blank
-	blank
-	blank
+	studio "ref_f_pistachiotracket"
+	studio "ref_f_taupeswacket"
+	studio "ref_f_redbuttonshirt"
+	studio "ref_f_purplebuttonshirt"
+//	blank
 }
+
+$texturegroup "skinfamilies"
+{
+	{ "f_hands"       }
+	{ "f_hands"       }
+	{ "f_hands_black" }
+	{ "f_hands"       }
+	{ "f_hands"       }
+	{ "f_hands_black" }
+}
+
 
 /*
 // prep lod stuff with bodygroups
