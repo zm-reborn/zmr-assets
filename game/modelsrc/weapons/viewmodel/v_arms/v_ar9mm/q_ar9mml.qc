@@ -134,6 +134,8 @@ $sequence "fire_burst" {
 	{ event AE_MUZZLEFLASH 5 "SMG1 muzzle" }
 	{ event AE_MUZZLEFLASH 10 "SMG1 muzzle" }
 	{ event 6001 0 "0" }
+	{ event 6001 5 "0" }
+	{ event 6001 10 "0" }
 	snap
 	fps 60
 }
