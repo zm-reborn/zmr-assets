@@ -128,11 +128,11 @@ $sequence "fire3" {
 }
 
 $sequence "fire_burst" {
-	left/s_fire2.smd
+	left/s_fire_burst.smd
 	activity "ACT_VM_SECONDARYATTACK" -1
 	{ event AE_MUZZLEFLASH 0 "SMG1 muzzle" }
-	{ event AE_MUZZLEFLASH 3 "SMG1 muzzle" }
-	{ event AE_MUZZLEFLASH 6 "SMG1 muzzle" }
+	{ event AE_MUZZLEFLASH 5 "SMG1 muzzle" }
+	{ event AE_MUZZLEFLASH 10 "SMG1 muzzle" }
 	{ event 6001 0 "0" }
 	snap
 	fps 60
