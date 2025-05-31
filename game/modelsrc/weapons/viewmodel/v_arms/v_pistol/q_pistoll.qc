@@ -3,7 +3,7 @@
 // Get the latest version and notes at:
 // https://dev.wallworm.com 
 
-$modelname "weapons/c_pistol_new.mdl"
+$modelname "weapons/c_pistol_new_lh.mdl"
 
 $body studio "ref_pistol.smd"
 

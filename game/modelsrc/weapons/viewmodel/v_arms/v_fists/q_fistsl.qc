@@ -1,5 +1,5 @@
 
-$modelname "weapons/c_fists_zm.mdl"
+$modelname "weapons/c_fists_zm_lh.mdl"
 
 $body studio "ref_nothing.smd"
 
