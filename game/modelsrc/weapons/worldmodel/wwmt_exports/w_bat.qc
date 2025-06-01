@@ -13,7 +13,7 @@ $collisionmodel "w_bat_hull.smd" {
 	$mass 5.0
 
 }
-$surfaceprop "metal_bouncy" 
+$surfaceprop "metal"
 $contents "solid"
 $cdmaterials "models/weapons/alumbat"
 $sequence idle "w_bat.smd"  activity ACT_IDLE -1 loop fps 30
