@@ -3,9 +3,7 @@
 // Get the latest version and notes at:
 // http://dev.wallworm.com 
 
-$scale 1.0
 $modelname	"weapons/w_sporting.mdl"
-$origin 0 0 0 0 
 $body w_sporting "w_sporting.smd"
 $collisionmodel "w_sporting_hull.smd" {
 	$inertia 1.0
@@ -22,4 +20,4 @@ $sequence idle "w_sporting.smd"  activity ACT_IDLE -1 loop fps 30
 $attachment "muzzle" "wmodel" 0 20.2887 1.36058 rotate 7.31644 90.0 0
 $attachment "1" "wmodel" 0 -6.13223 5.91563 rotate -7.31644 -90.0 0
 
-$include	"w_sporting_wwmt_custom.qci"
+//$include	"w_sporting_wwmt_custom.qci"
