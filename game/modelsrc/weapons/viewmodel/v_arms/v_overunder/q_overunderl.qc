@@ -1,4 +1,4 @@
-$modelname "weapons/c_sporting.mdl"
+$modelname "weapons/c_sporting_lh.mdl"
 
 $bodygroup "studio"
 {

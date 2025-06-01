@@ -1,5 +1,5 @@
 
-$modelname "weapons/c_faxe_zmr.mdl"
+$modelname "weapons/c_faxe_zmr_lh.mdl"
 
 $bodygroup "stoodio"
 {

@@ -1,6 +1,5 @@
-// Created by Crowbar 0.44.0.0
 
-$modelname "weapons/c_molotov_zmr.mdl"
+$modelname "weapons/c_molotov_zmr_lh.mdl"
 
 $bodygroup "stoodio"
 {

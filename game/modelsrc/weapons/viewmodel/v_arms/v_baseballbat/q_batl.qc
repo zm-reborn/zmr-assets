@@ -1,5 +1,5 @@
 
-$modelname "weapons/c_baseballbat.mdl"
+$modelname "weapons/c_baseballbat_lh.mdl"
 
 $bodygroup "stoodio"
 {

@@ -1,5 +1,5 @@
 
-$modelname	"weapons/c_ar9mm.mdl"
+$modelname	"weapons/c_ar9mm_lh.mdl"
 $body studio "ref_ar9mm.smd"
 $cdmaterials "models/weapons/ar9mm"
 // ar9.vmt

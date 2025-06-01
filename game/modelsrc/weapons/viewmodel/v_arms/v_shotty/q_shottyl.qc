@@ -1,6 +1,5 @@
 
-$modelname "weapons/c_shotgun_new.mdl"
-//$modelname "weapons/c_rifle_zm.mdl"
+$modelname "weapons/c_shotgun_new_lh.mdl"
 
 $bodygroup "stoodio"
 {

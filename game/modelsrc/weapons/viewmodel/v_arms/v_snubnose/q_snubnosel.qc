@@ -1,6 +1,6 @@
 
 //$modelname "weapons/c_airweight.mdl"
-$modelname "weapons/c_snubnose.mdl"
+$modelname "weapons/c_snubnose_lh.mdl"
 
 $bodygroup "studio"
 {

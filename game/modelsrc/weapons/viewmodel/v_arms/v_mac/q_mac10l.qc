@@ -1,4 +1,4 @@
-$modelname "weapons/c_mac10_new.mdl"
+$modelname "weapons/c_mac10_new_lh.mdl"
 
 $bodygroup "stoodio"
 {

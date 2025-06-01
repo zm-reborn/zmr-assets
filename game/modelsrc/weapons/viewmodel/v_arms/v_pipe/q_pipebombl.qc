@@ -1,4 +1,5 @@
-$modelname "weapons/c_pipebomb.mdl"
+
+$modelname "weapons/c_pipebomb_lh.mdl"
 
 $bodygroup "stoodio"
 {

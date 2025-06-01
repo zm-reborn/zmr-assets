@@ -1,6 +1,6 @@
 
-//$modelname "weapons/c_revolver_new.mdl"
-$modelname "weapons/c_revolver_zmr.mdl"
+$modelname "weapons/c_revolver_new.mdl"
+//$modelname "weapons/c_revolver_zmr.mdl"
 
 $bodygroup "stoodio"
 {

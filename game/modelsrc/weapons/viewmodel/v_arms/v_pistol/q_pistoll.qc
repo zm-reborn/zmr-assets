@@ -120,7 +120,7 @@ $sequence "reload" {
 	activity "ACT_VM_RELOAD" -1
 	{ event AE_CL_PLAYSOUND 25 "Weapon_Pistol_ZM.Reload1" }
 	{ event AE_CL_PLAYSOUND 95 "Weapon_Pistol_ZM.Reload2" }
-	{ event AE_WPN_INCREMENTAMMO 62 "" }
+	{ event AE_WPN_INCREMENTAMMO 107 "" }
 	fadein 0.1
 	fadeout 0
 	node "0"
@@ -133,7 +133,7 @@ $sequence "reload_empty" {
 	{ event AE_CL_PLAYSOUND 18 "Weapon_Pistol_ZM.Reload1" }
 	{ event AE_CL_PLAYSOUND 48 "Weapon_Pistol_ZM.Reload2" }
 	{ event AE_CL_PLAYSOUND 93 "Weapon_Pistol_ZM.Reload3" }
-	{ event AE_WPN_INCREMENTAMMO 62 "" }
+	{ event AE_WPN_INCREMENTAMMO 84 "" }
 	fadein 0.1
 	fadeout 0
 	node "0"

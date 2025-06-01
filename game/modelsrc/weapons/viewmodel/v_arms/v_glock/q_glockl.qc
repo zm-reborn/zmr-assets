@@ -1,4 +1,5 @@
-$modelname "weapons/c_glock17.mdl"
+
+$modelname "weapons/c_glock17_lh.mdl"
 $cdmaterials "models/weapons/glock17"
 // glock.vmt
 
