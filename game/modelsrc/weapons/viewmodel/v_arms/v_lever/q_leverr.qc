@@ -162,18 +162,15 @@ $sequence "reload" {
 	{ event AE_CL_PLAYSOUND 45 "Weapon_Rifle_ZM.Reload" }
 	{ event AE_WPN_INCREMENTAMMO 45 ""}
 	fadein 0.1
-	fadeout 0.01
+	fadeout 0.1
 	fps 60
-	node rel
-	transition rel rel
 }
 
 $sequence "reload_end" {
 	right/s_reload_end.smd
 	activity "ACT_VM_RELOAD_FINISH" -1
-	fadein 0
-	fadeout 0.1
+//	fadein 0
+//	fadeout 0.1
+	snap
 	fps 60
-//	node relend
-//	transition rel relend
 }
