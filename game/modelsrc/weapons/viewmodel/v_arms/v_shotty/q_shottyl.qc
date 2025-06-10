@@ -125,6 +125,15 @@ $sequence "reload_end" {
 $sequence "reload_empty" {
 	"left/s_reload_empty.smd"
 	activity "ACT_VM_RELOAD_EMPTY" -1
+	{ event AE_WPN_INCREMENTAMMO 56 "" }
+	snap
+	fps 60
+}
+
+
+$sequence "reload_empty_last_one" {
+	"left/s_reload_last_one.smd"
+//	activity "ACT_VM_RELOAD______" -1
 	{ event AE_WPN_INCREMENTAMMO 53 "" }
 	fadein 0.05
 	fadeout 0.05
