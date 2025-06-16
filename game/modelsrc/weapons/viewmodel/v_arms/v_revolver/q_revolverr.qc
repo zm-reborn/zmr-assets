@@ -111,26 +111,8 @@ $sequence "reload" {
 	{ event 6001 40 "0" }
 	{ event 6001 40 "0" }
 	{ event 6001 40 "0" }
-	{ event AE_WPN_INCREMENTAMMO 105 "" }
+	{ event AE_WPN_INCREMENTAMMO 138 "" }
 	fadein 0.1
 	fadeout 0.2
 	fps 60
 }
-
-/*
-$sequence "reload" {
-	"anims/reload_wspdloader.smd"
-	activity "ACT_VM_RELOAD" -1
-	{ event AE_CL_PLAYSOUND 11 "Weapon_Revolver_ZM.Reload" }
-	{ event 6001 50 "0" }
-	{ event 6001 50 "0" }
-	{ event 6001 50 "0" }
-	{ event 6001 50 "0" }
-	{ event 6001 50 "0" }
-	{ event 6001 50 "0" }
-	{ event AE_WPN_INCREMENTAMMO 110 "" }
-	fadein 0.1
-	fadeout 0.2
-	fps 60
-}
-*/

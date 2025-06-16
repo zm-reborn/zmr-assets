@@ -142,7 +142,7 @@ $sequence "reload" {
 $sequence "reload_empty" {
 	left/s_reload_empty.smd
 	activity "ACT_VM_RELOAD_EMPTY" -1
-	{ event AE_WPN_INCREMENTAMMO 141 "" }
+	{ event AE_WPN_INCREMENTAMMO 140 "" }
 	{ event AE_CL_PLAYSOUND 35 "Weapon_SMG_ZM.Reload3" }
 	{ event AE_CL_PLAYSOUND 74 "Weapon_SMG_ZM.Reload1" }
 	{ event AE_CL_PLAYSOUND 136 "Weapon_SMG_ZM.Reload2" }

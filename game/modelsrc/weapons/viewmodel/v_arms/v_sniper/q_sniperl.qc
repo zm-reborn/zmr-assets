@@ -146,7 +146,7 @@ $sequence "reload" {
 $sequence "reload_end" {
 	"left/s_reload_end.smd"
 	activity "ACT_VM_RELOAD_FINISH" -1
-	{ event AE_CL_PLAYSOUND 44 "Weapon_R700_ZM.BoltClose" }
+	{ event AE_CL_PLAYSOUND 44 "Weapon_R700_ZM.ReloadBoltClose" }
 	snap
 	fps 60
 }

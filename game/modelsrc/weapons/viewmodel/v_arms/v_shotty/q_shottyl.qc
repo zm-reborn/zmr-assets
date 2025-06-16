@@ -125,7 +125,10 @@ $sequence "reload_end" {
 $sequence "reload_empty" {
 	"left/s_reload_empty.smd"
 	activity "ACT_VM_RELOAD_EMPTY" -1
-	{ event AE_WPN_INCREMENTAMMO 56 "" }
+	{ event AE_CL_PLAYSOUND 0 "Weapon_Shotgun_ZM.EmptyPump" }
+	{ event AE_CL_PLAYSOUND 30 "Weapon_Shotgun_ZM.EmptyInsert" }
+	{ event AE_CL_PLAYSOUND 53 "Weapon_Shotgun_ZM.EmptyPump2" }
+	{ event AE_WPN_INCREMENTAMMO 59 "" }
 	snap
 	fps 60
 }

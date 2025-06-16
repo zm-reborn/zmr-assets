@@ -169,10 +169,10 @@ $sequence "reload" {
 $sequence "reload_empty" {
 	left/s_reload_empty.smd
 	activity "ACT_VM_RELOAD_EMPTY" -1
-	{ event AE_WPN_INCREMENTAMMO 115 "" }
+	{ event AE_WPN_INCREMENTAMMO 134 "" }
 	{ event AE_CL_PLAYSOUND 29 "Weapon_Ar9mm_ZM.Reload2_1" }
 	{ event AE_CL_PLAYSOUND 110 "Weapon_Ar9mm_ZM.Reload2_2" }
-	{ event AE_CL_PLAYSOUND 145 "Weapon_Ar9mm_ZM.Reload2_3" }
+	{ event AE_CL_PLAYSOUND 132 "Weapon_Ar9mm_ZM.Reload2_3" }
 	snap
 	node "Ready"
 	fps 60

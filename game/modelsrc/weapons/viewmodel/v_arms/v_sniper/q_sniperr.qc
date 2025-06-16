@@ -149,7 +149,7 @@ $sequence "reload" {
 $sequence "reload_end" {
 	"right/s_reload_end.smd"
 	activity "ACT_VM_RELOAD_FINISH" -1
-	{ event AE_CL_PLAYSOUND 31 "Weapon_R700_ZM.BoltClose" }
+	{ event AE_CL_PLAYSOUND 31 "Weapon_R700_ZM.ReloadBoltClose" }
 	fadein 0.1
 	fadeout 0.1
 	fps 60

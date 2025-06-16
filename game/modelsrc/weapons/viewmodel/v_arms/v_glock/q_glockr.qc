@@ -141,7 +141,7 @@ $sequence "reload_empty" {
 	{ event AE_CL_PLAYSOUND 18 "Weapon_Glock_ZM.Reload1" }
 	{ event AE_CL_PLAYSOUND 60 "Weapon_Glock_ZM.Reload2" }
 	{ event AE_CL_PLAYSOUND 91 "Weapon_Glock_ZM.Reload3" }
-	{ event AE_WPN_INCREMENTAMMO 93 "" }
+	{ event AE_WPN_INCREMENTAMMO 94 "" }
 	fadein 0.1
 	fadeout 0.1
 	fps 60
