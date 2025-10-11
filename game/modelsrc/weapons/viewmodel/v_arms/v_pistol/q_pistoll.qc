@@ -99,7 +99,6 @@ $sequence "firelast" {
 $sequence "deploy" {
 	"left\s_deploy.smd"
 	activity "ACT_VM_DRAW" 9
-//	{ event AE_CL_PLAYSOUND 17 "Weapon_Pistol_ZM.Draw" }
 	fadein 0.1
 	fadeout 0.1
 	node "0"
@@ -115,9 +114,20 @@ $sequence "deploy_empty" {
 	fps 60
 }
 
-$sequence "reload" {
+$sequence "reload_smooth" {
 	"left\s_reload.smd"
-	activity "ACT_VM_RELOAD" -1
+	activity "ACT_VM_RELOAD" 1
+	{ event AE_CL_PLAYSOUND 25 "Weapon_Pistol_ZM.Reload1" }
+	{ event AE_CL_PLAYSOUND 95 "Weapon_Pistol_ZM.Reload2" }
+	{ event AE_WPN_INCREMENTAMMO 107 "" }
+	fadein 0.1
+	fadeout 0
+	node "0"
+	fps 60
+}
+$sequence "reload_bumped" {
+	"left\s_reload2.smd"
+	activity "ACT_VM_RELOAD" 2
 	{ event AE_CL_PLAYSOUND 25 "Weapon_Pistol_ZM.Reload1" }
 	{ event AE_CL_PLAYSOUND 95 "Weapon_Pistol_ZM.Reload2" }
 	{ event AE_WPN_INCREMENTAMMO 107 "" }
